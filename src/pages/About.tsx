@@ -64,7 +64,7 @@ const About = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-emerald-800 via-teal-900 to-cyan-900">
+        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-blue-800 via-blue-900 to-blue-950">
           {/* Network Connection Lines */}
           <div className="absolute inset-0 opacity-10">
             <svg className="w-full h-full" viewBox="0 0 1000 600" fill="none">
