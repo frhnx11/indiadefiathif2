@@ -114,75 +114,98 @@ const Membership = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-violet-800 via-purple-900 to-indigo-900">
+        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-emerald-600 via-teal-700 to-cyan-800">
+          {/* Dynamic Background Elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-full blur-3xl animate-morph-slow"></div>
+            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-teal-400/15 to-cyan-400/15 rounded-full blur-2xl animate-float"></div>
+            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-cyan-300/25 to-teal-300/25 rounded-full blur-xl animate-pulse-slow"></div>
+          </div>
+
           {/* Membership Tier Symbols */}
-          <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 opacity-30">
             <div className="absolute top-20 left-20 animate-float">
-              <Star className="w-12 h-12 text-violet-300" />
+              <Star className="w-12 h-12 text-emerald-300 drop-shadow-lg" />
             </div>
             <div className="absolute top-32 right-24 animate-float" style={{ animationDelay: '2s' }}>
-              <Crown className="w-14 h-14 text-purple-300" />
+              <Crown className="w-14 h-14 text-yellow-300 drop-shadow-lg" />
             </div>
             <div className="absolute bottom-28 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
-              <Users className="w-10 h-10 text-indigo-300" />
+              <Users className="w-10 h-10 text-teal-300 drop-shadow-lg" />
             </div>
             <div className="absolute bottom-20 right-1/3 animate-float" style={{ animationDelay: '1s' }}>
-              <Star className="w-8 h-8 text-violet-400" />
+              <Star className="w-8 h-8 text-cyan-300 drop-shadow-lg" />
+            </div>
+            <div className="absolute top-1/2 right-20 animate-float" style={{ animationDelay: '3s' }}>
+              <Check className="w-9 h-9 text-green-300 drop-shadow-lg" />
             </div>
           </div>
 
-          {/* Connection Network */}
-          <div className="absolute inset-0 opacity-5">
-            <svg className="w-full h-full" viewBox="0 0 1000 600">
+          {/* Community Connection Network */}
+          <div className="absolute inset-0 opacity-20">
+            <svg className="w-full h-full" viewBox="0 0 1000 600" fill="none">
+              <path d="M100 200L300 150L500 250L700 100L900 300" stroke="url(#memberGradient1)" strokeWidth="3" opacity="0.6" className="animate-pulse" />
+              <path d="M150 400L350 300L550 450L750 200L950 500" stroke="url(#memberGradient2)" strokeWidth="3" opacity="0.6" className="animate-pulse" style={{ animationDelay: '1s' }} />
+              <circle cx="100" cy="200" r="8" fill="url(#nodeGrad1)" className="animate-glow-pulse" />
+              <circle cx="300" cy="150" r="6" fill="url(#nodeGrad2)" className="animate-glow-pulse" style={{ animationDelay: '0.5s' }} />
+              <circle cx="500" cy="250" r="7" fill="url(#nodeGrad3)" className="animate-glow-pulse" style={{ animationDelay: '1s' }} />
+              <circle cx="700" cy="100" r="9" fill="url(#nodeGrad4)" className="animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
               <defs>
-                <radialGradient id="nodeGrad" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" style={{ stopColor: 'white', stopOpacity: 0.8 }} />
-                  <stop offset="100%" style={{ stopColor: 'white', stopOpacity: 0 }} />
-                </radialGradient>
+                <linearGradient id="memberGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{ stopColor: '#10b981', stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: '#06b6d4', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#0891b2', stopOpacity: 1 }} />
+                </linearGradient>
+                <linearGradient id="memberGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{ stopColor: '#f59e0b', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#10b981', stopOpacity: 1 }} />
+                </linearGradient>
+                <radialGradient id="nodeGrad1"><stop offset="0%" style={{ stopColor: '#10b981' }} /></radialGradient>
+                <radialGradient id="nodeGrad2"><stop offset="0%" style={{ stopColor: '#06b6d4' }} /></radialGradient>
+                <radialGradient id="nodeGrad3"><stop offset="0%" style={{ stopColor: '#0891b2' }} /></radialGradient>
+                <radialGradient id="nodeGrad4"><stop offset="0%" style={{ stopColor: '#f59e0b' }} /></radialGradient>
               </defs>
-              <circle cx="200" cy="150" r="30" fill="url(#nodeGrad)" className="animate-pulse" />
-              <circle cx="500" cy="200" r="25" fill="url(#nodeGrad)" className="animate-pulse" style={{ animationDelay: '1s' }} />
-              <circle cx="800" cy="180" r="35" fill="url(#nodeGrad)" className="animate-pulse" style={{ animationDelay: '2s' }} />
-              <line x1="200" y1="150" x2="500" y2="200" stroke="white" strokeWidth="1" opacity="0.3" />
-              <line x1="500" y1="200" x2="800" y2="180" stroke="white" strokeWidth="1" opacity="0.3" />
             </svg>
+          </div>
+
+          {/* Glowing Orbs */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/3 w-4 h-4 bg-emerald-400 rounded-full animate-glow-pulse shadow-lg shadow-emerald-400/50"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-teal-400 rounded-full animate-glow-pulse shadow-lg shadow-teal-400/50" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-cyan-400 rounded-full animate-glow-pulse shadow-lg shadow-cyan-400/50" style={{ animationDelay: '2s' }}></div>
           </div>
 
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-6 animate-staggered-fade-in">
                 <div className="inline-flex items-center gap-3 mb-4">
-                  <Users className="w-6 h-6 text-violet-400 animate-pulse" />
-                  <span className="text-violet-200 text-sm uppercase tracking-wider font-medium">Join the Community</span>
-                  <Crown className="w-6 h-6 text-purple-400 animate-pulse" style={{ animationDelay: '0.5s' }} />
+                  <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                  <span className="text-emerald-200 text-sm uppercase tracking-wider font-medium">Join the Community</span>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" style={{ animationDelay: '0.9s' }}></div>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-text-glow">
+                <h1 className="text-4xl md:text-6xl font-light bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent mb-8 animate-gradient-x leading-relaxed py-2">
                   Membership
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl text-violet-100 max-w-3xl mx-auto mb-8 animate-staggered-fade-in stagger-2">
-                Join India's leading DeFi community and help shape the future of decentralized finance through collaboration, education, and advocacy.
+              <p className="text-xl md:text-2xl text-teal-100 max-w-3xl mx-auto mb-8 animate-staggered-fade-in stagger-2 font-light">
+                Shape the future of decentralized finance through collaboration, education, and advocacy
               </p>
               
               {/* Membership Tiers Preview */}
-              <div className="flex justify-center gap-8 animate-staggered-fade-in stagger-3">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-violet-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <Users className="w-8 h-8 text-violet-300" />
-                  </div>
-                  <span className="text-sm text-violet-200">Associate</span>
+              <div className="flex flex-wrap justify-center gap-6 animate-staggered-fade-in stagger-3">
+                <div className="flex items-center gap-2 text-emerald-200 bg-emerald-900/30 px-4 py-2 rounded-full border border-emerald-700/30">
+                  <Users className="w-4 h-4" />
+                  <span className="text-sm">Associate Member</span>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <Star className="w-8 h-8 text-purple-300" />
-                  </div>
-                  <span className="text-sm text-purple-200">Full Member</span>
+                <div className="flex items-center gap-2 text-teal-200 bg-teal-900/30 px-4 py-2 rounded-full border border-teal-700/30">
+                  <Star className="w-4 h-4" />
+                  <span className="text-sm">Full Member</span>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <Crown className="w-8 h-8 text-indigo-300" />
-                  </div>
-                  <span className="text-sm text-indigo-200">Founding</span>
+                <div className="flex items-center gap-2 text-yellow-200 bg-yellow-900/30 px-4 py-2 rounded-full border border-yellow-700/30">
+                  <Crown className="w-4 h-4" />
+                  <span className="text-sm">Founding Member</span>
                 </div>
               </div>
             </div>
@@ -190,119 +213,192 @@ const Membership = () => {
         </section>
 
         {/* Why Join Section */}
-        <section className="py-12 lg:py-16 bg-gradient-to-r from-background/30 to-background/50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="section-heading text-center mb-8">Why Join the Alliance?</h2>
-              <Card className="content-box-enhanced animate-staggered-fade-in">
-                <CardContent className="p-8">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {memberBenefitsOverview.map((benefit, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-green-600 shrink-0 mt-1" />
-                        <p className="body-text">{benefit}</p>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-10 right-10 w-80 h-80 bg-gradient-to-br from-blue-300/20 to-indigo-300/20 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-10 left-10 w-72 h-72 bg-gradient-to-br from-purple-300/15 to-pink-300/15 rounded-full blur-2xl animate-pulse-slow"></div>
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-light text-center mb-12 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Why Join the Alliance?</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {memberBenefitsOverview.map((benefit, index) => {
+                  const colors = [
+                    { bg: 'from-emerald-400/15 to-green-400/15', icon: 'text-emerald-600', border: 'border-emerald-200/50' },
+                    { bg: 'from-blue-400/15 to-cyan-400/15', icon: 'text-blue-600', border: 'border-blue-200/50' },
+                    { bg: 'from-purple-400/15 to-violet-400/15', icon: 'text-purple-600', border: 'border-purple-200/50' },
+                    { bg: 'from-orange-400/15 to-red-400/15', icon: 'text-orange-600', border: 'border-orange-200/50' },
+                    { bg: 'from-indigo-400/15 to-blue-400/15', icon: 'text-indigo-600', border: 'border-indigo-200/50' },
+                    { bg: 'from-teal-400/15 to-cyan-400/15', icon: 'text-teal-600', border: 'border-teal-200/50' }
+                  ];
+                  const color = colors[index % colors.length];
+                  
+                  return (
+                    <Card 
+                      key={index} 
+                      className={`content-box-enhanced animate-card-hover animate-staggered-fade-in stagger-${index + 1} ${color.border} bg-gradient-to-br from-white/95 to-white/85 backdrop-blur-lg shadow-xl hover:shadow-2xl transition-all duration-500`}
+                    >
+                      <CardContent className="p-6">
+                        <div className="flex items-start gap-4">
+                          <div className={`w-12 h-12 bg-gradient-to-br ${color.bg} rounded-2xl flex items-center justify-center shrink-0 shadow-lg`}>
+                            <Check className={`w-6 h-6 ${color.icon}`} />
+                          </div>
+                          <p className="text-slate-700 leading-relaxed font-light">{benefit}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
 
         {/* Membership Tiers */}
-        <section className="py-12 lg:py-16">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-rose-50 via-orange-50 to-yellow-50 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-20 w-80 h-80 bg-gradient-to-br from-rose-300/20 to-pink-300/20 rounded-full blur-3xl animate-morph-slow"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-br from-orange-300/15 to-yellow-300/15 rounded-full blur-2xl animate-spin-slow"></div>
+            <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-gradient-to-br from-amber-300/10 to-orange-300/10 rounded-full blur-xl animate-float"></div>
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-7xl mx-auto">
-              <h2 className="section-heading text-center mb-12">Membership Tiers</h2>
+              <h2 className="text-3xl md:text-4xl font-light text-center mb-12 bg-gradient-to-r from-rose-600 via-orange-600 to-yellow-600 bg-clip-text text-transparent">Membership Tiers</h2>
               <div className="grid lg:grid-cols-3 gap-8">
-                {membershipTiers.map((tier, index) => (
-                  <Card 
-                    key={index} 
-                    className={`relative h-full content-box-enhanced animate-card-hover animate-staggered-fade-in ${tier.color} border-2 stagger-${index + 1}`}
-                  >
-                    {tier.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <Badge className="bg-purple-600 text-white px-4 py-1">
-                          Most Popular
-                        </Badge>
-                      </div>
-                    )}
-                    <CardHeader className="text-center pb-4">
-                      <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
-                        {tier.icon}
-                      </div>
-                      <CardTitle className="text-2xl text-primary">{tier.name}</CardTitle>
-                      <div className="text-3xl font-bold text-primary mt-2">{tier.price}</div>
-                      <p className="body-text text-sm mt-3">{tier.description}</p>
-                    </CardHeader>
-                    <CardContent className="px-6 pb-8">
-                      <div className="space-y-4 mb-6">
-                        <h4 className="font-semibold text-primary">Included Benefits:</h4>
-                        <ul className="space-y-2">
-                          {tier.benefits.map((benefit, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <Check className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
-                              <span className="body-text text-sm">{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      {tier.limitations.length > 0 && (
-                        <div className="space-y-4 mb-6">
-                          <h4 className="font-semibold text-muted-foreground text-sm">Limitations:</h4>
-                          <ul className="space-y-2">
-                            {tier.limitations.map((limitation, idx) => (
-                              <li key={idx} className="flex items-start gap-2">
-                                <span className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5">•</span>
-                                <span className="body-text text-sm text-muted-foreground">{limitation}</span>
+                {membershipTiers.map((tier, index) => {
+                  const colorSchemes = [
+                    { 
+                      bg: 'from-blue-400/20 to-cyan-400/20', 
+                      border: 'border-blue-200/50', 
+                      icon: 'text-blue-600', 
+                      iconBg: 'bg-gradient-to-br from-blue-400/20 to-cyan-400/20',
+                      title: 'text-blue-700',
+                      price: 'text-blue-800',
+                      button: 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600',
+                      popular: 'bg-gradient-to-r from-blue-500 to-cyan-500'
+                    },
+                    { 
+                      bg: 'from-purple-400/20 to-violet-400/20', 
+                      border: 'border-purple-200/50', 
+                      icon: 'text-purple-600', 
+                      iconBg: 'bg-gradient-to-br from-purple-400/20 to-violet-400/20',
+                      title: 'text-purple-700',
+                      price: 'text-purple-800',
+                      button: 'bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600',
+                      popular: 'bg-gradient-to-r from-purple-500 to-violet-500'
+                    },
+                    { 
+                      bg: 'from-amber-400/20 to-yellow-400/20', 
+                      border: 'border-amber-200/50', 
+                      icon: 'text-amber-600', 
+                      iconBg: 'bg-gradient-to-br from-amber-400/20 to-yellow-400/20',
+                      title: 'text-amber-700',
+                      price: 'text-amber-800',
+                      button: 'bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600',
+                      popular: 'bg-gradient-to-r from-amber-500 to-yellow-500'
+                    }
+                  ];
+                  const colors = colorSchemes[index];
+                  
+                  return (
+                    <Card 
+                      key={index} 
+                      className={`relative h-full content-box-enhanced animate-card-hover animate-staggered-fade-in stagger-${index + 1} ${colors.border} bg-gradient-to-br from-white/95 to-white/85 backdrop-blur-lg shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105`}
+                    >
+                      <CardHeader className="text-center pb-6 p-8">
+                        <div className={`w-20 h-20 mx-auto mb-6 ${colors.iconBg} rounded-3xl flex items-center justify-center shadow-lg transform hover:scale-110 hover:rotate-3 transition-all duration-300`}>
+                          {React.cloneElement(tier.icon as React.ReactElement, {
+                            className: `w-10 h-10 ${colors.icon}`
+                          })}
+                        </div>
+                        <CardTitle className={`text-2xl font-bold ${colors.title} mb-3`}>{tier.name}</CardTitle>
+                        <div className={`text-3xl md:text-4xl font-bold ${colors.price} mb-4`}>{tier.price}</div>
+                        <p className="text-slate-600 leading-relaxed font-light">{tier.description}</p>
+                      </CardHeader>
+                      <CardContent className="px-8 pb-8">
+                        <div className="space-y-6 mb-8">
+                          <h4 className={`font-bold ${colors.title} text-lg`}>What's Included:</h4>
+                          <ul className="space-y-3">
+                            {tier.benefits.map((benefit, idx) => (
+                              <li key={idx} className="flex items-start gap-3">
+                                <div className="w-5 h-5 bg-gradient-to-br from-emerald-400/20 to-green-400/20 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                                  <Check className="w-3 h-3 text-emerald-600" />
+                                </div>
+                                <span className="text-slate-700 text-sm leading-relaxed font-light">{benefit}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
-                      )}
-                      
-                      <Button 
-                        className={`w-full ${tier.buttonColor} text-white`}
-                        size="lg"
-                      >
-                        {tier.price === "Free" ? "Join Now" : "Apply Now"}
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
+                        
+                        {tier.limitations.length > 0 && (
+                          <div className="space-y-4 mb-8">
+                            <h4 className="font-semibold text-slate-500 text-sm">Limitations:</h4>
+                            <ul className="space-y-2">
+                              {tier.limitations.map((limitation, idx) => (
+                                <li key={idx} className="flex items-start gap-3">
+                                  <span className="w-2 h-2 bg-slate-300 rounded-full shrink-0 mt-2"></span>
+                                  <span className="text-slate-500 text-sm leading-relaxed font-light">{limitation}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        
+                        <Button 
+                          className={`w-full ${colors.button} text-white shadow-lg hover:shadow-xl transition-all duration-300 font-medium`}
+                          size="lg"
+                        >
+                          {tier.price === "Free" ? "Join Now" : "Apply Now"}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
             </div>
           </div>
         </section>
 
         {/* Application Process */}
-        <section className="py-12 lg:py-16 bg-gradient-to-r from-background/50 to-background/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="section-heading text-center mb-12">How to Apply</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {applicationSteps.map((step, index) => (
-                  <Card 
-                    key={index} 
-                    className={`content-box-enhanced text-center h-full animate-card-hover animate-staggered-fade-in stagger-${index + 1}`}
-                  >
-                    <CardContent className="p-6">
-                      <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
-                        {step.step}
-                      </div>
-                      <h3 className="text-lg font-semibold text-primary mb-3">{step.title}</h3>
-                      <p className="body-text text-sm">{step.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-br from-green-300/20 to-emerald-300/20 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-10 right-10 w-72 h-72 bg-gradient-to-br from-teal-300/15 to-cyan-300/15 rounded-full blur-2xl animate-pulse-slow"></div>
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-light text-center mb-12 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">How to Apply</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                {applicationSteps.map((step, index) => {
+                  const colors = [
+                    { bg: 'from-green-400/20 to-emerald-400/20', icon: 'text-green-600', number: 'bg-gradient-to-r from-green-500 to-emerald-500', border: 'border-green-200/50' },
+                    { bg: 'from-emerald-400/20 to-teal-400/20', icon: 'text-emerald-600', number: 'bg-gradient-to-r from-emerald-500 to-teal-500', border: 'border-emerald-200/50' },
+                    { bg: 'from-teal-400/20 to-cyan-400/20', icon: 'text-teal-600', number: 'bg-gradient-to-r from-teal-500 to-cyan-500', border: 'border-teal-200/50' },
+                    { bg: 'from-cyan-400/20 to-blue-400/20', icon: 'text-cyan-600', number: 'bg-gradient-to-r from-cyan-500 to-blue-500', border: 'border-cyan-200/50' }
+                  ];
+                  const color = colors[index];
+                  
+                  return (
+                    <Card 
+                      key={index} 
+                      className={`content-box-enhanced text-center h-full animate-card-hover animate-staggered-fade-in stagger-${index + 1} ${color.border} bg-gradient-to-br from-white/95 to-white/85 backdrop-blur-lg shadow-xl hover:shadow-2xl transition-all duration-500`}
+                    >
+                      <CardContent className="p-6">
+                        <div className={`w-16 h-16 ${color.number} text-white rounded-2xl flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg transform hover:scale-110 hover:rotate-3 transition-all duration-300`}>
+                          {step.step}
+                        </div>
+                        <h3 className={`text-lg font-bold ${color.icon} mb-4`}>{step.title}</h3>
+                        <p className="text-slate-600 text-sm leading-relaxed font-light">{step.description}</p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
-              <div className="text-center mt-8">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <div className="text-center">
+                <Button size="lg" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-medium px-8">
                   Start Your Application
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
             </div>
@@ -312,9 +408,9 @@ const Membership = () => {
         {/* FAQ Section */}
         <section className="py-12 lg:py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="section-heading text-center mb-12">Frequently Asked Questions</h2>
-              <div className="space-y-6">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-light text-center mb-12 bg-gradient-to-r from-slate-600 via-gray-600 to-slate-600 bg-clip-text text-transparent">Frequently Asked Questions</h2>
+              <div className="grid md:grid-cols-2 gap-6">
                 {[
                   {
                     question: "Who can become a member of the India DeFi Alliance?",
@@ -332,18 +428,28 @@ const Membership = () => {
                     question: "Can I upgrade my membership tier later?",
                     answer: "Yes, you can upgrade your membership tier at any time. The price difference will be prorated based on your remaining membership period, and you'll gain immediate access to the enhanced benefits of your new tier.",
                   },
-                ].map((faq, index) => (
-                  <Card 
-                    key={index} 
-                    className="content-box-enhanced animate-card-hover animate-staggered-fade-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-semibold text-primary mb-3">{faq.question}</h3>
-                      <p className="body-text">{faq.answer}</p>
-                    </CardContent>
-                  </Card>
-                ))}
+                ].map((faq, index) => {
+                  const colors = [
+                    { border: 'border-indigo-200/50', title: 'text-indigo-700' },
+                    { border: 'border-purple-200/50', title: 'text-purple-700' },
+                    { border: 'border-pink-200/50', title: 'text-pink-700' },
+                    { border: 'border-rose-200/50', title: 'text-rose-700' }
+                  ];
+                  const color = colors[index % colors.length];
+                  
+                  return (
+                    <Card 
+                      key={index} 
+                      className={`content-box-enhanced animate-card-hover animate-staggered-fade-in ${color.border} bg-gradient-to-br from-white/95 to-white/85 backdrop-blur-lg shadow-xl hover:shadow-2xl transition-all duration-500`}
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <CardContent className="p-8">
+                        <h3 className={`text-lg font-bold ${color.title} mb-4 leading-tight`}>{faq.question}</h3>
+                        <p className="text-slate-600 leading-relaxed font-light">{faq.answer}</p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
             </div>
           </div>
