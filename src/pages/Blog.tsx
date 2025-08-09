@@ -149,38 +149,38 @@ const Blog = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-slate-800 via-gray-900 to-zinc-900">
-          {/* Newspaper Grid Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0" 
-                 style={{
-                   backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Crect x='0' y='0' width='30' height='2'/%3E%3Crect x='0' y='10' width='25' height='2'/%3E%3Crect x='0' y='20' width='20' height='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                 }}
-            ></div>
+        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-teal-600 via-cyan-700 to-blue-800">
+          {/* Dynamic Background Elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-cyan-400/20 to-teal-400/20 rounded-full blur-3xl animate-morph-slow"></div>
+            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-blue-400/15 to-indigo-400/15 rounded-full blur-2xl animate-float"></div>
+            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-teal-300/25 to-cyan-300/25 rounded-full blur-xl animate-pulse-slow"></div>
           </div>
 
-          {/* Floating News Elements */}
-          <div className="absolute inset-0 opacity-15">
-            <div className="absolute top-16 left-16 animate-float">
-              <Newspaper className="w-8 h-8 text-slate-300" />
+          {/* Floating Blog Elements */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-20 left-20 animate-float">
+              <Newspaper className="w-12 h-12 text-cyan-300 drop-shadow-lg" />
             </div>
-            <div className="absolute top-24 right-20 text-gray-300 font-bold text-lg animate-float" style={{ animationDelay: '1s' }}>📰</div>
-            <div className="absolute bottom-24 left-1/4 animate-float" style={{ animationDelay: '3s' }}>
-              <User className="w-6 h-6 text-zinc-300" />
+            <div className="absolute top-32 right-24 animate-float" style={{ animationDelay: '2s' }}>
+              <User className="w-10 h-10 text-teal-300 drop-shadow-lg" />
             </div>
-            <div className="absolute bottom-16 right-1/3 text-slate-400 font-mono text-sm animate-float" style={{ animationDelay: '2s' }}>
-              Breaking...
+            <div className="absolute bottom-28 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
+              <Calendar className="w-11 h-11 text-blue-300 drop-shadow-lg" />
             </div>
-            <div className="absolute top-1/3 right-16 animate-float" style={{ animationDelay: '4s' }}>
-              <Calendar className="w-7 h-7 text-gray-400" />
+            <div className="absolute bottom-20 right-1/3 animate-float" style={{ animationDelay: '1s' }}>
+              <Clock className="w-9 h-9 text-cyan-300 drop-shadow-lg" />
+            </div>
+            <div className="absolute top-1/2 right-20 animate-float" style={{ animationDelay: '3s' }}>
+              <ExternalLink className="w-8 h-8 text-teal-300 drop-shadow-lg" />
             </div>
           </div>
 
-          {/* Content Stream Lines */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent animate-pulse"></div>
-            <div className="absolute top-2/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent animate-pulse" style={{ animationDelay: '2s' }}></div>
+          {/* Glowing Orbs */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/3 w-4 h-4 bg-cyan-400 rounded-full animate-glow-pulse shadow-lg shadow-cyan-400/50"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-teal-400 rounded-full animate-glow-pulse shadow-lg shadow-teal-400/50" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-blue-400 rounded-full animate-glow-pulse shadow-lg shadow-blue-400/50" style={{ animationDelay: '2s' }}></div>
           </div>
 
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,7 +193,7 @@ const Blog = () => {
                   <div className="w-2 h-2 bg-zinc-400 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
                   <div className="w-2 h-2 bg-slate-400 rounded-full animate-pulse" style={{ animationDelay: '0.9s' }}></div>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-text-glow">
+                <h1 className="text-4xl md:text-6xl font-light bg-gradient-to-r from-teal-300 via-cyan-300 to-blue-300 bg-clip-text text-transparent mb-8 animate-gradient-x leading-relaxed py-2">
                   Blog & News
                 </h1>
               </div>
@@ -233,37 +233,44 @@ const Blog = () => {
                 {/* Blog Posts Tab */}
                 <TabsContent value="blog">
                   {/* Featured Post */}
-                  <div className="mb-12">
-                    <Card className="content-box-enhanced animate-pulse-glow overflow-hidden">
+                  <div className="mb-12 relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 via-purple-50 to-pink-100 rounded-3xl transform -rotate-1"></div>
+                    <Card className="content-box-enhanced animate-pulse-glow overflow-hidden relative z-10 bg-gradient-to-br from-white/95 to-white/85 backdrop-blur-lg shadow-2xl border border-indigo-200/30">
                       <div className="md:flex">
                         <div className="md:w-1/3">
-                          <div className="h-64 bg-muted flex items-center justify-center">
-                            <Newspaper className="w-16 h-16 text-muted-foreground" />
+                          <div className="h-64 bg-gradient-to-br from-indigo-400/20 to-purple-400/20 flex items-center justify-center relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/10 to-blue-300/10 animate-pulse"></div>
+                            <Newspaper className="w-16 h-16 text-indigo-600 relative z-10 drop-shadow-lg" />
                           </div>
                         </div>
                         <div className="md:w-2/3 p-8">
-                          <Badge className={`mb-3 ${getCategoryColor(blogPosts[0].category)}`}>
-                            Featured
-                          </Badge>
-                          <h2 className="text-2xl font-bold text-primary mb-4">{blogPosts[0].title}</h2>
-                          <p className="body-text mb-4">{blogPosts[0].excerpt}</p>
+                          <div className="flex items-center gap-2 mb-4">
+                            <Badge className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium px-3 py-1">
+                              ✨ Featured Article
+                            </Badge>
+                            <Badge className={`${getCategoryColor(blogPosts[0].category)} font-medium`}>
+                              {blogPosts[0].category}
+                            </Badge>
+                          </div>
+                          <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 bg-clip-text text-transparent mb-4 leading-tight">{blogPosts[0].title}</h2>
+                          <p className="text-slate-600 mb-6 leading-relaxed font-light">{blogPosts[0].excerpt}</p>
                           <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-4 text-sm text-slate-500">
                               <div className="flex items-center gap-1">
-                                <User className="w-4 h-4" />
-                                {blogPosts[0].author}
+                                <User className="w-4 h-4 text-indigo-500" />
+                                <span className="font-medium">{blogPosts[0].author}</span>
                               </div>
                               <div className="flex items-center gap-1">
-                                <Calendar className="w-4 h-4" />
+                                <Calendar className="w-4 h-4 text-purple-500" />
                                 {blogPosts[0].date}
                               </div>
                               <div className="flex items-center gap-1">
-                                <Clock className="w-4 h-4" />
+                                <Clock className="w-4 h-4 text-pink-500" />
                                 {blogPosts[0].readTime}
                               </div>
                             </div>
-                            <Button variant="outline">
-                              Read More <ArrowRight className="w-4 h-4 ml-2" />
+                            <Button className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                              Read Article <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
                           </div>
                         </div>
@@ -272,82 +279,122 @@ const Blog = () => {
                   </div>
 
                   {/* Blog Grid */}
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {blogPosts.slice(1).map((post, index) => (
-                      <Card 
-                        key={index} 
-                        className={`content-box-enhanced h-full cursor-pointer animate-card-hover animate-staggered-fade-in stagger-${(index % 6) + 1}`}
-                      >
-                        <CardHeader className="p-0">
-                          <div className="h-48 bg-muted rounded-t-lg flex items-center justify-center">
-                            <Newspaper className="w-12 h-12 text-muted-foreground" />
-                          </div>
-                        </CardHeader>
-                        <CardContent className="p-6">
-                          <Badge className={`mb-3 text-xs ${getCategoryColor(post.category)}`}>
-                            {post.category}
-                          </Badge>
-                          <CardTitle className="text-lg mb-3 leading-tight">{post.title}</CardTitle>
-                          <p className="body-text text-sm mb-4 line-clamp-3">{post.excerpt}</p>
-                          <div className="flex items-center justify-between text-xs text-muted-foreground mb-4">
-                            <span>{post.author}</span>
-                            <span>{post.date}</span>
-                          </div>
-                          <div className="flex flex-wrap gap-1 mb-4">
-                            {post.tags.map((tag, idx) => (
-                              <Badge key={idx} variant="outline" className="text-xs">
-                                {tag}
+                  <div className="relative py-8">
+                    <div className="absolute inset-0">
+                      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-300/10 to-teal-300/10 rounded-full blur-3xl animate-float"></div>
+                      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-blue-300/8 to-indigo-300/8 rounded-full blur-2xl animate-pulse-slow"></div>
+                    </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+                      {blogPosts.slice(1).map((post, index) => {
+                        const colors = [
+                          { bg: 'from-rose-400/15 to-pink-400/15', header: 'from-rose-400/25 to-pink-400/25', icon: 'text-rose-600', title: 'text-rose-700', border: 'border-rose-200/50', badge: 'bg-rose-100 text-rose-700' },
+                          { bg: 'from-emerald-400/15 to-green-400/15', header: 'from-emerald-400/25 to-green-400/25', icon: 'text-emerald-600', title: 'text-emerald-700', border: 'border-emerald-200/50', badge: 'bg-emerald-100 text-emerald-700' },
+                          { bg: 'from-blue-400/15 to-cyan-400/15', header: 'from-blue-400/25 to-cyan-400/25', icon: 'text-blue-600', title: 'text-blue-700', border: 'border-blue-200/50', badge: 'bg-blue-100 text-blue-700' },
+                          { bg: 'from-amber-400/15 to-yellow-400/15', header: 'from-amber-400/25 to-yellow-400/25', icon: 'text-amber-600', title: 'text-amber-700', border: 'border-amber-200/50', badge: 'bg-amber-100 text-amber-700' },
+                          { bg: 'from-purple-400/15 to-violet-400/15', header: 'from-purple-400/25 to-violet-400/25', icon: 'text-purple-600', title: 'text-purple-700', border: 'border-purple-200/50', badge: 'bg-purple-100 text-purple-700' },
+                          { bg: 'from-teal-400/15 to-cyan-400/15', header: 'from-teal-400/25 to-cyan-400/25', icon: 'text-teal-600', title: 'text-teal-700', border: 'border-teal-200/50', badge: 'bg-teal-100 text-teal-700' }
+                        ];
+                        const color = colors[index % colors.length];
+                        
+                        return (
+                          <Card 
+                            key={index} 
+                            className={`content-box-enhanced h-full cursor-pointer animate-card-hover animate-staggered-fade-in stagger-${(index % 6) + 1} ${color.border} bg-gradient-to-br from-white/95 to-white/85 backdrop-blur-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105`}
+                          >
+                            <CardHeader className="p-0">
+                              <div className={`h-48 bg-gradient-to-br ${color.header} rounded-t-lg flex items-center justify-center relative overflow-hidden`}>
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent animate-pulse"></div>
+                                <Newspaper className={`w-12 h-12 ${color.icon} relative z-10 drop-shadow-lg`} />
+                              </div>
+                            </CardHeader>
+                            <CardContent className="p-6">
+                              <Badge className={`mb-3 text-xs font-medium ${color.badge} border-none`}>
+                                {post.category}
                               </Badge>
-                            ))}
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-xs text-muted-foreground">{post.readTime}</span>
-                            <Button variant="ghost" size="sm">
-                              Read More
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
+                              <CardTitle className={`text-lg mb-3 leading-tight font-bold ${color.title}`}>{post.title}</CardTitle>
+                              <p className="text-slate-600 text-sm mb-4 leading-relaxed font-light line-clamp-3">{post.excerpt}</p>
+                              <div className="flex items-center justify-between text-xs text-slate-500 mb-4">
+                                <span className="font-medium">{post.author}</span>
+                                <span>{post.date}</span>
+                              </div>
+                              <div className="flex flex-wrap gap-1 mb-4">
+                                {post.tags.map((tag, idx) => (
+                                  <Badge key={idx} variant="outline" className={`text-xs ${color.border.replace('border-', 'border-')} text-slate-600 hover:${color.bg.replace('from-', 'bg-').replace('/15', '/20').split(' ')[0]}`}>
+                                    {tag}
+                                  </Badge>
+                                ))}
+                              </div>
+                              <div className="flex items-center justify-between">
+                                <span className="text-xs text-slate-500 flex items-center gap-1">
+                                  <Clock className="w-3 h-3" />
+                                  {post.readTime}
+                                </span>
+                                <Button variant="ghost" size="sm" className={`${color.title} hover:${color.bg.replace('from-', 'bg-').replace('/15', '/20').split(' ')[0]} transition-all duration-300`}>
+                                  Read More
+                                </Button>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        );
+                      })}
+                    </div>
                   </div>
                 </TabsContent>
 
                 {/* Press & News Tab */}
                 <TabsContent value="press">
-                  <div className="space-y-6">
-                    {pressItems.map((item, index) => (
-                      <Card 
-                        key={index} 
-                        className="content-box-enhanced cursor-pointer animate-card-hover animate-staggered-fade-in"
-                        style={{ animationDelay: `${index * 0.1}s` }}
-                      >
-                        <CardContent className="p-6">
-                          <div className="flex gap-6">
-                            <div className="w-20 h-20 bg-muted rounded-lg flex items-center justify-center shrink-0">
-                              <Newspaper className="w-8 h-8 text-muted-foreground" />
-                            </div>
-                            <div className="flex-1">
-                              <div className="flex items-center gap-3 mb-3">
-                                <Badge className={`text-xs ${getTypeColor(item.type)}`}>
-                                  {item.type}
-                                </Badge>
-                                <span className="text-sm font-medium text-primary">{item.outlet}</span>
-                                <span className="text-xs text-muted-foreground">•</span>
-                                <span className="text-xs text-muted-foreground">{item.date}</span>
+                  <div className="relative">
+                    <div className="absolute inset-0">
+                      <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-emerald-300/10 to-teal-300/10 rounded-full blur-3xl animate-spin-slow"></div>
+                      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-300/8 to-cyan-300/8 rounded-full blur-2xl animate-float"></div>
+                    </div>
+                    <div className="space-y-6 relative z-10">
+                      {pressItems.map((item, index) => {
+                        const colors = [
+                          { bg: 'from-sky-400/15 to-cyan-400/15', thumbnail: 'from-sky-400/25 to-cyan-400/25', icon: 'text-sky-600', text: 'text-sky-700', border: 'border-sky-200/50', badge: 'bg-sky-100 text-sky-700' },
+                          { bg: 'from-green-400/15 to-emerald-400/15', thumbnail: 'from-green-400/25 to-emerald-400/25', icon: 'text-green-600', text: 'text-green-700', border: 'border-green-200/50', badge: 'bg-green-100 text-green-700' },
+                          { bg: 'from-violet-400/15 to-purple-400/15', thumbnail: 'from-violet-400/25 to-purple-400/25', icon: 'text-violet-600', text: 'text-violet-700', border: 'border-violet-200/50', badge: 'bg-violet-100 text-violet-700' },
+                          { bg: 'from-orange-400/15 to-red-400/15', thumbnail: 'from-orange-400/25 to-red-400/25', icon: 'text-orange-600', text: 'text-orange-700', border: 'border-orange-200/50', badge: 'bg-orange-100 text-orange-700' },
+                          { bg: 'from-indigo-400/15 to-blue-400/15', thumbnail: 'from-indigo-400/25 to-blue-400/25', icon: 'text-indigo-600', text: 'text-indigo-700', border: 'border-indigo-200/50', badge: 'bg-indigo-100 text-indigo-700' },
+                          { bg: 'from-pink-400/15 to-rose-400/15', thumbnail: 'from-pink-400/25 to-rose-400/25', icon: 'text-pink-600', text: 'text-pink-700', border: 'border-pink-200/50', badge: 'bg-pink-100 text-pink-700' }
+                        ];
+                        const color = colors[index % colors.length];
+                        
+                        return (
+                          <Card 
+                            key={index} 
+                            className={`content-box-enhanced cursor-pointer animate-card-hover animate-staggered-fade-in ${color.border} bg-gradient-to-r from-white/95 to-white/90 backdrop-blur-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]`}
+                            style={{ animationDelay: `${index * 0.1}s` }}
+                          >
+                            <CardContent className="p-8">
+                              <div className="flex gap-6">
+                                <div className={`w-24 h-24 bg-gradient-to-br ${color.thumbnail} rounded-2xl flex items-center justify-center shrink-0 shadow-lg transform hover:scale-110 hover:rotate-3 transition-all duration-300`}>
+                                  <Newspaper className={`w-10 h-10 ${color.icon} drop-shadow-lg`} />
+                                </div>
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-3 mb-4">
+                                    <Badge className={`text-xs font-medium ${color.badge} border-none px-3 py-1`}>
+                                      {item.type}
+                                    </Badge>
+                                    <span className={`text-sm font-bold ${color.text}`}>{item.outlet}</span>
+                                    <span className="text-xs text-slate-400">•</span>
+                                    <span className="text-xs text-slate-500 font-medium">{item.date}</span>
+                                  </div>
+                                  <h3 className={`text-xl font-bold ${color.text} mb-4 leading-tight hover:underline cursor-pointer transition-all duration-300`}>
+                                    {item.headline}
+                                  </h3>
+                                  <p className="text-slate-600 mb-6 leading-relaxed font-light">{item.summary}</p>
+                                  <Button variant="ghost" size="sm" className={`${color.text} hover:${color.bg.replace('from-', 'bg-').replace('/15', '/20').split(' ')[0]} transition-all duration-300 font-medium`}>
+                                    <ExternalLink className="w-4 h-4 mr-2" />
+                                    Read Full Article
+                                  </Button>
+                                </div>
                               </div>
-                              <h3 className="text-lg font-semibold text-primary mb-3 leading-tight">
-                                {item.headline}
-                              </h3>
-                              <p className="body-text text-sm mb-4">{item.summary}</p>
-                              <Button variant="ghost" size="sm">
-                                <ExternalLink className="w-4 h-4 mr-2" />
-                                Read Full Article
-                              </Button>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
+                            </CardContent>
+                          </Card>
+                        );
+                      })}
+                    </div>
                   </div>
                 </TabsContent>
               </Tabs>

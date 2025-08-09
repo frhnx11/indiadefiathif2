@@ -99,33 +99,38 @@ const Resources = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-emerald-800 via-teal-900 to-cyan-900">
-          {/* Tech Grid Background */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0" 
-                 style={{
-                   backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M20 20h20v20H20V20zm-20 0h20v20H0V20z'/%3E%3C/g%3E%3C/svg%3E")`,
-                 }}
-            ></div>
+        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-amber-600 via-orange-700 to-red-800">
+          {/* Dynamic Background Elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl animate-morph-slow"></div>
+            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-red-400/15 to-pink-400/15 rounded-full blur-2xl animate-float"></div>
+            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-orange-300/25 to-amber-300/25 rounded-full blur-xl animate-pulse-slow"></div>
           </div>
 
-          {/* Floating Code Elements */}
-          <div className="absolute inset-0 opacity-15">
-            <div className="absolute top-16 left-16 text-emerald-300 font-mono text-lg animate-float">&lt;/&gt;</div>
-            <div className="absolute top-24 right-20 text-teal-300 font-mono text-xl animate-float" style={{ animationDelay: '1s' }}>{ }</div>
-            <div className="absolute bottom-24 left-1/4 text-cyan-300 font-mono text-lg animate-float" style={{ animationDelay: '3s' }}>[ ]</div>
-            <div className="absolute bottom-16 right-1/3 text-emerald-400 font-mono text-2xl animate-float" style={{ animationDelay: '2s' }}>📚</div>
-            <div className="absolute top-1/3 right-16 text-teal-400 font-mono text-lg animate-float" style={{ animationDelay: '4s' }}>🔬</div>
+          {/* Floating Educational Icons */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-20 left-20 animate-float">
+              <BookOpen className="w-12 h-12 text-yellow-300 drop-shadow-lg" />
+            </div>
+            <div className="absolute top-32 right-24 animate-float" style={{ animationDelay: '2s' }}>
+              <Play className="w-10 h-10 text-orange-300 drop-shadow-lg" />
+            </div>
+            <div className="absolute bottom-28 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
+              <Beaker className="w-11 h-11 text-red-300 drop-shadow-lg" />
+            </div>
+            <div className="absolute bottom-20 right-1/3 animate-float" style={{ animationDelay: '1s' }}>
+              <GraduationCap className="w-10 h-10 text-yellow-300 drop-shadow-lg" />
+            </div>
+            <div className="absolute top-1/2 right-20 animate-float" style={{ animationDelay: '3s' }}>
+              <Search className="w-9 h-9 text-orange-300 drop-shadow-lg" />
+            </div>
           </div>
 
-          {/* Binary Rain Effect */}
-          <div className="absolute inset-0 opacity-5 overflow-hidden">
-            <div className="absolute top-0 left-1/4 text-emerald-300 font-mono text-xs animate-bounce" style={{ animationDelay: '0.5s' }}>
-              1010<br/>0101<br/>1100<br/>0011
-            </div>
-            <div className="absolute top-0 right-1/4 text-teal-300 font-mono text-xs animate-bounce" style={{ animationDelay: '1.5s' }}>
-              1111<br/>0000<br/>1010<br/>0101
-            </div>
+          {/* Glowing Orbs */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/3 w-4 h-4 bg-yellow-400 rounded-full animate-glow-pulse shadow-lg shadow-yellow-400/50"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-orange-400 rounded-full animate-glow-pulse shadow-lg shadow-orange-400/50" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-red-400 rounded-full animate-glow-pulse shadow-lg shadow-red-400/50" style={{ animationDelay: '2s' }}></div>
           </div>
 
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,12 +141,12 @@ const Resources = () => {
                   <span className="text-emerald-200 text-sm uppercase tracking-wider font-medium">Knowledge Hub</span>
                   <Search className="w-6 h-6 text-teal-400 animate-pulse" style={{ animationDelay: '0.5s' }} />
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-text-glow">
-                  Resources & Research
+                <h1 className="text-4xl md:text-6xl font-light bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 bg-clip-text text-transparent mb-8 animate-gradient-x leading-relaxed py-2">
+                  Knowledge Center
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl text-teal-100 max-w-3xl mx-auto mb-8 animate-staggered-fade-in stagger-2">
-                Access comprehensive educational materials, cutting-edge research, and practical tools to deepen your understanding of decentralized finance.
+              <p className="text-xl md:text-2xl text-orange-100 max-w-2xl mx-auto mb-8 animate-staggered-fade-in stagger-2 font-light">
+                Learn • Research • Innovate
               </p>
               
               {/* Resource Categories */}
@@ -176,39 +181,56 @@ const Resources = () => {
                 {/* Education & Resources Tab */}
                 <TabsContent value="education" className="space-y-12">
                   {/* Core Educational Resources */}
-                  <div>
-                    <h2 className="section-heading text-center mb-8">Core Educational Resources</h2>
-                    <div className="grid lg:grid-cols-3 gap-8">
-                      {educationResources.map((resource, index) => (
-                        <Card 
-                          key={index} 
-                          className={`content-box-enhanced h-full animate-card-hover animate-staggered-fade-in stagger-${index + 1}`}
-                        >
-                          <CardHeader className="text-center pb-4">
-                            <div className={`w-16 h-16 ${resource.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                              {resource.icon}
-                            </div>
-                            <Badge variant="secondary" className="mb-3">{resource.type}</Badge>
-                            <CardTitle className="text-xl">{resource.title}</CardTitle>
-                          </CardHeader>
-                          <CardContent>
-                            <p className="body-text mb-6">{resource.description}</p>
-                            <div className="space-y-3 mb-6">
-                              <h4 className="font-semibold text-primary text-sm">Key Modules:</h4>
-                              <div className="flex flex-wrap gap-2">
-                                {resource.modules.map((module, idx) => (
-                                  <Badge key={idx} variant="outline" className="text-xs">
-                                    {module}
-                                  </Badge>
-                                ))}
-                              </div>
-                            </div>
-                            <Button variant="outline" className="w-full">
-                              Access Resource
-                            </Button>
-                          </CardContent>
-                        </Card>
-                      ))}
+                  <div className="relative py-12 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl overflow-hidden">
+                    <div className="absolute inset-0">
+                      <div className="absolute top-10 right-10 w-72 h-72 bg-gradient-to-br from-blue-300/20 to-indigo-300/20 rounded-full blur-3xl animate-float"></div>
+                      <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-to-br from-purple-300/15 to-pink-300/15 rounded-full blur-2xl animate-pulse-slow"></div>
+                    </div>
+                    <div className="relative z-10 container mx-auto px-8">
+                      <h2 className="text-3xl md:text-4xl font-light text-center mb-12 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Essential Resources</h2>
+                      <div className="grid lg:grid-cols-3 gap-8">
+                        {educationResources.map((resource, index) => {
+                          const colors = [
+                            { bg: 'from-blue-400/20 to-indigo-400/20', icon: 'text-blue-600', border: 'border-blue-200/50', shadow: 'hover:shadow-blue-200/25' },
+                            { bg: 'from-emerald-400/20 to-green-400/20', icon: 'text-emerald-600', border: 'border-emerald-200/50', shadow: 'hover:shadow-emerald-200/25' },
+                            { bg: 'from-purple-400/20 to-violet-400/20', icon: 'text-purple-600', border: 'border-purple-200/50', shadow: 'hover:shadow-purple-200/25' }
+                          ];
+                          const color = colors[index % colors.length];
+                          
+                          return (
+                            <Card 
+                              key={index} 
+                              className={`content-box-enhanced h-full animate-card-hover animate-staggered-fade-in stagger-${index + 1} ${color.border} ${color.shadow} bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-lg shadow-xl transition-all duration-500`}
+                            >
+                              <CardHeader className="text-center pb-4">
+                                <div className={`w-20 h-20 bg-gradient-to-br ${color.bg} rounded-3xl flex items-center justify-center mx-auto mb-4 transform hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg`}>
+                                  {React.cloneElement(resource.icon as React.ReactElement, {
+                                    className: `w-10 h-10 ${color.icon}`
+                                  })}
+                                </div>
+                                <Badge variant="secondary" className="mb-3 font-medium">{resource.type}</Badge>
+                                <CardTitle className="text-xl font-bold text-slate-700">{resource.title}</CardTitle>
+                              </CardHeader>
+                              <CardContent>
+                                <p className="text-slate-600 mb-6 leading-relaxed">{resource.description}</p>
+                                <div className="space-y-3 mb-6">
+                                  <h4 className="font-semibold text-slate-700 text-sm">Modules:</h4>
+                                  <div className="flex flex-wrap gap-2">
+                                    {resource.modules.map((module, idx) => (
+                                      <Badge key={idx} variant="outline" className={`text-xs ${color.border.replace('border-', 'border-')} ${color.icon.replace('text-', 'text-')}`}>
+                                        {module}
+                                      </Badge>
+                                    ))}
+                                  </div>
+                                </div>
+                                <Button variant="outline" className={`w-full ${color.border.replace('border-', 'border-')} hover:bg-gradient-to-r hover:${color.bg.split(' ')[0].replace('from-', 'from-').replace('/20', '/10')} hover:${color.bg.split(' ')[1].replace('to-', 'to-').replace('/20', '/10')} transition-all duration-300`}>
+                                  Explore Now
+                                </Button>
+                              </CardContent>
+                            </Card>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
 

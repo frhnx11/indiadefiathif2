@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -50,6 +51,38 @@ const FAQSection = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const faqItemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: [0.16, 1, 0.3, 1] as any
+      }
+    })
+  };
+
+  const contentVariants: Variants = {
+    closed: { 
+      height: 0, 
+      opacity: 0,
+      transition: {
+        duration: 0.3,
+        ease: [0.16, 1, 0.3, 1] as any
+      }
+    },
+    open: { 
+      height: 'auto',
+      opacity: 1,
+      transition: { 
+        duration: 0.3, 
+        ease: [0.16, 1, 0.3, 1] as any
+      }
+    }
+  };
+
   return (
     <section 
       ref={sectionRef}
@@ -74,51 +107,56 @@ const FAQSection = () => {
           </div>
 
           {/* FAQ Items */}
-          <div className="space-y-4">
+          <motion.div 
+            className="space-y-4"
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}
+          >
             {faqs.map((faq, index) => (
-              <div
+              <motion.div
                 key={index}
-                className={`transition-all duration-800 transform ${
-                  isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-8'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                custom={index}
+                variants={faqItemVariants}
+                className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300"
               >
-                <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full px-6 lg:px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset"
+                <motion.button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full px-6 lg:px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset flex items-center justify-between"
+                  whileHover={{ backgroundColor: 'rgba(0, 0, 0, 0.02)' }}
+                  whileTap={{ backgroundColor: 'rgba(0, 0, 0, 0.04)' }}
+                >
+                  <h3 className="text-lg lg:text-xl font-semibold text-primary pr-4 text-left">
+                    {faq.question}
+                  </h3>
+                  <motion.div
+                    animate={openIndex === index ? { rotate: 180 } : { rotate: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex-shrink-0 ml-4"
                   >
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-lg lg:text-xl font-semibold text-primary pr-4">
-                        {faq.question}
-                      </h3>
-                      <div className="flex-shrink-0">
-                        {openIndex === index ? (
-                          <ChevronUp className="w-5 h-5 text-muted-foreground" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-muted-foreground" />
-                        )}
+                    <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                  </motion.div>
+                </motion.button>
+                
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial="closed"
+                      animate="open"
+                      exit="closed"
+                      variants={contentVariants}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 lg:px-8 pb-6 pt-0">
+                        <p className="text-muted-foreground leading-relaxed">
+                          {faq.answer}
+                        </p>
                       </div>
-                    </div>
-                  </button>
-                  
-                  <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                      openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                  >
-                    <div className="px-6 lg:px-8 pb-6">
-                      <p className="text-muted-foreground leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

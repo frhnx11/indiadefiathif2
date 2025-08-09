@@ -40,40 +40,69 @@ const Contact = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-green-800 via-emerald-900 to-teal-900">
+        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-700 to-pink-800">
+          {/* Dynamic Background Elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-morph-slow"></div>
+            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-pink-400/15 to-rose-400/15 rounded-full blur-2xl animate-float"></div>
+            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-violet-300/25 to-indigo-300/25 rounded-full blur-xl animate-pulse-slow"></div>
+          </div>
+
           {/* Communication Wave Pattern */}
-          <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 opacity-20">
             <svg className="w-full h-full" viewBox="0 0 1000 400">
-              <path d="M0,200 Q250,100 500,200 T1000,200" stroke="white" strokeWidth="2" fill="none" opacity="0.3" className="animate-pulse" />
-              <path d="M0,250 Q250,150 500,250 T1000,250" stroke="white" strokeWidth="2" fill="none" opacity="0.2" className="animate-pulse" style={{ animationDelay: '1s' }} />
-              <path d="M0,150 Q250,50 500,150 T1000,150" stroke="white" strokeWidth="2" fill="none" opacity="0.2" className="animate-pulse" style={{ animationDelay: '2s' }} />
+              <path d="M0,200 Q250,100 500,200 T1000,200" stroke="url(#waveGradient1)" strokeWidth="3" fill="none" opacity="0.6" className="animate-pulse" />
+              <path d="M0,250 Q250,150 500,250 T1000,250" stroke="url(#waveGradient2)" strokeWidth="3" fill="none" opacity="0.5" className="animate-pulse" style={{ animationDelay: '1s' }} />
+              <path d="M0,150 Q250,50 500,150 T1000,150" stroke="url(#waveGradient3)" strokeWidth="3" fill="none" opacity="0.4" className="animate-pulse" style={{ animationDelay: '2s' }} />
+              <defs>
+                <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{ stopColor: '#06b6d4', stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: '#8b5cf6', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#ec4899', stopOpacity: 1 }} />
+                </linearGradient>
+                <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{ stopColor: '#f59e0b', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#06b6d4', stopOpacity: 1 }} />
+                </linearGradient>
+                <linearGradient id="waveGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{ stopColor: '#ec4899', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#8b5cf6', stopOpacity: 1 }} />
+                </linearGradient>
+              </defs>
             </svg>
           </div>
 
           {/* Floating Contact Icons */}
-          <div className="absolute inset-0 opacity-15">
+          <div className="absolute inset-0 opacity-30">
             <div className="absolute top-20 left-20 animate-float">
-              <Mail className="w-8 h-8 text-green-300" />
+              <Mail className="w-10 h-10 text-cyan-300 drop-shadow-lg" />
             </div>
             <div className="absolute top-32 right-24 animate-float" style={{ animationDelay: '2s' }}>
-              <Phone className="w-8 h-8 text-emerald-300" />
+              <Phone className="w-10 h-10 text-emerald-300 drop-shadow-lg" />
             </div>
             <div className="absolute bottom-28 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
-              <MessageCircle className="w-10 h-10 text-teal-300" />
+              <MessageCircle className="w-12 h-12 text-pink-300 drop-shadow-lg" />
             </div>
             <div className="absolute bottom-20 right-1/3 animate-float" style={{ animationDelay: '1s' }}>
-              <MapPin className="w-8 h-8 text-green-400" />
+              <MapPin className="w-10 h-10 text-yellow-300 drop-shadow-lg" />
             </div>
             <div className="absolute top-1/2 right-20 animate-float" style={{ animationDelay: '3s' }}>
-              <Send className="w-7 h-7 text-emerald-400" />
+              <Send className="w-9 h-9 text-teal-300 drop-shadow-lg" />
             </div>
           </div>
 
           {/* Signal Ripples */}
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 opacity-10">
-            <div className="absolute inset-0 border-2 border-white rounded-full animate-ping"></div>
-            <div className="absolute inset-2 border-2 border-white rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute inset-4 border-2 border-white rounded-full animate-ping" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 opacity-20">
+            <div className="absolute inset-0 border-2 border-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-ping"></div>
+            <div className="absolute inset-2 border-2 border-gradient-to-r from-pink-400 to-rose-400 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute inset-4 border-2 border-gradient-to-r from-purple-400 to-violet-400 rounded-full animate-ping" style={{ animationDelay: '2s' }}></div>
+          </div>
+
+          {/* Glowing Orbs */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/3 left-1/3 w-4 h-4 bg-cyan-400 rounded-full animate-glow-pulse shadow-lg shadow-cyan-400/50"></div>
+            <div className="absolute bottom-1/4 right-1/3 w-6 h-6 bg-pink-400 rounded-full animate-glow-pulse shadow-lg shadow-pink-400/50" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-yellow-400 rounded-full animate-glow-pulse shadow-lg shadow-yellow-400/50" style={{ animationDelay: '2s' }}></div>
           </div>
 
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,11 +113,11 @@ const Contact = () => {
                   <span className="text-green-200 text-sm uppercase tracking-wider font-medium">Let's Connect</span>
                   <div className="w-3 h-3 bg-teal-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-text-glow">
+                <h1 className="text-4xl md:text-6xl font-light bg-gradient-to-r from-cyan-300 via-pink-300 to-yellow-300 bg-clip-text text-transparent mb-8 animate-gradient-x leading-relaxed py-2">
                   Get in Touch
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto mb-8 animate-staggered-fade-in stagger-2">
+              <p className="text-xl md:text-2xl text-purple-100 max-w-3xl mx-auto mb-8 animate-staggered-fade-in stagger-2">
                 Questions, partnership inquiries, or media requests? We'd love to hear from you. Let's work together to advance DeFi in India.
               </p>
               
@@ -116,28 +145,47 @@ const Contact = () => {
         </section>
 
         {/* Contact Methods */}
-        <section className="py-12 lg:py-16 bg-gradient-to-r from-background/30 to-background/50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-10 right-10 w-80 h-80 bg-gradient-to-br from-teal-300/20 to-cyan-300/20 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-10 left-10 w-72 h-72 bg-gradient-to-br from-blue-300/15 to-indigo-300/15 rounded-full blur-2xl animate-pulse-slow"></div>
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-3 gap-6 mb-12">
-                {contactMethods.map((method, index) => (
-                  <Card 
-                    key={index} 
-                    className={`content-box-enhanced text-center cursor-pointer animate-card-hover animate-staggered-fade-in stagger-${index + 1}`}
-                  >
-                    <CardContent className="p-6">
-                      <div className="w-12 h-12 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
-                        {method.icon}
-                      </div>
-                      <h3 className="text-lg font-semibold text-primary mb-2">{method.title}</h3>
-                      <p className="body-text text-sm mb-3">{method.description}</p>
-                      <p className="font-medium text-primary mb-4">{method.contact}</p>
-                      <Button variant="outline" size="sm">
-                        {method.action}
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
+                {contactMethods.map((method, index) => {
+                  const colors = [
+                    { bg: 'from-blue-400/20 to-cyan-400/20', icon: 'bg-blue-500', text: 'text-blue-700', border: 'border-blue-200/50', shadow: 'hover:shadow-blue-200/25' },
+                    { bg: 'from-emerald-400/20 to-green-400/20', icon: 'bg-emerald-500', text: 'text-emerald-700', border: 'border-emerald-200/50', shadow: 'hover:shadow-emerald-200/25' },
+                    { bg: 'from-purple-400/20 to-violet-400/20', icon: 'bg-purple-500', text: 'text-purple-700', border: 'border-purple-200/50', shadow: 'hover:shadow-purple-200/25' }
+                  ];
+                  const color = colors[index % colors.length];
+                  
+                  return (
+                    <Card 
+                      key={index} 
+                      className={`content-box-enhanced text-center cursor-pointer animate-card-hover animate-staggered-fade-in stagger-${index + 1} ${color.border} ${color.shadow} bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-lg shadow-xl transition-all duration-500 hover:scale-105`}
+                    >
+                      <CardContent className="p-8">
+                        <div className={`w-16 h-16 mx-auto mb-6 ${color.icon} rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 hover:rotate-3 transition-all duration-300`}>
+                          {React.cloneElement(method.icon as React.ReactElement, {
+                            className: 'w-8 h-8 text-white'
+                          })}
+                        </div>
+                        <h3 className={`text-lg font-bold ${color.text} mb-3`}>{method.title}</h3>
+                        <p className="body-text text-sm mb-4 text-slate-600">{method.description}</p>
+                        <p className={`font-semibold ${color.text} mb-6`}>{method.contact}</p>
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className={`${color.border.replace('border-', 'border-')} hover:bg-gradient-to-r hover:${color.bg.split(' ')[0].replace('from-', 'from-').replace('/20', '/10')} hover:${color.bg.split(' ')[1].replace('to-', 'to-').replace('/20', '/10')} transition-all duration-300`}
+                        >
+                          {method.action}
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
             </div>
           </div>
