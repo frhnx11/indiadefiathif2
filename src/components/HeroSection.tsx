@@ -61,7 +61,7 @@ const HeroSection = () => {
       ref={ref}
       initial="hidden"
       animate={controls}
-      className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-20 px-4 overflow-hidden"
+      className="relative min-h-screen w-full flex items-center justify-center bg-white py-20 px-4 overflow-hidden"
     >
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -73,17 +73,15 @@ const HeroSection = () => {
           transition={{ duration: 1.5 }}
           style={{
             background: `
-              radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.4) 0%, transparent 60%),
-              radial-gradient(circle at 80% 60%, rgba(99, 102, 241, 0.3) 0%, transparent 60%),
-              radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.2) 0%, transparent 60%),
-              linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.95) 100%)
+              radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 60%),
+              radial-gradient(circle at 80% 60%, rgba(139, 92, 246, 0.05) 0%, transparent 60%)
             `
           }}
         />
         
-        {/* Animated gradient elements */}
+        {/* Simplified DeFi network nodes */}
         <motion.div 
-          className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"
+          className="absolute top-10 left-10 w-96 h-96 bg-blue-100/10 rounded-full blur-3xl"
           animate={{
             y: [0, -30, 0],
             scale: [1, 1.05, 1]
@@ -97,7 +95,7 @@ const HeroSection = () => {
         />
         
         <motion.div 
-          className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-br from-indigo-400/15 to-purple-400/15 rounded-full blur-2xl"
+          className="absolute bottom-20 right-10 w-80 h-80 bg-purple-100/10 rounded-full blur-2xl"
           animate={{
             y: [0, 30, 0],
             scale: [1, 1.03, 1]
@@ -313,33 +311,19 @@ const HeroSection = () => {
           <div className="text-center relative">
             {/* Main title */}
             <div className="w-full mb-8">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight py-4 animate-slide-up-stagger text-center">
-                <span className="text-slate-800 drop-shadow-sm">Shaping the Future of </span>
-                <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent animate-gradient-x">DeFi </span>
-                <span className="block sm:inline">in <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-violet-600 bg-clip-text text-transparent animate-gradient-x">India</span></span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight py-4 animate-slide-up-stagger text-center">
+                <span className="text-slate-900">India DeFi Alliance</span>
               </h1>
             </div>
             
-            {/* Enhanced subtitle with better typography */}
+            {/* Subtitle */}
             <div className="relative mb-6">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-slate-700 max-w-4xl mx-auto leading-relaxed animate-slide-up-stagger" style={{ animationDelay: '0.8s' }}>
-                <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent font-medium">Innovation</span>
-                <span className="text-slate-500"> × </span>
-                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-medium">Policy</span>
-                <span className="text-slate-500"> × </span>
-                <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent font-medium">Finance</span>
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-normal text-slate-600 max-w-4xl mx-auto leading-relaxed animate-slide-up-stagger" style={{ animationDelay: '0.8s' }}>
+                Connecting Innovators, Policymakers, and Industry Leaders to drive open, inclusive finance
               </h2>
             </div>
             
-            {/* Enhanced description */}
-            <div className="relative max-w-3xl mx-auto mb-10">
-              <p className="text-base md:text-lg text-slate-600 leading-relaxed font-light animate-slide-up-stagger" style={{ animationDelay: '1.1s' }}>
-                Empowering India's financial future through decentralized technology.
-                <span className="block mt-3 text-sm text-slate-500">
-                  Join our alliance of innovators, policymakers, and financial leaders building the next generation of finance.
-                </span>
-              </p>
-            </div>
+            {/* Description removed as per requirements */}
             
             {/* Premium CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 mb-12 justify-center animate-slide-up-stagger" style={{ animationDelay: '1.4s' }}>
@@ -350,8 +334,8 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <span className="relative flex items-center gap-2 text-base font-medium">
-                  <Sparkles className="w-5 h-5 animate-spin-slow" />
-                  Read Our Vision
+                  Our Vision
+                  <ArrowRight className="w-4 h-4" />
                 </span>
               </Button>
               
@@ -359,6 +343,7 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg" 
                 className="group button-text border-2 border-slate-300 bg-white/70 backdrop-blur-sm text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:border-blue-400 hover:text-blue-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 px-8 py-4"
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
               >
                 <span className="flex items-center gap-2 text-base font-medium">
                   <TrendingUp className="w-5 h-5 group-hover:animate-bounce transition-transform duration-300" />
@@ -370,28 +355,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Premium Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-        <div className="relative group">
-          {/* Glow effect */}
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-400 to-indigo-500 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-          
-          {/* Main scroll indicator */}
-          <div className="relative w-10 h-16 border-2 border-slate-300/60 bg-white/20 backdrop-blur-sm rounded-full flex justify-center shadow-lg">
-            <div className="w-1.5 h-4 bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 rounded-full mt-3 animate-scroll-indicator shadow-sm"></div>
-          </div>
-          
-          {/* Arrow with enhanced styling */}
-          <div className="flex justify-center mt-3">
-            <div className="relative">
-              <ArrowDown className="w-5 h-5 text-slate-500 group-hover:text-blue-600 animate-bounce transition-colors duration-300 drop-shadow-sm" />
-            </div>
-          </div>
-          
-          {/* Hint text */}
-          <p className="text-xs text-slate-400 text-center mt-2 font-light tracking-wide">Scroll to explore</p>
-        </div>
-      </div>
     </motion.section>
   );
 };

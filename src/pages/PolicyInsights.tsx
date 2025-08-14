@@ -132,7 +132,7 @@ const PolicyInsights = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-red-600 via-pink-700 to-purple-800">
+        <section className="relative py-16 lg:py-20 bg-white border-b border-gray-200">
           {/* Dynamic Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-rose-400/20 to-red-400/20 rounded-full blur-3xl animate-morph-slow"></div>
@@ -199,29 +199,29 @@ const PolicyInsights = () => {
                 <div className="inline-flex items-center gap-3 mb-4">
                   <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse"></div>
                   <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
-                  <span className="text-rose-200 text-sm uppercase tracking-wider font-medium">Policy & Regulation</span>
+                  <span className="text-slate-600 text-sm uppercase tracking-wider font-medium">Policy & Regulation</span>
                   <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
                   <div className="w-2 h-2 bg-violet-400 rounded-full animate-pulse" style={{ animationDelay: '0.9s' }}></div>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-light bg-gradient-to-r from-rose-300 via-pink-300 to-purple-300 bg-clip-text text-transparent mb-8 animate-gradient-x leading-relaxed py-2">
+                <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
                   Policy Insights
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl text-pink-100 max-w-3xl mx-auto mb-8 animate-staggered-fade-in stagger-2 font-light">
+              <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
                 Navigate regulatory developments and industry insights shaping India's DeFi future
               </p>
               
               {/* Action Indicators */}
               <div className="flex flex-wrap justify-center gap-6 animate-staggered-fade-in stagger-3">
-                <div className="flex items-center gap-2 text-rose-200 bg-rose-900/30 px-4 py-2 rounded-full border border-rose-700/30">
+                <div className="flex items-center gap-2 text-rose-700 bg-rose-50 px-4 py-2 rounded-full border border-rose-200">
                   <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse"></div>
                   <span className="text-sm">Live Updates</span>
                 </div>
-                <div className="flex items-center gap-2 text-pink-200 bg-pink-900/30 px-4 py-2 rounded-full border border-pink-700/30">
+                <div className="flex items-center gap-2 text-pink-700 bg-pink-50 px-4 py-2 rounded-full border border-pink-200">
                   <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
                   <span className="text-sm">Expert Analysis</span>
                 </div>
-                <div className="flex items-center gap-2 text-purple-200 bg-purple-900/30 px-4 py-2 rounded-full border border-purple-700/30">
+                <div className="flex items-center gap-2 text-purple-700 bg-purple-50 px-4 py-2 rounded-full border border-purple-200">
                   <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
                   <span className="text-sm">Regulatory Insights</span>
                 </div>
@@ -231,14 +231,14 @@ const PolicyInsights = () => {
         </section>
 
         {/* Key Publications */}
-        <section ref={sectionRef} className="relative py-12 lg:py-16 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 overflow-hidden">
+        <section ref={sectionRef} className="py-12 lg:py-16 bg-gray-50">
           <div className="absolute inset-0">
             <div className="absolute top-10 right-10 w-80 h-80 bg-gradient-to-br from-indigo-300/20 to-purple-300/20 rounded-full blur-3xl animate-float"></div>
             <div className="absolute bottom-10 left-10 w-72 h-72 bg-gradient-to-br from-purple-300/15 to-pink-300/15 rounded-full blur-2xl animate-pulse-slow"></div>
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-light text-center mb-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Key Publications</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-800">Key Publications</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {publications.map((pub, index) => {
                   const colors = [

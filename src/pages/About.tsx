@@ -28,34 +28,34 @@ const About = () => {
 
   const objectives = [
     {
-      icon: <Users className="w-8 h-8 text-primary" />,
-      title: "Bridge Developer-Policymaker Knowledge Gaps",
-      description: "Facilitate meaningful dialogue between DeFi innovators and regulatory authorities to ensure informed policy decisions.",
+      icon: <Users className="w-8 h-8 text-blue-600" />,
+      title: "Connect developers and policymakers",
+      description: "Foster informed dialogue and practical solutions.",
     },
     {
-      icon: <Shield className="w-8 h-8 text-primary" />,
-      title: "Advocate Clear, Balanced Regulations",
-      description: "Work with regulators to develop practical frameworks that protect consumers while fostering innovation.",
+      icon: <Shield className="w-8 h-8 text-blue-600" />,
+      title: "Advocate pro-innovation regulations",
+      description: "Protect consumers while encouraging experimentation.",
     },
     {
-      icon: <BookOpen className="w-8 h-8 text-primary" />,
-      title: "Educate via Publications and Events",
-      description: "Create comprehensive educational resources and host events to increase DeFi awareness and understanding.",
+      icon: <BookOpen className="w-8 h-8 text-blue-600" />,
+      title: "Educate stakeholders",
+      description: "Through events, workshops, and authoritative publications.",
     },
     {
-      icon: <Target className="w-8 h-8 text-primary" />,
-      title: "Lead Research on Security & Governance",
-      description: "Drive cutting-edge research on DeFi security, governance models, and financial inclusion initiatives.",
+      icon: <Target className="w-8 h-8 text-blue-600" />,
+      title: "Advance research",
+      description: "On security, governance, and the social impact of DeFi.",
     },
     {
-      icon: <Handshake className="w-8 h-8 text-primary" />,
-      title: "Facilitate Academic-Industry Partnerships",
-      description: "Foster collaboration between universities, industry players, and regulatory bodies for comprehensive ecosystem development.",
+      icon: <Handshake className="w-8 h-8 text-blue-600" />,
+      title: "Build partnerships",
+      description: "Across academia, industry, and government.",
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-primary" />,
-      title: "Foster an Engaged DeFi Community",
-      description: "Build a vibrant community of DeFi enthusiasts, developers, and stakeholders across India.",
+      icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
+      title: "Grow an informed community",
+      description: "That actively shapes the direction of decentralized finance in India.",
     },
   ];
 
@@ -64,7 +64,7 @@ const About = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-violet-600 via-purple-700 to-fuchsia-800">
+        <section className="relative py-16 lg:py-20 bg-white border-b border-gray-200">
           {/* Dynamic Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-pink-400/20 to-rose-400/20 rounded-full blur-3xl animate-morph-slow"></div>
@@ -129,42 +129,42 @@ const About = () => {
               <div className="mb-6 animate-staggered-fade-in">
                 <div className="inline-flex items-center gap-3 mb-4">
                   <div className="w-8 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full animate-pulse"></div>
-                  <span className="text-cyan-200 text-sm uppercase tracking-wider font-medium">Our Story & Mission</span>
+                  <span className="text-slate-600 text-sm uppercase tracking-wider font-medium">Our Story & Mission</span>
                   <div className="w-8 h-1 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-light bg-gradient-to-r from-cyan-300 via-pink-300 to-yellow-300 bg-clip-text text-transparent mb-8 animate-gradient-x leading-relaxed py-2">
+                <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
                   About & Objectives
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl text-purple-100 max-w-3xl mx-auto mb-8 animate-staggered-fade-in stagger-2">
+              <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
                 Discover who we are, our founding principles, and our mission to transform India's financial landscape through decentralized finance.
               </p>
               
               {/* Key Focus Areas */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto animate-staggered-fade-in stagger-3">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <Users className="w-6 h-6 text-emerald-300" />
+                  <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-2 border border-emerald-200">
+                    <Users className="w-6 h-6 text-emerald-600" />
                   </div>
-                  <span className="text-xs text-emerald-200">Community</span>
+                  <span className="text-xs text-slate-600 font-medium">Community</span>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-teal-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <Target className="w-6 h-6 text-teal-300" />
+                  <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-2 border border-teal-200">
+                    <Target className="w-6 h-6 text-teal-600" />
                   </div>
-                  <span className="text-xs text-teal-200">Mission</span>
+                  <span className="text-xs text-slate-600 font-medium">Mission</span>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <BookOpen className="w-6 h-6 text-cyan-300" />
+                  <div className="w-12 h-12 bg-cyan-50 rounded-full flex items-center justify-center mx-auto mb-2 border border-cyan-200">
+                    <BookOpen className="w-6 h-6 text-cyan-600" />
                   </div>
-                  <span className="text-xs text-cyan-200">Education</span>
+                  <span className="text-xs text-slate-600 font-medium">Education</span>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-teal-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <TrendingUp className="w-6 h-6 text-teal-300" />
+                  <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-2 border border-blue-200">
+                    <TrendingUp className="w-6 h-6 text-blue-600" />
                   </div>
-                  <span className="text-xs text-emerald-200">Growth</span>
+                  <span className="text-xs text-slate-600 font-medium">Growth</span>
                 </div>
               </div>
             </div>
@@ -177,28 +177,13 @@ const About = () => {
             <div className="max-w-4xl mx-auto">
               <Card className="content-box-enhanced animate-staggered-fade-in p-8 lg:p-12">
                 <CardContent className="p-0">
-                  <h2 className="section-heading text-center mb-8 animate-text-glow">About India DeFi Alliance</h2>
+                  <h2 className="text-3xl font-bold text-center mb-8 text-slate-800">About India DeFi Alliance</h2>
                   <div className="space-y-6">
-                    <p className="body-text text-lg leading-relaxed">
-                      India DeFi Alliance is a non-profit consortium of industry leaders, regulators, and academics 
-                      committed to harnessing blockchain-based financial innovations to empower millions and foster 
-                      economic inclusion across India.
+                    <p className="text-lg leading-relaxed text-slate-600">
+                      India DeFi Alliance is a non-profit policy consortium uniting innovators, industry leaders, and regulators to shape the future of decentralized finance in India. We provide a neutral platform for dialogue, research, and collaboration, ensuring that DeFi develops in a way that is secure, inclusive, and transparent.
                     </p>
-                    <p className="body-text text-lg leading-relaxed">
-                      Founded in 2024, our alliance emerged from the recognition that India's vast population and 
-                      digital-first economy position it uniquely to benefit from decentralized finance. With over 
-                      1.4 billion people, many of whom remain underbanked, DeFi presents unprecedented opportunities 
-                      for financial inclusion and economic empowerment.
-                    </p>
-                    <p className="body-text text-lg leading-relaxed">
-                      Our founding principles are rooted in transparency, education, and collaborative governance. 
-                      We believe that the future of finance in India must be built on open, accessible, and 
-                      secure foundations that serve all citizens, regardless of their economic status or geographic location.
-                    </p>
-                    <p className="body-text text-lg leading-relaxed">
-                      As a bridge between innovation and regulation, we work tirelessly to ensure that India's 
-                      regulatory framework evolves thoughtfully, balancing the need for consumer protection with 
-                      the imperative to foster technological advancement and financial innovation.
+                    <p className="text-lg leading-relaxed text-slate-600">
+                      Our work bridges the gap between rapid technological innovation and regulatory frameworks, enabling India to lead in responsible DeFi adoption. By connecting diverse stakeholders—protocol architects, policymakers, academics, investors, and developers—we aim to create an environment where open financial systems can thrive while safeguarding consumer interests.
                     </p>
                   </div>
                 </CardContent>
@@ -224,14 +209,11 @@ const About = () => {
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Target className="w-8 h-8 text-blue-600" />
                     </div>
-                    <h2 className="section-heading animate-content-reveal" style={{ animationDelay: '0.1s' }}>Our Mission</h2>
+                    <h2 className="text-2xl font-bold text-slate-800">Mission</h2>
                   </div>
                   <div className="animate-content-reveal text-center" style={{ animationDelay: '0.3s' }}>
-                    <p className="body-text text-lg leading-relaxed">
-                      To bridge the knowledge gap between DeFi innovators and policymakers, 
-                      advocate for clear and balanced regulatory frameworks, educate stakeholders 
-                      through authoritative publications and events, drive cutting‑edge research, 
-                      and cultivate a thriving DeFi community in India.
+                    <p className="text-lg leading-relaxed text-slate-600">
+                      To bridge innovators and policymakers, shape balanced regulations, and build India's DeFi future through research, education, and collaboration.
                     </p>
                   </div>
                 </div>
@@ -249,13 +231,11 @@ const About = () => {
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <TrendingUp className="w-8 h-8 text-purple-600" />
                     </div>
-                    <h2 className="section-heading animate-content-reveal" style={{ animationDelay: '0.2s' }}>Our Vision</h2>
+                    <h2 className="text-2xl font-bold text-slate-800">Vision</h2>
                   </div>
                   <div className="animate-content-reveal text-center" style={{ animationDelay: '0.4s' }}>
-                    <p className="body-text text-lg leading-relaxed">
-                      A resilient, open, and transparent financial system—built on decentralized 
-                      technologies—that empowers every Indian with equitable access to financial 
-                      services and economic opportunity.
+                    <p className="text-lg leading-relaxed text-slate-600">
+                      A resilient, open, and transparent financial system—built on decentralized technologies—that gives every Indian fair access to finance and opportunity.
                     </p>
                   </div>
                 </div>
@@ -265,14 +245,14 @@ const About = () => {
         </section>
 
         {/* Our Objectives */}
-        <section className="relative py-12 lg:py-16 bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 overflow-hidden">
+        <section className="py-12 lg:py-16 bg-gray-50">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-orange-300/20 to-yellow-300/20 rounded-full blur-3xl animate-morph-slow"></div>
             <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-amber-300/15 to-orange-300/15 rounded-full blur-2xl animate-spin-slow"></div>
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-6xl mx-auto">
-              <h2 className="section-heading text-center mb-12 bg-gradient-to-r from-orange-600 via-yellow-600 to-amber-600 bg-clip-text text-transparent">Our Objectives</h2>
+              <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Our Objectives</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {objectives.map((objective, index) => {
                   const colors = [
@@ -313,36 +293,39 @@ const About = () => {
           </div>
         </section>
 
-        {/* Why India is Unique */}
-        <section className="py-12 lg:py-16 bg-gradient-to-r from-background/50 to-background/30">
+        {/* Why India */}
+        <section className="py-12 lg:py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <Card className="content-box-enhanced animate-background-shift animate-staggered-fade-in p-8 lg:p-12">
+              <Card className="bg-white border border-gray-200 p-8 lg:p-12">
                 <CardContent className="p-0">
-                  <h2 className="section-heading text-center mb-8">Why India is Unique to the DeFi Ecosystem</h2>
-                  <div className="space-y-6">
-                    <p className="body-text text-lg leading-relaxed">
-                      India stands at the epicenter of global financial transformation. With the world's largest 
-                      remittance recipient status, receiving over $100 billion annually, India demonstrates the 
-                      massive potential for DeFi solutions to reduce costs and increase efficiency in cross-border payments.
-                    </p>
-                    <p className="body-text text-lg leading-relaxed">
-                      Our digital payments infrastructure, anchored by the Unified Payments Interface (UPI), 
-                      has already revolutionized domestic transactions. This existing digital-first mindset 
-                      creates a natural foundation for DeFi adoption and innovation.
-                    </p>
-                    <p className="body-text text-lg leading-relaxed">
-                      India's vast unbanked and underbanked population presents an enormous opportunity for 
-                      financial inclusion through DeFi protocols. Decentralized finance can provide accessible 
-                      lending, savings, and investment opportunities to millions who have been excluded from 
-                      traditional financial services.
-                    </p>
-                    <p className="body-text text-lg leading-relaxed">
-                      Furthermore, India's robust technology sector, world-class educational institutions, 
-                      and growing blockchain developer community position the country to be a global leader 
-                      in DeFi innovation and implementation.
-                    </p>
-                  </div>
+                  <h2 className="text-3xl font-bold text-center mb-8 text-slate-800">Why India</h2>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <p className="text-lg text-slate-600">
+                        The world's largest remittance market, with strong potential to reduce cross-border transaction costs through blockchain solutions.
+                      </p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <p className="text-lg text-slate-600">
+                        A rapidly digitising economy driven by UPI and mobile adoption, primed for on-chain financial innovation.
+                      </p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <p className="text-lg text-slate-600">
+                        Over 190 million unbanked or underbanked citizens who can benefit from inclusive DeFi products.
+                      </p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-blue-600 mt-1">•</span>
+                      <p className="text-lg text-slate-600">
+                        A thriving developer ecosystem and global leadership in Web3 talent, capable of building scalable financial infrastructure.
+                      </p>
+                    </li>
+                  </ul>
                 </CardContent>
               </Card>
             </div>

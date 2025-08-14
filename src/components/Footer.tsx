@@ -18,8 +18,7 @@ const Footer = () => {
                 <span className="text-xl font-bold">India DeFi Alliance</span>
               </div>
               <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-md">
-                Building a secure, inclusive, and transparent financial ecosystem through 
-                decentralized technologies in India.
+                Building a secure, inclusive, and transparent financial ecosystem for everyone through Decentralized Technology.
               </p>
               
               {/* Social Links */}
@@ -40,16 +39,19 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                {['Home', 'Resources', 'Membership', 'Blog', 'About'].map((link) => (
-                  <li key={link}>
-                    <a
-                      href={`#${link.toLowerCase()}`}
-                      className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {['Home', 'About', 'Resources', 'Why Join Us', 'Contact'].map((link) => {
+                  const href = link === 'Why Join Us' ? '/membership' : `/${link.toLowerCase().replace(' ', '-')}`;
+                  return (
+                    <li key={link}>
+                      <a
+                        href={href === '/home' ? '/' : href}
+                        className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
@@ -57,7 +59,11 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-4">
-                <Button variant="outline" className="w-full bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+                <Button 
+                  variant="outline" 
+                  className="w-full bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
+                >
                   Join the Alliance
                 </Button>
                 <Button variant="outline" className="w-full bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
@@ -73,14 +79,6 @@ const Footer = () => {
               <p className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
                 © 2024 India DeFi Alliance. All rights reserved.
               </p>
-              <div className="flex space-x-6 text-sm">
-                <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                  Privacy Policy
-                </a>
-                <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                  Terms of Service
-                </a>
-              </div>
             </div>
           </div>
         </div>

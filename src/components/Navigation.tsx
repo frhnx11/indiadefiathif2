@@ -20,8 +20,7 @@ const Navigation = () => {
     { name: 'About', href: '/about' },
     { name: 'Policy', href: '/policy-insights' },
     { name: 'Resources', href: '/resources' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Membership', href: '/membership' },
+    { name: 'Why Join Us', href: '/membership' },
     { name: 'Contact', href: '/contact' },
   ];
 

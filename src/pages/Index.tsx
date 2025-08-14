@@ -51,8 +51,8 @@ const Index = () => {
   const stats = [
     { number: "1.4B+", label: "Indians to Empower", icon: <Users className="w-6 h-6" /> },
     { number: "$100B+", label: "Annual Remittances", icon: <Globe className="w-6 h-6" /> },
-    { number: "50+", label: "Industry Partners", icon: <Shield className="w-6 h-6" /> },
-    { number: "10K+", label: "Community Members", icon: <Award className="w-6 h-6" /> },
+    { number: "60M+", label: "Indians on chain", icon: <Shield className="w-6 h-6" /> },
+    { number: "$45B", label: "DeFi Value by 2025", icon: <Award className="w-6 h-6" /> },
   ];
 
   const features = [
@@ -82,37 +82,14 @@ const Index = () => {
     }
   ];
 
-  const quickActions = [
-    {
-      title: "Download Vision Document",
-      description: "Get our comprehensive vision for DeFi in India",
-      icon: <Download className="w-5 h-5" />,
-      action: "Download PDF",
-      variant: "default" as const
-    },
-    {
-      title: "Join the Alliance",
-      description: "Become part of India's DeFi revolution",
-      icon: <Users className="w-5 h-5" />,
-      action: "Join Now",
-      variant: "outline" as const
-    },
-    {
-      title: "Explore Resources",
-      description: "Access educational materials and research",
-      icon: <BookOpen className="w-5 h-5" />,
-      action: "Learn More",
-      variant: "outline" as const
-    }
-  ];
 
   const objectives = [
-    "Bridge developer-policymaker knowledge gaps through direct dialogue and collaboration",
-    "Advocate for clear, balanced regulations that protect consumers while fostering innovation",
-    "Educate stakeholders through authoritative publications, events, and interactive resources",
-    "Drive cutting-edge research on security, governance, and financial inclusion initiatives",
-    "Facilitate partnerships between academic institutions, industry players, and regulators",
-    "Foster an engaged, knowledgeable DeFi community across India"
+    "Connect developers and policymakers",
+    "Advocate pro-innovation regulations",
+    "Educate via events and publications",
+    "Advance DeFi research",
+    "Build cross-sector partnerships",
+    "Grow an informed community"
   ];
 
   const faqData = [
@@ -125,8 +102,8 @@ const Index = () => {
       answer: "• Financial Freedom: Access banking‑like services from anywhere.\n• Crystal‑Clear Transparency: Every transaction and smart contract is on‑chain and auditable.\n• Programmable Money: Automate loans, swaps, staking—no middlemen, just code.\n• Composable Innovation: Mix 'n' match protocols to invent entirely new products.\n• Lean & Mean: Peer‑to‑peer transactions slash fees."
     },
     {
-      question: "Why does DeFi challenge traditional regulation?",
-      answer: "Instead of a single bank or broker, DeFi runs on global, permissionless code. Regulators must shift from entity‑centric rules to overseeing open, self‑enforcing protocols."
+      question: "Why does DeFi challenge traditional regulations?",
+      answer: "Instead of a single bank or broker, DeFi runs on global, permissionless code. Our regulations needs to shift from a entity centric top-down approach to an open, self enforcing decentralised approach."
     },
     {
       question: "What is DeFi not?",
@@ -134,7 +111,7 @@ const Index = () => {
     },
     {
       question: "Why is India unique to the DeFi ecosystem?",
-      answer: "India has the most foreign remittance inflows globally, creating massive opportunities for DeFi to provide more efficient cross-border payment solutions and financial inclusion."
+      answer: "With a billion-plus people a majority of whom still remain unbanked, rapid digital adoption, top-tier Web3 talent, and strong demand for open, low-cost financial tools, India is uniquely positioned to both build and scale the next generation of DeFi globally."
     },
     {
       question: "What does India DeFi Alliance aim to achieve?",
@@ -145,12 +122,12 @@ const Index = () => {
       answer: "• White Papers & Memos: Actionable policy blueprints.\n• Roundtables & Webinars: Direct dialogue with regulators.\n• Academic Partnerships: Cutting‑edge research with IITs and universities.\n• Hands‑On Toolkits: Interactive handbooks, glossaries, video primers."
     },
     {
-      question: "Who are our members?",
-      answer: "From DeFi protocol architects and financial institutions to regulators, legal experts, academics, and curious enthusiasts—organized into Founding, Full, and Associate tiers."
+      question: "Who are the contributors to India DeFi Alliance?",
+      answer: "A mixture of experts from all domains. From DeFi protocol architects and financial institutions to regulators, legal experts, academics, enthusiasts and students."
     },
     {
       question: "How can I join?",
-      answer: "Click \"Join the Alliance,\" pick your tier, fill out a 1‑minute form—and instantly unlock premium reports, event invites, and working‑group seats."
+      answer: "Fill out the form to join our community and contribute to shaping India's DeFi future."
     }
   ];
 
@@ -164,24 +141,60 @@ const Index = () => {
       <main className="relative z-10">
         <HeroSection />
         
-        {/* Introduction Section */}
-        <section className="relative py-12 lg:py-16 pb-4 overflow-hidden bg-gradient-rainbow">
-          <div className="absolute inset-0">
-            <div className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-pink-300/20 to-violet-300/20 rounded-full blur-3xl animate-float"></div>
-            <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-cyan-300/15 to-blue-300/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-          </div>
-          <div className="content-layer container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Impact Stats Section */}
+        <section className="py-12 lg:py-16 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <Card className="content-box-enhanced animate-staggered-fade-in p-12 lg:p-16 border-violet-200/50 bg-gradient-to-br from-white/95 via-violet-50/30 to-cyan-50/30 backdrop-blur-lg">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-800">Impact Stats</h2>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                {stats.map((stat, index) => (
+                  <Card key={index} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        {stat.icon}
+                      </div>
+                      <div className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2">{stat.number}</div>
+                      <div className="text-sm text-slate-600 font-medium">{stat.label}</div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Member Logos Ticker */}
+        <section className="py-8 bg-white border-y border-gray-200">
+          <div className="container mx-auto px-4">
+            <h3 className="text-2xl font-bold text-center text-slate-800 mb-6">Our Members</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {/* Placeholder for member logos - to be added */}
+              <div className="h-16 w-32 bg-gray-200 rounded"></div>
+              <div className="h-16 w-32 bg-gray-200 rounded"></div>
+              <div className="h-16 w-32 bg-gray-200 rounded"></div>
+              <div className="h-16 w-32 bg-gray-200 rounded"></div>
+              <div className="h-16 w-32 bg-gray-200 rounded"></div>
+              <div className="h-16 w-32 bg-gray-200 rounded"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction Section */}
+        <section className="relative py-8 lg:py-12 bg-white">
+          <div className="absolute inset-0">
+            <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-br from-rose-300/25 to-pink-300/25 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-gradient-to-br from-fuchsia-300/20 to-purple-300/20 rounded-full blur-2xl animate-bounce-slow"></div>
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-6xl mx-auto">
+              <Card className="content-box-enhanced animate-staggered-fade-in p-12 lg:p-16 border-rose-200/50 bg-gradient-to-br from-white/90 via-rose-50/40 to-pink-50/30 backdrop-blur-lg shadow-2xl shadow-rose-200/20">
                 <CardContent className="p-0 text-center">
-                  <p className="text-2xl md:text-3xl lg:text-4xl leading-relaxed font-light text-slate-600 max-w-4xl mx-auto">
-                    Building the future of{' '}
-                    <span className="font-bold text-gradient-rainbow">decentralized finance</span>{' '}
-                    in India
+                  <p className="text-2xl md:text-3xl lg:text-4xl leading-relaxed font-semibold text-slate-800 max-w-4xl mx-auto">
+                    Building the future of Decentralized Finance in India
                   </p>
-                  <div className="mt-8 pt-6 border-t border-violet-200/30">
-                    <p className="text-lg text-slate-500 max-w-2xl mx-auto font-light">
-                      Connecting innovators • Shaping policy • Driving adoption
+                  <div className="mt-8 pt-6 border-t border-gray-200">
+                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                      Connecting Innovators. Shaping Policy. Driving Adoption.
                     </p>
                   </div>
                 </CardContent>
@@ -191,68 +204,9 @@ const Index = () => {
         </section>
 
         {/* About Us Section */}
-        <section className="relative py-8 lg:py-12 bg-gradient-sunset overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-br from-rose-300/25 to-pink-300/25 rounded-full blur-3xl animate-pulse-slow"></div>
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-gradient-to-br from-fuchsia-300/20 to-purple-300/20 rounded-full blur-2xl animate-bounce-slow"></div>
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-8 lg:py-12 bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <Card className="content-box-enhanced animate-staggered-fade-in p-12 lg:p-16 border-rose-200/50 bg-gradient-to-br from-white/90 via-rose-50/40 to-pink-50/30 backdrop-blur-lg shadow-2xl shadow-rose-200/20">
-                <CardContent className="p-0 text-center">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gradient-rainbow mb-8">
-                    Our Mission
-                  </h2>
-                  <p className="text-xl md:text-2xl leading-relaxed text-slate-600 max-w-3xl mx-auto font-light">
-                    Empowering India through decentralized finance
-                  </p>
-                  <div className="mt-8 pt-6 border-t border-rose-200/30">
-                    <p className="text-lg text-slate-500 max-w-2xl mx-auto font-light">
-                      A non-profit consortium bridging innovation and regulation
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="relative py-8 lg:py-12 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 overflow-hidden shadow-colorful">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-emerald-200/20 to-teal-200/20 rounded-full blur-3xl animate-morph-slow"></div>
-            <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-br from-cyan-200/15 to-blue-200/15 rounded-full blur-2xl animate-spin-slow"></div>
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                {stats.map((stat, index) => {
-                  const colors = [
-                    { bg: 'from-emerald-400/20 to-teal-400/20', icon: 'text-emerald-600', text: 'text-emerald-700', border: 'border-emerald-200/50' },
-                    { bg: 'from-teal-400/20 to-cyan-400/20', icon: 'text-teal-600', text: 'text-teal-700', border: 'border-teal-200/50' },
-                    { bg: 'from-cyan-400/20 to-blue-400/20', icon: 'text-cyan-600', text: 'text-cyan-700', border: 'border-cyan-200/50' },
-                    { bg: 'from-blue-400/20 to-indigo-400/20', icon: 'text-blue-600', text: 'text-blue-700', border: 'border-blue-200/50' }
-                  ];
-                  const color = colors[index % colors.length];
-                  
-                  return (
-                    <Card 
-                      key={index} 
-                      className={`content-box-enhanced text-center animate-staggered-fade-in stagger-${index + 1} animate-card-hover ${color.border} bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-lg shadow-xl hover:shadow-2xl transition-all duration-500`}
-                    >
-                      <CardContent className="p-6">
-                        <div className={`w-14 h-14 bg-gradient-to-br ${color.bg} rounded-2xl flex items-center justify-center mx-auto mb-4 transform hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                          <div className={`${color.icon} transform hover:rotate-12 transition-transform duration-300`}>
-                            {stat.icon}
-                          </div>
-                        </div>
-                        <div className={`text-2xl lg:text-3xl font-bold ${color.text} mb-2`}>{stat.number}</div>
-                        <div className="text-sm text-slate-600 font-medium">{stat.label}</div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
             </div>
           </div>
         </section>
@@ -274,18 +228,12 @@ const Index = () => {
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Target className="w-8 h-8 text-blue-600" />
                     </div>
-                    <h2 className="section-heading animate-content-reveal" style={{ animationDelay: '0.1s' }}>Our Mission</h2>
+                    <h2 className="text-2xl font-bold text-slate-800">Our Mission</h2>
                   </div>
                   <div className="animate-content-reveal text-center" style={{ animationDelay: '0.3s' }}>
-                    <p className="body-text text-lg leading-relaxed mb-6">
-                      To bridge the knowledge gap between DeFi innovators and policymakers, 
-                      advocate for clear and balanced regulatory frameworks, educate stakeholders 
-                      through authoritative publications and events, drive cutting‑edge research, 
-                      and cultivate a thriving DeFi community in India.
+                    <p className="text-lg leading-relaxed text-slate-600">
+                      Bridging innovators and policymakers, shaping balanced regulations, and building India's DeFi future through research, education, and collaboration.
                     </p>
-                    <Button variant="outline" className="mt-4 btn-vibrant border-2 border-blue-500 text-blue-700 hover:text-white hover:border-blue-600 shadow-colorful-hover">
-                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
                   </div>
                 </div>
 
@@ -302,17 +250,14 @@ const Index = () => {
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <TrendingUp className="w-8 h-8 text-purple-600" />
                     </div>
-                    <h2 className="section-heading animate-content-reveal" style={{ animationDelay: '0.2s' }}>Our Vision</h2>
+                    <h2 className="text-2xl font-bold text-slate-800">Our Vision</h2>
                   </div>
                   <div className="animate-content-reveal text-center" style={{ animationDelay: '0.4s' }}>
-                    <p className="body-text text-lg leading-relaxed mb-6">
+                    <p className="text-lg leading-relaxed text-slate-600">
                       A resilient, open, and transparent financial system—built on decentralized 
                       technologies—that empowers every Indian with equitable access to financial 
                       services and economic opportunity.
                     </p>
-                    <Button variant="outline" className="mt-4 btn-vibrant border-2 border-purple-500 text-purple-700 hover:text-white hover:border-purple-600 shadow-colorful-hover">
-                      Our Strategy <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
                   </div>
                 </div>
               </div>
@@ -321,61 +266,65 @@ const Index = () => {
         </section>
 
         {/* Key Resources */}
-        <section className="relative py-12 lg:py-16 mt-8 lg:mt-12 bg-gradient-ocean overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-10 w-72 h-72 bg-gradient-to-br from-indigo-300/20 to-purple-300/20 rounded-full blur-3xl animate-float"></div>
-            <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-gradient-to-br from-purple-300/15 to-pink-300/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
-            <div className="absolute top-10 right-1/3 w-48 h-48 bg-gradient-to-br from-pink-300/25 to-rose-300/25 rounded-full blur-2xl animate-pulse-slow"></div>
-          </div>
+        <section className="py-12 lg:py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-6 text-gradient-rainbow">Learning Hub</h2>
-                <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto font-light">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Learning Hub</h2>
+                <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                   Essential resources for your DeFi journey
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-8">
-                <Card className="content-box-enhanced h-full animate-card-hover animate-staggered-fade-in stagger-1 border-indigo-200/50 bg-gradient-to-br from-white/90 via-indigo-50/40 to-purple-50/30 backdrop-blur-lg shadow-xl hover:shadow-indigo-200/25">
+                <Card className="bg-white border border-gray-200 h-full hover:shadow-lg transition-shadow">
                   <CardHeader className="pb-4">
-                    <div className="w-18 h-18 bg-gradient-to-br from-indigo-400/50 to-blue-500/50 rounded-2xl flex items-center justify-center mx-auto mb-4 transform hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-colorful">
+                    <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <BookOpen className="w-10 h-10 text-indigo-600" />
                     </div>
-                    <CardTitle className="text-xl text-center bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent font-bold">Comprehensive DeFi Handbook</CardTitle>
+                    <CardTitle className="text-xl text-center text-slate-800 font-bold">Comprehensive DeFi Handbook</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="body-text text-center text-slate-700">
-                      Step‑by‑step guide covering smart contracts, lending, AMMs, governance, and risk management.
+                    <p className="text-center text-slate-600">
+                      Step by step guide covering the basics of DeFi: Smart Contracts, Lending, AMMs, governance, and risk management.
                     </p>
+                    <div className="text-center mt-4">
+                      <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">Link →</a>
+                    </div>
                   </CardContent>
                 </Card>
 
-                <Card className="content-box-enhanced h-full animate-card-hover animate-staggered-fade-in stagger-2 border-emerald-200/50 bg-gradient-to-br from-white/90 via-emerald-50/40 to-teal-50/30 backdrop-blur-lg shadow-xl hover:shadow-emerald-200/25">
+                <Card className="bg-white border border-gray-200 h-full hover:shadow-lg transition-shadow">
                   <CardHeader className="pb-4">
-                    <div className="w-18 h-18 bg-gradient-to-br from-emerald-400/50 to-teal-500/50 rounded-2xl flex items-center justify-center mx-auto mb-4 transform hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-colorful">
+                    <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Globe className="w-10 h-10 text-emerald-600" />
                     </div>
-                    <CardTitle className="text-xl text-center bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent font-bold">Interactive DeFi Glossary</CardTitle>
+                    <CardTitle className="text-xl text-center text-slate-800 font-bold">DeFi Glossary</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="body-text text-center text-slate-700">
-                      Searchable definitions of 100+ core DeFi terms in English, Hindi, and Tamil, with examples and deeper dives.
+                    <p className="text-center text-slate-600">
+                      Core DeFi terms in English, Hindi, and Tamil, with examples and deep dives.
                     </p>
+                    <div className="text-center mt-4">
+                      <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">Link →</a>
+                    </div>
                   </CardContent>
                 </Card>
 
-                <Card className="content-box-enhanced h-full animate-card-hover animate-staggered-fade-in stagger-3 border-violet-200/50 bg-gradient-to-br from-white/90 via-violet-50/40 to-purple-50/30 backdrop-blur-lg shadow-xl hover:shadow-violet-200/25">
+                <Card className="bg-white border border-gray-200 h-full hover:shadow-lg transition-shadow">
                   <CardHeader className="pb-4">
-                    <div className="w-18 h-18 bg-gradient-to-br from-violet-400/50 to-purple-500/50 rounded-2xl flex items-center justify-center mx-auto mb-4 transform hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-colorful">
+                    <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Play className="w-10 h-10 text-violet-600" />
                     </div>
-                    <CardTitle className="text-xl text-center bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent font-bold">Video Primer: "DeFi Basics"</CardTitle>
+                    <CardTitle className="text-xl text-center text-slate-800 font-bold">Resources</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="body-text text-center text-slate-700">
-                      10‑minute animated explainer introducing concepts, use‑cases, and safety best practices.
+                    <p className="text-center text-slate-600">
+                      Comprehensive collection of educational materials, research papers, and guides.
                     </p>
+                    <div className="text-center mt-4">
+                      <a href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">Explore →</a>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -383,39 +332,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Quick Actions */}
-        <section className="py-12 lg:py-16">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="section-heading mb-4">Get Started Today</h2>
-                <p className="body-text text-lg">
-                  Join the movement to transform India's financial landscape through decentralized finance.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                {quickActions.map((action, index) => (
-                  <Card 
-                    key={index} 
-                    className={`content-box-enhanced text-center animate-card-hover animate-staggered-fade-in stagger-${index + 1}`}
-                  >
-                    <CardContent className="p-8">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        {action.icon}
-                      </div>
-                      <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">{action.title}</h3>
-                      <p className="body-text text-sm mb-6">{action.description}</p>
-                      <Button variant={action.variant} className={`w-full ${action.variant === 'default' ? 'btn-vibrant bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-colorful-hover' : 'border-2 border-blue-400 text-blue-700 hover:bg-blue-50 hover:border-blue-500 shadow-colorful-hover'} transform hover:scale-105 transition-all duration-300`}>
-                        {action.action}
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Our Objectives */}
         <section className="py-12 lg:py-16 bg-gradient-to-r from-background/50 to-background/30">
@@ -424,7 +340,7 @@ const Index = () => {
               <Card className="content-box-enhanced animate-background-shift animate-staggered-fade-in p-8 lg:p-12">
                 <CardContent className="p-0">
                   <div className="text-center mb-8">
-                    <h2 className="section-heading animate-text-glow mb-4">Our Core Objectives</h2>
+                    <h2 className="text-2xl font-bold text-slate-800 mb-4">Core Objectives</h2>
                     <p className="body-text text-lg">
                       Six key areas where we're making a meaningful impact on India's DeFi ecosystem.
                     </p>
@@ -493,7 +409,11 @@ const Index = () => {
                           )}
                           {index === faqData.length - 1 && (
                             <div className="mt-4">
-                              <Button variant="outline" className="btn-vibrant border-2 border-emerald-500 text-emerald-700 hover:text-white hover:bg-emerald-500 shadow-colorful-hover transform hover:scale-105 transition-all duration-300">
+                              <Button 
+                                variant="outline" 
+                                className="btn-vibrant border-2 border-emerald-500 text-emerald-700 hover:text-white hover:bg-emerald-500 shadow-colorful-hover transform hover:scale-105 transition-all duration-300"
+                                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
+                              >
                                 Join the Alliance <ArrowRight className="w-4 h-4 ml-2" />
                               </Button>
                             </div>
@@ -523,7 +443,11 @@ const Index = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="lg" className="text-lg px-8 py-4 btn-vibrant bg-gradient-to-r from-green-500 via-blue-600 to-purple-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white shadow-colorful-hover transform hover:scale-105 transition-all duration-300">
+                    <Button 
+                      size="lg" 
+                      className="text-lg px-8 py-4 btn-vibrant bg-gradient-to-r from-green-500 via-blue-600 to-purple-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white shadow-colorful-hover transform hover:scale-105 transition-all duration-300"
+                      onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
+                    >
                       <Users className="w-5 h-5 mr-2" />
                       Join the Alliance
                     </Button>
@@ -555,10 +479,9 @@ const Index = () => {
               <p className="text-sm text-muted-foreground">Stay informed with our newest reports, press releases, and upcoming events</p>
             </div>
             
-            <div className="relative overflow-hidden">
-              <div className="flex animate-scroll-horizontal space-x-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
                 {/* Reports */}
-                <Card className="content-box-enhanced min-w-[300px] cursor-pointer animate-card-hover">
+                <Card className="content-box-enhanced cursor-pointer animate-card-hover">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
                       <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
@@ -576,7 +499,7 @@ const Index = () => {
                 </Card>
 
                 {/* Press Release */}
-                <Card className="content-box-enhanced min-w-[300px] cursor-pointer animate-card-hover">
+                <Card className="content-box-enhanced cursor-pointer animate-card-hover">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
                       <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center shrink-0">
@@ -594,7 +517,7 @@ const Index = () => {
                 </Card>
 
                 {/* Upcoming Event */}
-                <Card className="content-box-enhanced min-w-[300px] cursor-pointer animate-card-hover">
+                <Card className="content-box-enhanced cursor-pointer animate-card-hover">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
                       <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center shrink-0">
@@ -612,7 +535,7 @@ const Index = () => {
                 </Card>
 
                 {/* Report 2 */}
-                <Card className="content-box-enhanced min-w-[300px] cursor-pointer animate-card-hover">
+                <Card className="content-box-enhanced cursor-pointer animate-card-hover">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
                       <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center shrink-0">
@@ -630,7 +553,7 @@ const Index = () => {
                 </Card>
 
                 {/* Webinar */}
-                <Card className="content-box-enhanced min-w-[300px] cursor-pointer animate-card-hover">
+                <Card className="content-box-enhanced cursor-pointer animate-card-hover">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
                       <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center shrink-0">
@@ -648,7 +571,7 @@ const Index = () => {
                 </Card>
 
                 {/* Event 2 */}
-                <Card className="content-box-enhanced min-w-[300px] cursor-pointer animate-card-hover">
+                <Card className="content-box-enhanced cursor-pointer animate-card-hover">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
                       <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center shrink-0">
@@ -664,7 +587,6 @@ const Index = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </div>
             </div>
           </div>
         </section>
