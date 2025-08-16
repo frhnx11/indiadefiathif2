@@ -30,100 +30,71 @@ const PolicyInsights = () => {
 
   const publications = [
     {
-      title: "White Paper: Defining the DeFi Reporting Entity",
+      title: "Coming Soon",
       type: "White Paper",
-      date: "March 2024",
-      summary: "Comprehensive framework for regulatory compliance and reporting standards in DeFi protocols.",
-      downloadUrl: "#",
+      summary: "Coming Soon",
     },
     {
-      title: "Position Paper: DeFi & Anti-Money Laundering Frameworks",
+      title: "Coming Soon",
       type: "Position Paper",
-      date: "February 2024",
-      summary: "Analysis of AML requirements and their application to decentralized finance protocols.",
-      downloadUrl: "#",
+      summary: "Coming Soon",
     },
     {
-      title: "Regulatory Submission: Recommendations on DeFi Taxation",
+      title: "Coming Soon",
       type: "Regulatory Submission",
-      date: "January 2024",
-      summary: "Policy recommendations for fair and practical taxation of DeFi transactions in India.",
-      downloadUrl: "#",
+      summary: "Coming Soon",
     },
   ];
 
   const policyUpdates = [
     {
-      date: "July 20, 2025",
-      title: "RBI Issues New Guidelines on Digital Asset Custody",
-      summary: "Reserve Bank of India releases comprehensive guidelines for digital asset custody services affecting DeFi protocols.",
-      readMore: "#",
+      title: "Coming Soon",
+      summary: "Coming Soon",
     },
     {
-      date: "July 15, 2025",
-      title: "SEBI Proposes Framework for Tokenized Securities",
-      summary: "Securities and Exchange Board of India seeks public consultation on regulatory framework for blockchain-based securities.",
-      readMore: "#",
+      title: "Coming Soon",
+      summary: "Coming Soon",
     },
     {
-      date: "July 10, 2025",
-      title: "Parliamentary Committee Reviews DeFi Regulations",
-      summary: "Standing Committee on Finance conducts comprehensive review of current DeFi regulatory landscape.",
-      readMore: "#",
+      title: "Coming Soon",
+      summary: "Coming Soon",
     },
     {
-      date: "July 5, 2025",
-      title: "Ministry of Finance Announces DeFi Tax Clarifications",
-      summary: "New clarifications provide guidance on tax treatment of DeFi yield farming and liquidity provision.",
-      readMore: "#",
+      title: "Coming Soon",
+      summary: "Coming Soon",
     },
   ];
 
   const newsItems = [
     {
-      outlet: "Economic Times",
-      headline: "India DeFi Alliance Advocates for Balanced Regulatory Framework",
-      date: "July 22, 2025",
-      thumbnail: "/placeholder.svg",
+      headline: "Coming Soon",
     },
     {
-      outlet: "Business Standard",
-      headline: "DeFi Education Initiative Gains Momentum in Indian Universities",
-      date: "July 18, 2025",
-      thumbnail: "/placeholder.svg",
+      headline: "Coming Soon",
     },
     {
-      outlet: "LiveMint",
-      headline: "Regulatory Clarity Needed for DeFi Growth, Says Alliance",
-      date: "July 14, 2025",
-      thumbnail: "/placeholder.svg",
+      headline: "Coming Soon",
     },
     {
-      outlet: "Hindu BusinessLine",
-      headline: "IIT Bombay Partners with DeFi Alliance for Research Initiative",
-      date: "July 10, 2025",
-      thumbnail: "/placeholder.svg",
+      headline: "Coming Soon",
     },
   ];
 
   const upcomingEvents = [
     {
-      title: "RBI Roundtable on DeFi",
-      date: "Aug 28, 2025",
-      type: "Roundtable",
-      description: "High-level discussion with RBI officials on DeFi regulatory framework.",
+      title: "Coming Soon",
+      type: "Event",
+      description: "Coming Soon",
     },
     {
-      title: "DeFi Security Webinar",
-      date: "Sep 12, 2025",
-      type: "Webinar",
-      description: "Educational session on DeFi security best practices and risk management.",
+      title: "Coming Soon",
+      type: "Event",
+      description: "Coming Soon",
     },
     {
-      title: "Launch of Second White Paper",
-      date: "Oct 5, 2025",
-      type: "Publication",
-      description: "Release of comprehensive policy recommendations for DeFi governance frameworks.",
+      title: "Coming Soon",
+      type: "Event",
+      description: "Coming Soon",
     },
   ];
 
@@ -260,16 +231,12 @@ const PolicyInsights = () => {
                           <Badge className={`text-xs font-medium ${color.badge} border-none px-3 py-1`}>
                             {pub.type}
                           </Badge>
-                          <span className="text-sm text-slate-500 font-medium">{pub.date}</span>
                         </div>
                         <CardTitle className={`text-lg leading-tight font-bold ${color.title}`}>{pub.title}</CardTitle>
                       </CardHeader>
                       <CardContent className="p-6 pt-0">
                         <p className="text-slate-600 mb-6 leading-relaxed font-light">{pub.summary}</p>
-                        <Button variant="outline" size="sm" className={`w-full ${color.border.replace('border-', 'border-')} ${color.button} ${color.title} transition-all duration-300 font-medium`}>
-                          <Download className="w-4 h-4 mr-2" />
-                          Download PDF
-                        </Button>
+                        <Badge variant="secondary" className="w-full justify-center">Coming Soon</Badge>
                       </CardContent>
                     </Card>
                   );
@@ -303,17 +270,10 @@ const PolicyInsights = () => {
                       <CardContent className="p-8">
                         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
                           <div className="flex-1">
-                            <div className="flex items-center gap-3 mb-4">
-                              <Calendar className={`w-5 h-5 ${color.icon}`} />
-                              <span className="text-sm text-slate-600 font-medium">{update.date}</span>
-                            </div>
                             <h3 className={`text-xl md:text-2xl font-bold ${color.title} mb-4 leading-tight`}>{update.title}</h3>
                             <p className="text-slate-600 leading-relaxed font-light">{update.summary}</p>
                           </div>
-                          <Button variant="ghost" size="sm" className={`shrink-0 ${color.button} transition-all duration-300 font-medium`}>
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Read More
-                          </Button>
+                          <Badge variant="secondary" className="shrink-0">Coming Soon</Badge>
                         </div>
                       </CardContent>
                     </Card>
@@ -355,10 +315,8 @@ const PolicyInsights = () => {
                             <Newspaper className={`w-8 h-8 ${color.icon} drop-shadow-lg`} />
                           </div>
                           <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-3">
-                              <span className={`text-sm font-bold ${color.outlet}`}>{news.outlet}</span>
-                              <span className="text-xs text-slate-400">•</span>
-                              <span className="text-xs text-slate-500 font-medium">{news.date}</span>
+                            <div className="mb-3">
+                              <Badge variant="secondary">Coming Soon</Badge>
                             </div>
                             <h3 className={`font-bold ${color.title} leading-tight hover:underline cursor-pointer transition-all duration-300`}>{news.headline}</h3>
                           </div>
@@ -403,8 +361,7 @@ const PolicyInsights = () => {
                               <Users className={`w-8 h-8 ${color.icon}`} />
                             </div>
                             <div>
-                              <div className={`font-bold text-lg ${color.title}`}>{event.date}</div>
-                              <Badge className={`text-xs mt-1 ${color.badge} border-none font-medium`}>
+                              <Badge className={`text-xs ${color.badge} border-none font-medium`}>
                                 {event.type}
                               </Badge>
                             </div>
@@ -413,9 +370,7 @@ const PolicyInsights = () => {
                             <h3 className={`text-xl font-bold ${color.title} mb-3 leading-tight`}>{event.title}</h3>
                             <p className="text-slate-600 leading-relaxed font-light">{event.description}</p>
                           </div>
-                          <Button className={`shrink-0 ${color.button} text-white shadow-lg hover:shadow-xl transition-all duration-300 font-medium`}>
-                            Register Now
-                          </Button>
+                          <Badge variant="secondary" className="shrink-0">Coming Soon</Badge>
                         </div>
                       </CardContent>
                     </Card>

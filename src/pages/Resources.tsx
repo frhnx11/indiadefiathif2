@@ -13,66 +13,55 @@ const Resources = () => {
       title: "DeFi Handbook",
       type: "Interactive Guide",
       description: "Step by step guide covering the basics of DeFi: Smart Contracts, Lending, AMMs, governance, and risk management.",
-      link: "https://docs.google.com/document/d/1KDjPoDt95mdLGr2qWSuC_eLJdK7vNRr9Ajaue0GGmiw/mobilebasic",
+      link: "/handbook",
       icon: <BookOpen className="w-8 h-8 text-blue-600" />,
     },
     {
       title: "DeFi Glossary",
       type: "Multi-Language Resource",
       description: "Core DeFi terms in English, Hindi, and Tamil, with examples and deep dives.",
-      link: "https://docs.google.com/document/d/19Syxk0ozGBHp06uaOy4_uMURHovJnu7UUoMGo0YhFHQ/edit?tab=t.0#heading=h.g4j5o7n8zrps",
+      link: "/glossary",
       icon: <Languages className="w-8 h-8 text-green-600" />,
     },
   ];
 
   const mediaItems = [
     {
-      outlet: "Economic Times",
-      headline: "India DeFi Alliance Advocates for Balanced Regulatory Framework",
-      date: "July 22, 2025",
-      link: "#",
+      headline: "Coming Soon",
+      status: "Coming Soon",
     },
     {
-      outlet: "Business Standard",
-      headline: "DeFi Education Initiative Gains Momentum in Indian Universities",
-      date: "July 18, 2025",
-      link: "#",
+      headline: "Coming Soon",
+      status: "Coming Soon",
     },
     {
-      outlet: "LiveMint",
-      headline: "Regulatory Clarity Needed for DeFi Growth, Says Alliance",
-      date: "July 14, 2025",
-      link: "#",
+      headline: "Coming Soon",
+      status: "Coming Soon",
     },
     {
-      outlet: "Hindu BusinessLine",
-      headline: "IIT Bombay Partners with DeFi Alliance for Research Initiative",
-      date: "July 10, 2025",
-      link: "#",
+      headline: "Coming Soon",
+      status: "Coming Soon",
     },
   ];
 
   const researchReports = [
     {
-      title: "DeFi Regulatory Framework for India",
-      date: "July 2025",
+      title: "Coming Soon",
       type: "White Paper",
-      description: "Comprehensive framework for regulatory compliance and reporting standards in DeFi protocols.",
-      link: "#",
+      description: "Coming Soon",
+      status: "Coming Soon",
     },
     {
-      title: "DeFi Security Best Practices",
-      date: "June 2025",
+      title: "Coming Soon",
       type: "Research Paper",
-      description: "Analysis of security vulnerabilities and mitigation strategies for DeFi protocols.",
-      link: "#",
+      description: "Coming Soon",
+      status: "Coming Soon",
     },
     {
-      title: "Financial Inclusion through DeFi",
-      date: "May 2025",
+      title: "Coming Soon",
       type: "Study",
-      description: "Research on DeFi's potential to provide financial services to underserved communities.",
-      link: "#",
+      description: "Coming Soon",
+      status: "Coming Soon",
     },
   ];
 
@@ -196,9 +185,19 @@ const Resources = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-slate-600 mb-6">{resource.description}</p>
-                      <a href={resource.link} className="text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center">
-                        Link <ExternalLink className="w-4 h-4 ml-2" />
-                      </a>
+                      {resource.title === "DeFi Handbook" ? (
+                        <a href={resource.link} className="text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center">
+                          View Handbook <ExternalLink className="w-4 h-4 ml-2" />
+                        </a>
+                      ) : resource.title === "DeFi Glossary" ? (
+                        <a href={resource.link} className="text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center">
+                          View Glossary <ExternalLink className="w-4 h-4 ml-2" />
+                        </a>
+                      ) : (
+                        <a href={resource.link} className="text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center">
+                          Link <ExternalLink className="w-4 h-4 ml-2" />
+                        </a>
+                      )}
                     </CardContent>
                   </Card>
                 ))}
@@ -221,12 +220,8 @@ const Resources = () => {
                           <Newspaper className="w-6 h-6 text-gray-600" />
                         </div>
                         <div className="flex-1">
-                          <Badge variant="outline" className="mb-2">{item.outlet}</Badge>
                           <h3 className="text-lg font-semibold text-slate-800 mb-2">{item.headline}</h3>
-                          <p className="text-sm text-slate-500 mb-3">{item.date}</p>
-                          <a href={item.link} className="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                            Read More →
-                          </a>
+                          <Badge variant="secondary" className="mt-2">{item.status}</Badge>
                         </div>
                       </div>
                     </CardContent>
@@ -254,11 +249,7 @@ const Resources = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-slate-600 mb-4">{report.description}</p>
-                      <p className="text-xs text-slate-500 mb-4">{report.date}</p>
-                      <Button variant="outline" size="sm" className="w-full">
-                        <Download className="w-4 h-4 mr-2" />
-                        Download PDF
-                      </Button>
+                      <Badge variant="secondary" className="w-full justify-center">{report.status}</Badge>
                     </CardContent>
                   </Card>
                 ))}

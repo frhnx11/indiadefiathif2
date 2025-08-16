@@ -49,10 +49,10 @@ const Index = () => {
   }, []);
 
   const stats = [
-    { number: "1.4B+", label: "Indians to Empower", icon: <Users className="w-6 h-6" /> },
-    { number: "$100B+", label: "Annual Remittances", icon: <Globe className="w-6 h-6" /> },
-    { number: "60M+", label: "Indians on chain", icon: <Shield className="w-6 h-6" /> },
-    { number: "$45B", label: "DeFi Value by 2025", icon: <Award className="w-6 h-6" /> },
+    { number: "1.4B+", label: "Indians to Empower", iconPath: "/icons/defi.png" },
+    { number: "$100B+", label: "Annual Remittances", iconPath: "/icons/ico.png" },
+    { number: "60M+", label: "Indians on chain", iconPath: "/icons/blockchain.png" },
+    { number: "$250B", label: "Projected DeFi Value by 2030", iconPath: "/icons/inflation.png" },
   ];
 
   const features = [
@@ -145,13 +145,12 @@ const Index = () => {
         <section className="py-12 lg:py-16 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-slate-800">Impact Stats</h2>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {stats.map((stat, index) => (
                   <Card key={index} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
                     <CardContent className="p-6 text-center">
-                      <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        {stat.icon}
+                      <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 p-2">
+                        <img src={stat.iconPath} alt={stat.label} className="w-full h-full object-contain" />
                       </div>
                       <div className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2">{stat.number}</div>
                       <div className="text-sm text-slate-600 font-medium">{stat.label}</div>
@@ -289,7 +288,7 @@ const Index = () => {
                       Step by step guide covering the basics of DeFi: Smart Contracts, Lending, AMMs, governance, and risk management.
                     </p>
                     <div className="text-center mt-4">
-                      <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">Link →</a>
+                      <a href="/handbook" className="text-blue-600 hover:text-blue-700 font-medium">View Handbook →</a>
                     </div>
                   </CardContent>
                 </Card>
@@ -306,7 +305,7 @@ const Index = () => {
                       Core DeFi terms in English, Hindi, and Tamil, with examples and deep dives.
                     </p>
                     <div className="text-center mt-4">
-                      <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">Link →</a>
+                      <a href="/glossary" className="text-blue-600 hover:text-blue-700 font-medium">View Glossary →</a>
                     </div>
                   </CardContent>
                 </Card>
