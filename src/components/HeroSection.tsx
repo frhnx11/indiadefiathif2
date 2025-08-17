@@ -330,7 +330,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="group relative button-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white border-0 shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 overflow-hidden px-8 py-4"
-                onClick={() => window.open('https://drive.google.com/file/d/1rTa3vGJu1rKrDBrMw9qxcN8G0h0VJMsW/view?usp=sharing', '_blank')}
+                onClick={() => window.open('/pitchdeck.pdf', '_blank')}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>

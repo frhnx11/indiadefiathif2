@@ -359,7 +359,11 @@ const Index = () => {
                   </div>
                   
                   <div className="text-center mt-8">
-                    <Button size="lg" className="btn-vibrant bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-colorful-hover transform hover:scale-105 transition-all duration-300">
+                    <Button 
+                      size="lg" 
+                      className="btn-vibrant bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-colorful-hover transform hover:scale-105 transition-all duration-300"
+                      onClick={() => window.open('/pitchdeck.pdf', '_blank')}
+                    >
                       Learn About Our Work <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </div>
