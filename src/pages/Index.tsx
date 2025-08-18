@@ -50,7 +50,7 @@ const Index = () => {
 
   const stats = [
     { number: "1.4B+", label: "Indians to Empower", iconPath: "/icons/defi.png" },
-    { number: "$100B+", label: "Annual Remittances", iconPath: "/icons/ico.png" },
+    { number: "$100B+", label: "Indian Annual Inward Remittance", iconPath: "/icons/ico.png" },
     { number: "60M+", label: "Indians on chain", iconPath: "/icons/blockchain.png" },
     { number: "$250B", label: "Projected DeFi Value by 2030", iconPath: "/icons/inflation.png" },
   ];
@@ -99,7 +99,7 @@ const Index = () => {
     },
     {
       question: "What are the benefits of DeFi?",
-      answer: "• Financial Freedom: Access banking‑like services from anywhere.\n• Crystal‑Clear Transparency: Every transaction and smart contract is on‑chain and auditable.\n• Programmable Money: Automate loans, swaps, staking—no middlemen, just code.\n• Composable Innovation: Mix 'n' match protocols to invent entirely new products.\n• Lean & Mean: Peer‑to‑peer transactions slash fees."
+      answer: "• Financial Freedom: Access banking‑like services from anywhere.\n• Crystal‑Clear Transparency: Every transaction and smart contract is on‑chain and auditable.\n• Programmable Money: Automate loans, swaps, staking—no middlemen, just code.\n• Composable Innovation: Mix 'n' match protocols to invent entirely new products.\n• Cheaper and Faster Transfers: Peer to peer transactions reduce time and fees."
     },
     {
       question: "Why does DeFi challenge traditional regulations?",
@@ -162,12 +162,11 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Member Logos Ticker */}
-        <section className="py-8 bg-white border-y border-gray-200">
+        {/* Member Logos Ticker - Hidden for now */}
+        {/* <section className="py-8 bg-white border-y border-gray-200">
           <div className="container mx-auto px-4">
             <h3 className="text-2xl font-bold text-center text-slate-800 mb-6">Our Members</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {/* Placeholder for member logos - to be added */}
               <div className="h-16 w-32 bg-gray-200 rounded"></div>
               <div className="h-16 w-32 bg-gray-200 rounded"></div>
               <div className="h-16 w-32 bg-gray-200 rounded"></div>
@@ -176,7 +175,7 @@ const Index = () => {
               <div className="h-16 w-32 bg-gray-200 rounded"></div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Introduction Section */}
         <section className="relative py-8 lg:py-12 bg-white">
@@ -364,7 +363,7 @@ const Index = () => {
                       className="btn-vibrant bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-colorful-hover transform hover:scale-105 transition-all duration-300"
                       onClick={() => window.open('/pitchdeck.pdf', '_blank')}
                     >
-                      Learn About Our Work <ArrowRight className="w-5 h-5 ml-2" />
+                      Discover Our Objectives <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </div>
                 </CardContent>
@@ -461,12 +460,17 @@ const Index = () => {
                   </div>
                   
                   <div className="mt-8 pt-8 border-t border-border/50">
-                    <p className="text-sm text-muted-foreground">
-                      Questions? Contact us at{' '}
-                      <a href="mailto:contact@indiadefalliance.org" className="text-primary hover:underline">
-                        contact@indiadefalliance.org
-                      </a>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Questions?
                     </p>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+                      onClick={() => window.location.href = '/contact'}
+                    >
+                      Contact Us
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

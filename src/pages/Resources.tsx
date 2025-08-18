@@ -5,7 +5,7 @@ import FloatingBot from '@/components/FloatingBot';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, FileText, Newspaper, Languages, ExternalLink, Download, Search, GraduationCap, Library } from 'lucide-react';
+import { BookOpen, FileText, Newspaper, Languages, ExternalLink, Download, Search, GraduationCap, Library, Calendar, User, ArrowRight } from 'lucide-react';
 
 const Resources = () => {
   const educationResources = [
@@ -63,6 +63,39 @@ const Resources = () => {
       description: "Coming Soon",
       status: "Coming Soon",
     },
+  ];
+
+  const blogArticles = [
+    {
+      id: "what-is-defi",
+      title: "What is DeFi?",
+      author: "India DeFi Alliance",
+      date: "August 18, 2025",
+      excerpt: "Discover the fundamentals of Decentralized Finance (DeFi) and how it's revolutionizing the traditional financial system through blockchain technology, smart contracts, and peer-to-peer transactions.",
+      readTime: "8 min read",
+      category: "Education",
+      link: "/blog/what-is-defi"
+    },
+    {
+      id: "how-defi-works",
+      title: "How DeFi Works",
+      author: "India DeFi Alliance",
+      date: "August 17, 2025",
+      excerpt: "A comprehensive guide to understanding the mechanics of DeFi protocols, from liquidity pools and yield farming to automated market makers and governance tokens.",
+      readTime: "12 min read",
+      category: "Technical",
+      link: "/blog/how-defi-works"
+    },
+    {
+      id: "defi-vs-cefi",
+      title: "DeFi vs CeFi: Understanding the Differences",
+      author: "India DeFi Alliance",
+      date: "August 16, 2025",
+      excerpt: "An in-depth comparison between Decentralized Finance (DeFi) and Centralized Finance (CeFi), exploring the advantages, challenges, and use cases of each approach.",
+      readTime: "10 min read",
+      category: "Analysis",
+      link: "/blog/defi-vs-cefi"
+    }
   ];
 
   return (
@@ -201,6 +234,75 @@ const Resources = () => {
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Blog Section */}
+        <section className="py-12 lg:py-16 bg-gradient-to-br from-slate-50 to-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Latest Blog Articles</h2>
+              <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                {blogArticles.map((article, index) => (
+                  <Card key={article.id} className="content-box-enhanced bg-white hover:shadow-2xl transition-all duration-300 group overflow-hidden border-0 relative">
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:to-purple-50/50 transition-all duration-500 pointer-events-none"></div>
+                    
+                    {/* Category ribbon */}
+                    <div className="absolute top-0 right-0 z-10">
+                      <div className={`px-4 py-1 text-xs font-semibold text-white transform rotate-0 shadow-lg ${
+                        article.category === 'Education' ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
+                        article.category === 'Technical' ? 'bg-gradient-to-r from-purple-500 to-purple-600' :
+                        'bg-gradient-to-r from-green-500 to-green-600'
+                      }`}>
+                        {article.category}
+                      </div>
+                    </div>
+                    
+                    <CardHeader className="pb-4 relative z-10">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-xs text-slate-500 flex items-center gap-1">
+                          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                          {article.readTime}
+                        </span>
+                      </div>
+                      <CardTitle className="text-xl font-bold text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                        {article.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <p className="text-slate-600 mb-4 line-clamp-3 leading-relaxed">{article.excerpt}</p>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-2 text-sm text-slate-500">
+                          <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
+                            <User className="w-4 h-4 text-blue-600" />
+                          </div>
+                          <span className="font-medium">{article.author}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-slate-500 mb-4">
+                        <Calendar className="w-4 h-4" />
+                        <span>{article.date}</span>
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-gray-100">
+                        <a 
+                          href={article.link} 
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-600 font-semibold rounded-lg hover:from-blue-100 hover:to-purple-100 transition-all duration-300 hover:shadow-md"
+                        >
+                          Read Article 
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <Button variant="outline" size="lg" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50">
+                  View All Articles
+                </Button>
               </div>
             </div>
           </div>

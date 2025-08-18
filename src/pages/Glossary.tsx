@@ -64,7 +64,7 @@ const Glossary = () => {
       hindi: "अस्थायी नुकसान: मूल्य के विचलन के कारण किसी लिक्विडिटी पूल में रखी गई संपत्ति के मूल्य में होने वाली अस्थायी कमी।",
       tamil: "நிரந்தரமற்ற இழப்பு: விலை வேறுபாடுகள் காரணமாக, ஒரு சொத்தை ஒரு திரவத்தன்மை குளத்தில் வைத்திருப்பதற்கும், அதை வெளியே வைத்திருப்பதற்கும் இடையே உள்ள மதிப்பு வேறுபாடு.",
       example: "A user deposits 1 ETH and 2,000 USDT into a liquidity pool. If ETH's price doubles, the user may withdraw less ETH and more USDT than initially deposited.",
-      risk: "The loss becomes permanent if assets are withdrawn before prices revert. LPs must manage this risk by using stablecoin pairs or seeking high-fee pools."
+      risk: "The loss becomes permanent if assets are withdrawn before prices revert. These risks must be managed by using stablecoin pairs or seeking high-fee pools."
     },
     {
       term: "Liquid Staking",
@@ -74,7 +74,7 @@ const Glossary = () => {
       hindi: "लिक्विड स्टेकिंग: क्रिप्टोकरेंसी को स्टेकिंग पर लगाने की एक विधि, जिसमें उपयोगकर्ता को अपनी स्टेकिंग पर लगी हुई संपत्ति का टोकन वाला प्रतिनिधित्व मिलता है।",
       tamil: "திரவ ஸ்டேக்கிங்: கிரிப்டோகரன்சிகளை ஸ்டேக் செய்யும் முறை, இதில் பயனர்கள் தங்கள் ஸ்டேக் செய்யப்பட்ட சொத்துகளின் டோக்கன் செய்யப்பட்ட பிரதிநிதித்துவத்தைப் பெறுகிறார்கள்.",
       example: "A user stakes 1 ETH with Lido and receives 1 stETH, which can be used as collateral while still earning staking rewards.",
-      risk: "The LST's price can diverge from the underlying asset, and the protocol is susceptible to smart contract vulnerabilities and slashing penalties."
+      risk: "The value of the liquid staking token (LST) may deviate from the underlying asset's price. Additionally, the protocol is exposed to risks such as smart contract vulnerabilities and validator slashing penalties."
     },
     {
       term: "Automated Market Maker (AMM)",
@@ -84,7 +84,7 @@ const Glossary = () => {
       hindi: "ऑटोमेटेड मार्केट मेकर (AMM): एक प्रकार का विकेन्द्रीकृत एक्सचेंज प्रोटोकॉल जो संपत्ति की कीमत निर्धारित करने और ऑर्डर बुक के बिना व्यापार की सुविधा के लिए गणितीय सूत्रों का उपयोग करता है।",
       tamil: "தானியங்கி சந்தை உருவாக்குநர் (AMM): ஆர்டர் புத்தகங்கள் இல்லாமல் சொத்துகளின் விலையை நிர்ணயிக்கவும் வர்த்தகத்தை எளிதாக்கவும் கணித சூத்திரங்களைப் பயன்படுத்தும் ஒரு வகை பரவலாக்கப்பட்ட பரிமாற்ற நெறிமுறை.",
       example: "Uniswap uses the formula x·y=k to maintain liquidity pools and enable instant token swaps.",
-      risk: "AMMs expose liquidity providers to impermanent loss and can suffer from price slippage on large trades."
+      risk: "Automated market makers (AMMs) expose liquidity providers to impermanent loss and are vulnerable to price slippage, particularly during large trades or periods of low liquidity."
     },
     {
       term: "Yield Farming",

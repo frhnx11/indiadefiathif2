@@ -1,9 +1,14 @@
-Just a few things:
+Changes to IDA Website
 
-1. The Our Vision needs to link to the ppt - its in the google drive
-2. ⁠let’s remove the heading impact stats, let the stats be
-3. ⁠instead of 45B defi value by 2025, put it as $250B, projected DeFi value by 2030
-4. ⁠defi handbook: please add the link in home page 
-5. ⁠defi glossary: please add the link in home page 
-6. ⁠in resources page: everything that you’ve put let the names of the articles be: but put it as ‘coming soon’ remove the date and hindu/ economic times all that
-7. ⁠even research and reports at the bottom of the research page: put it as coming soon instead of download pdf
+1.	Hero Text - Connecting Innovators, Policymakers, and Industry Leaders to drive open and inclusive finance.
+2.	Our Vision make this to ‘Explore Our Purpose’ – Updated Doc (have sent over whatsapp)
+3.	Annual Remittance – Indian Annual Inward Remittance 
+4.	Can you hide the ‘Our Members’ for now – once we get confirmation will get their logos and add it in, then we can make it live, looks odd now.
+5.	Core Objectives: Instead of the button saying ‘Learn About Our Work’ make it ‘Discover Our Objectives’.
+6.	FAQ: What are benefits of DeFi - Ans: Cheaper and Faster Transfers: Peer to peer transactions reduce time and fees.
+7.	Questions? Contact us at contact@indiadefalliance.org, remove this email, just put a button which re-directs to the Contact Us page.
+8.	In DeFi glossary: LPs must manage this risk by using stablecoin pairs or seeking high-fee pools – change to – These risks must be managed by using stablecoin pairs or seeking high-fee pools.
+9.	In DeFi glossary: Risk Analysis: The LST's price can diverge from the underlying asset, and the protocol is susceptible to smart contract vulnerabilities and slashing penalties – change to - The value of the liquid staking token (LST) may deviate from the underlying asset’s price. Additionally, the protocol is exposed to risks such as smart contract vulnerabilities and validator slashing penalties.
+10.	In DeFi glossary: AMMs expose liquidity providers to impermanent loss and can suffer from price slippage on large trades – change to - Automated market makers (AMMs) expose liquidity providers to impermanent loss and are vulnerable to price slippage, particularly during large trades or periods of low liquidity.
+11.	Bro in the resources page, there also has to be a blog section, where the 3 articles need to be added, I think you missed that (ive re-send it on whatsapp)
+
