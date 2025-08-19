@@ -453,23 +453,14 @@ const Index = () => {
                       <Users className="w-5 h-5 mr-2" />
                       Join the Alliance
                     </Button>
-                    <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-2 border-gradient-to-r border-purple-500 text-purple-700 hover:bg-purple-50 hover:border-purple-600 shadow-colorful-hover transform hover:scale-105 transition-all duration-300">
-                      <MessageCircle className="w-5 h-5 mr-2" />
-                      Get in Touch
-                    </Button>
-                  </div>
-                  
-                  <div className="mt-8 pt-8 border-t border-border/50">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Questions?
-                    </p>
                     <Button 
                       variant="outline" 
-                      size="sm" 
-                      className="border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+                      size="lg" 
+                      className="text-lg px-8 py-4 border-2 border-gradient-to-r border-purple-500 text-purple-700 hover:bg-purple-50 hover:border-purple-600 shadow-colorful-hover transform hover:scale-105 transition-all duration-300"
                       onClick={() => window.location.href = '/contact'}
                     >
-                      Contact Us
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      Get in Touch
                     </Button>
                   </div>
                 </CardContent>
