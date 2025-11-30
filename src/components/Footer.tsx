@@ -12,9 +12,11 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-primary-foreground rounded-lg flex items-center justify-center">
-                  <span className="text-primary font-bold">IDA</span>
-                </div>
+                <img
+                  src="/logo.png"
+                  alt="India DeFi Alliance Logo"
+                  className="h-10 w-auto object-contain"
+                />
                 <span className="text-xl font-bold">India DeFi Alliance</span>
               </div>
               <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-md">

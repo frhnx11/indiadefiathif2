@@ -36,9 +36,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo Area */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/ChatGPT Image Jul 25, 2025, 02_15_19 PM.png" 
-              alt="India DeFi Alliance Logo" 
+            <img
+              src="/logo.png"
+              alt="India DeFi Alliance Logo"
               className="h-8 lg:h-10 w-auto object-contain"
             />
             <span className="text-lg lg:text-xl font-display text-primary tracking-wide" style={{ fontFamily: 'Outfit, sans-serif', fontWeight: '200', letterSpacing: '0.03em' }}>
