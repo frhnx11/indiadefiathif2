@@ -33,14 +33,14 @@ const HeroSection = () => {
 
           {/* Title */}
           <div className="text-center relative">
-            <div className="w-full mb-8">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight py-4 text-center" style={{ fontFamily: 'Outfit, sans-serif', fontWeight: '200', letterSpacing: '0.03em' }}>
+            <div className="w-full mb-12">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight py-4 text-center" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '800', letterSpacing: '-0.02em' }}>
                 <span className="text-slate-900">India DeFi Alliance</span>
               </h1>
             </div>
 
             {/* Subtitle */}
-            <div className="relative mb-6">
+            <div className="relative mb-10">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-normal text-slate-600 max-w-4xl mx-auto leading-relaxed">
                 Connecting Innovators, Policymakers, and Industry Leaders to drive open and inclusive finance
               </h2>
