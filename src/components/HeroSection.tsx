@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* LiquidEther Background */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <LiquidEther
-          colors={['#5227FF', '#FF9FFC', '#B19EEF']}
+          colors={['#E3F2FD', '#90CAF9', '#42A5F5', '#1E88E5']}
           mouseForce={20}
           cursorSize={100}
           isViscous={false}
