@@ -125,9 +125,9 @@ const Blog = () => {
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
-      "Policy Analysis": "bg-blue-100 text-blue-800",
-      "Technical Analysis": "bg-green-100 text-green-800", 
-      "Research Insights": "bg-purple-100 text-purple-800",
+      "Policy Analysis": "bg-[#1E4B8E]/10 text-blue-800",
+      "Technical Analysis": "bg-[#2E9E5B]/10 text-green-800", 
+      "Research Insights": "bg-[#F5A623]/10 text-purple-800",
       "Educational": "bg-orange-100 text-orange-800",
       "Governance": "bg-red-100 text-red-800",
       "Market Analysis": "bg-teal-100 text-teal-800",
@@ -137,9 +137,9 @@ const Blog = () => {
 
   const getTypeColor = (type: string) => {
     const colors: { [key: string]: string } = {
-      "Press Release": "bg-blue-100 text-blue-800",
-      "Media Coverage": "bg-green-100 text-green-800",
-      "Event Coverage": "bg-purple-100 text-purple-800",
+      "Press Release": "bg-[#1E4B8E]/10 text-blue-800",
+      "Media Coverage": "bg-[#2E9E5B]/10 text-green-800",
+      "Event Coverage": "bg-[#F5A623]/10 text-purple-800",
     };
     return colors[type] || "bg-gray-100 text-gray-800";
   };
@@ -240,7 +240,7 @@ const Blog = () => {
                         <div className="md:w-1/3">
                           <div className="h-64 bg-gradient-to-br from-indigo-400/20 to-purple-400/20 flex items-center justify-center relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/10 to-blue-300/10 animate-pulse"></div>
-                            <Newspaper className="w-16 h-16 text-indigo-600 relative z-10 drop-shadow-lg" />
+                            <Newspaper className="w-16 h-16 text-[#1E4B8E] relative z-10 drop-shadow-lg" />
                           </div>
                         </div>
                         <div className="md:w-2/3 p-8">
@@ -288,10 +288,10 @@ const Blog = () => {
                       {blogPosts.slice(1).map((post, index) => {
                         const colors = [
                           { bg: 'from-rose-400/15 to-pink-400/15', header: 'from-rose-400/25 to-pink-400/25', icon: 'text-rose-600', title: 'text-rose-700', border: 'border-rose-200/50', badge: 'bg-rose-100 text-rose-700' },
-                          { bg: 'from-emerald-400/15 to-green-400/15', header: 'from-emerald-400/25 to-green-400/25', icon: 'text-emerald-600', title: 'text-emerald-700', border: 'border-emerald-200/50', badge: 'bg-emerald-100 text-emerald-700' },
-                          { bg: 'from-blue-400/15 to-cyan-400/15', header: 'from-blue-400/25 to-cyan-400/25', icon: 'text-blue-600', title: 'text-blue-700', border: 'border-blue-200/50', badge: 'bg-blue-100 text-blue-700' },
+                          { bg: 'from-emerald-400/15 to-green-400/15', header: 'from-emerald-400/25 to-green-400/25', icon: 'text-[#2E9E5B]', title: 'text-emerald-700', border: 'border-emerald-200/50', badge: 'bg-emerald-100 text-emerald-700' },
+                          { bg: 'from-blue-400/15 to-cyan-400/15', header: 'from-blue-400/25 to-cyan-400/25', icon: 'text-[#1E4B8E]', title: 'text-blue-700', border: 'border-blue-200/50', badge: 'bg-[#1E4B8E]/10 text-blue-700' },
                           { bg: 'from-amber-400/15 to-yellow-400/15', header: 'from-amber-400/25 to-yellow-400/25', icon: 'text-amber-600', title: 'text-amber-700', border: 'border-amber-200/50', badge: 'bg-amber-100 text-amber-700' },
-                          { bg: 'from-purple-400/15 to-violet-400/15', header: 'from-purple-400/25 to-violet-400/25', icon: 'text-purple-600', title: 'text-purple-700', border: 'border-purple-200/50', badge: 'bg-purple-100 text-purple-700' },
+                          { bg: 'from-purple-400/15 to-violet-400/15', header: 'from-purple-400/25 to-violet-400/25', icon: 'text-[#F5A623]', title: 'text-purple-700', border: 'border-purple-200/50', badge: 'bg-[#F5A623]/10 text-purple-700' },
                           { bg: 'from-teal-400/15 to-cyan-400/15', header: 'from-teal-400/25 to-cyan-400/25', icon: 'text-teal-600', title: 'text-teal-700', border: 'border-teal-200/50', badge: 'bg-teal-100 text-teal-700' }
                         ];
                         const color = colors[index % colors.length];
@@ -352,10 +352,10 @@ const Blog = () => {
                       {pressItems.map((item, index) => {
                         const colors = [
                           { bg: 'from-sky-400/15 to-cyan-400/15', thumbnail: 'from-sky-400/25 to-cyan-400/25', icon: 'text-sky-600', text: 'text-sky-700', border: 'border-sky-200/50', badge: 'bg-sky-100 text-sky-700' },
-                          { bg: 'from-green-400/15 to-emerald-400/15', thumbnail: 'from-green-400/25 to-emerald-400/25', icon: 'text-green-600', text: 'text-green-700', border: 'border-green-200/50', badge: 'bg-green-100 text-green-700' },
+                          { bg: 'from-green-400/15 to-emerald-400/15', thumbnail: 'from-green-400/25 to-emerald-400/25', icon: 'text-[#2E9E5B]', text: 'text-green-700', border: 'border-green-200/50', badge: 'bg-[#2E9E5B]/10 text-green-700' },
                           { bg: 'from-violet-400/15 to-purple-400/15', thumbnail: 'from-violet-400/25 to-purple-400/25', icon: 'text-violet-600', text: 'text-violet-700', border: 'border-violet-200/50', badge: 'bg-violet-100 text-violet-700' },
                           { bg: 'from-orange-400/15 to-red-400/15', thumbnail: 'from-orange-400/25 to-red-400/25', icon: 'text-orange-600', text: 'text-orange-700', border: 'border-orange-200/50', badge: 'bg-orange-100 text-orange-700' },
-                          { bg: 'from-indigo-400/15 to-blue-400/15', thumbnail: 'from-indigo-400/25 to-blue-400/25', icon: 'text-indigo-600', text: 'text-indigo-700', border: 'border-indigo-200/50', badge: 'bg-indigo-100 text-indigo-700' },
+                          { bg: 'from-indigo-400/15 to-blue-400/15', thumbnail: 'from-indigo-400/25 to-blue-400/25', icon: 'text-[#1E4B8E]', text: 'text-indigo-700', border: 'border-indigo-200/50', badge: 'bg-indigo-100 text-indigo-700' },
                           { bg: 'from-pink-400/15 to-rose-400/15', thumbnail: 'from-pink-400/25 to-rose-400/25', icon: 'text-pink-600', text: 'text-pink-700', border: 'border-pink-200/50', badge: 'bg-pink-100 text-pink-700' }
                         ];
                         const color = colors[index % colors.length];

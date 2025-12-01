@@ -28,32 +28,32 @@ const About = () => {
 
   const objectives = [
     {
-      icon: <Users className="w-8 h-8 text-blue-600" />,
+      icon: <Users className="w-8 h-8 text-[#1E4B8E]" />,
       title: "Connect developers and policymakers",
       description: "Foster informed dialogue and practical solutions.",
     },
     {
-      icon: <Shield className="w-8 h-8 text-blue-600" />,
+      icon: <Shield className="w-8 h-8 text-[#2E9E5B]" />,
       title: "Advocate pro-innovation regulations",
       description: "Protect consumers while encouraging experimentation.",
     },
     {
-      icon: <BookOpen className="w-8 h-8 text-blue-600" />,
+      icon: <BookOpen className="w-8 h-8 text-[#F5A623]" />,
       title: "Educate stakeholders",
       description: "Through events, workshops, and authoritative publications.",
     },
     {
-      icon: <Target className="w-8 h-8 text-blue-600" />,
+      icon: <Target className="w-8 h-8 text-[#1E4B8E]" />,
       title: "Advance research",
       description: "On security, governance, and the social impact of DeFi.",
     },
     {
-      icon: <Handshake className="w-8 h-8 text-blue-600" />,
+      icon: <Handshake className="w-8 h-8 text-[#2E9E5B]" />,
       title: "Build partnerships",
       description: "Across academia, industry, and government.",
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
+      icon: <TrendingUp className="w-8 h-8 text-[#F5A623]" />,
       title: "Grow an informed community",
       description: "That actively shapes the direction of decentralized finance in India.",
     },
@@ -64,73 +64,14 @@ const About = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 bg-white border-b border-gray-200">
-          {/* Dynamic Background Elements */}
-          <div className="absolute inset-0">
-            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-pink-400/20 to-rose-400/20 rounded-full blur-3xl animate-morph-slow"></div>
-            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-cyan-400/15 to-teal-400/15 rounded-full blur-2xl animate-float"></div>
-            <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-violet-300/25 to-purple-300/25 rounded-full blur-xl animate-pulse-slow"></div>
-          </div>
-
-          {/* Network Connection Lines */}
-          <div className="absolute inset-0 opacity-20">
-            <svg className="w-full h-full" viewBox="0 0 1000 600" fill="none">
-              <path d="M100 100L300 200L500 150L700 250L900 200" stroke="url(#gradient1)" strokeWidth="3" opacity="0.6" className="animate-pulse" />
-              <path d="M150 300L350 400L550 350L750 450L950 400" stroke="url(#gradient2)" strokeWidth="3" opacity="0.6" className="animate-pulse" style={{ animationDelay: '1s' }} />
-              <circle cx="100" cy="100" r="6" fill="url(#gradient3)" opacity="0.8" className="animate-glow-pulse" />
-              <circle cx="300" cy="200" r="6" fill="url(#gradient4)" opacity="0.8" className="animate-glow-pulse" style={{ animationDelay: '0.5s' }} />
-              <circle cx="500" cy="150" r="6" fill="url(#gradient5)" opacity="0.8" className="animate-glow-pulse" style={{ animationDelay: '1s' }} />
-              <circle cx="700" cy="250" r="6" fill="url(#gradient6)" opacity="0.8" className="animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
-              <defs>
-                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#06b6d4', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#8b5cf6', stopOpacity: 1 }} />
-                </linearGradient>
-                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#f59e0b', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#ec4899', stopOpacity: 1 }} />
-                </linearGradient>
-                <radialGradient id="gradient3"><stop offset="0%" style={{ stopColor: '#06b6d4' }} /></radialGradient>
-                <radialGradient id="gradient4"><stop offset="0%" style={{ stopColor: '#8b5cf6' }} /></radialGradient>
-                <radialGradient id="gradient5"><stop offset="0%" style={{ stopColor: '#f59e0b' }} /></radialGradient>
-                <radialGradient id="gradient6"><stop offset="0%" style={{ stopColor: '#ec4899' }} /></radialGradient>
-              </defs>
-            </svg>
-          </div>
-
-          {/* Floating Mission Icons */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-20 left-20 animate-float">
-              <Target className="w-10 h-10 text-cyan-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute top-32 right-24 animate-float" style={{ animationDelay: '2s' }}>
-              <Users className="w-12 h-12 text-emerald-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute bottom-28 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
-              <Handshake className="w-10 h-10 text-pink-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute bottom-20 right-1/3 animate-float" style={{ animationDelay: '1s' }}>
-              <TrendingUp className="w-11 h-11 text-yellow-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute top-1/2 right-20 animate-float" style={{ animationDelay: '3s' }}>
-              <Shield className="w-9 h-9 text-teal-300 drop-shadow-lg" />
-            </div>
-          </div>
-
-          {/* Glowing Orbs */}
-          <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-cyan-400 rounded-full animate-glow-pulse shadow-lg shadow-cyan-400/50"></div>
-            <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-pink-400 rounded-full animate-glow-pulse shadow-lg shadow-pink-400/50" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-yellow-400 rounded-full animate-glow-pulse shadow-lg shadow-yellow-400/50" style={{ animationDelay: '2s' }}></div>
-          </div>
-
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 lg:py-20 bg-white border-b border-gray-200">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6 animate-staggered-fade-in">
+              <div className="mb-6">
                 <div className="inline-flex items-center gap-3 mb-4">
-                  <div className="w-8 h-1 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full animate-pulse"></div>
+                  <div className="w-8 h-1 bg-[#1E4B8E] rounded-full"></div>
                   <span className="text-slate-600 text-sm uppercase tracking-wider font-medium">Our Story & Mission</span>
-                  <div className="w-8 h-1 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  <div className="w-8 h-1 bg-[#2E9E5B] rounded-full"></div>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
                   About & Objectives
@@ -139,30 +80,30 @@ const About = () => {
               <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
                 Discover who we are, our founding principles, and our mission to transform India's financial landscape through decentralized finance.
               </p>
-              
+
               {/* Key Focus Areas */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto animate-staggered-fade-in stagger-3">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-2 border border-emerald-200">
-                    <Users className="w-6 h-6 text-emerald-600" />
+                  <div className="w-12 h-12 bg-[#2E9E5B]/10 rounded-full flex items-center justify-center mx-auto mb-2 border border-[#2E9E5B]/20">
+                    <Users className="w-6 h-6 text-[#2E9E5B]" />
                   </div>
                   <span className="text-xs text-slate-600 font-medium">Community</span>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-2 border border-teal-200">
-                    <Target className="w-6 h-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-[#1E4B8E]/10 rounded-full flex items-center justify-center mx-auto mb-2 border border-[#1E4B8E]/20">
+                    <Target className="w-6 h-6 text-[#1E4B8E]" />
                   </div>
                   <span className="text-xs text-slate-600 font-medium">Mission</span>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-cyan-50 rounded-full flex items-center justify-center mx-auto mb-2 border border-cyan-200">
-                    <BookOpen className="w-6 h-6 text-cyan-600" />
+                  <div className="w-12 h-12 bg-[#F5A623]/10 rounded-full flex items-center justify-center mx-auto mb-2 border border-[#F5A623]/20">
+                    <BookOpen className="w-6 h-6 text-[#F5A623]" />
                   </div>
                   <span className="text-xs text-slate-600 font-medium">Education</span>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-2 border border-blue-200">
-                    <TrendingUp className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-[#1E4B8E]/10 rounded-full flex items-center justify-center mx-auto mb-2 border border-[#1E4B8E]/20">
+                    <TrendingUp className="w-6 h-6 text-[#1E4B8E]" />
                   </div>
                   <span className="text-xs text-slate-600 font-medium">Growth</span>
                 </div>
@@ -206,8 +147,8 @@ const About = () => {
                   }`}
                 >
                   <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Target className="w-8 h-8 text-blue-600" />
+                    <div className="w-16 h-16 bg-[#1E4B8E]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Target className="w-8 h-8 text-[#1E4B8E]" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-800">Mission</h2>
                   </div>
@@ -228,8 +169,8 @@ const About = () => {
                   style={{ animationDelay: '200ms' }}
                 >
                   <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <TrendingUp className="w-8 h-8 text-purple-600" />
+                    <div className="w-16 h-16 bg-[#2E9E5B]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <TrendingUp className="w-8 h-8 text-[#2E9E5B]" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-800">Vision</h2>
                   </div>
@@ -246,11 +187,7 @@ const About = () => {
 
         {/* Our Objectives */}
         <section className="py-12 lg:py-16 bg-gray-50">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-orange-300/20 to-yellow-300/20 rounded-full blur-3xl animate-morph-slow"></div>
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-amber-300/15 to-orange-300/15 rounded-full blur-2xl animate-spin-slow"></div>
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Our Objectives</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -302,25 +239,25 @@ const About = () => {
                   <h2 className="text-3xl font-bold text-center mb-8 text-slate-800">Why India</h2>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-600 mt-1">•</span>
+                      <span className="text-[#1E4B8E] mt-1">•</span>
                       <p className="text-lg text-slate-600">
                         The world's largest remittance market, with strong potential to reduce cross-border transaction costs through blockchain solutions.
                       </p>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-600 mt-1">•</span>
+                      <span className="text-[#1E4B8E] mt-1">•</span>
                       <p className="text-lg text-slate-600">
                         A rapidly digitising economy driven by UPI and mobile adoption, primed for on-chain financial innovation.
                       </p>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-600 mt-1">•</span>
+                      <span className="text-[#1E4B8E] mt-1">•</span>
                       <p className="text-lg text-slate-600">
                         Over 190 million unbanked or underbanked citizens who can benefit from inclusive DeFi products.
                       </p>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-blue-600 mt-1">•</span>
+                      <span className="text-[#1E4B8E] mt-1">•</span>
                       <p className="text-lg text-slate-600">
                         A thriving developer ecosystem and global leadership in Web3 talent, capable of building scalable financial infrastructure.
                       </p>

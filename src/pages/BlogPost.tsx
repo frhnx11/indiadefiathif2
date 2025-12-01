@@ -383,15 +383,15 @@ const BlogPost = () => {
             <div className="max-w-4xl mx-auto">
               {/* Breadcrumb */}
               <div className="flex items-center gap-2 text-sm mb-8">
-                <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/" className="text-gray-600 hover:text-[#1E4B8E] transition-colors">
                   Home
                 </Link>
                 <ChevronRight className="w-4 h-4 text-gray-400" />
-                <Link to="/resources" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/resources" className="text-gray-600 hover:text-[#1E4B8E] transition-colors">
                   Resources
                 </Link>
                 <ChevronRight className="w-4 h-4 text-gray-400" />
-                <span className="text-blue-600 font-medium">Blog</span>
+                <span className="text-[#1E4B8E] font-medium">Blog</span>
               </div>
               
               {/* Category and Read Time */}
@@ -423,7 +423,7 @@ const BlogPost = () => {
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center shadow-md">
-                    <User className="w-6 h-6 text-blue-600" />
+                    <User className="w-6 h-6 text-[#1E4B8E]" />
                   </div>
                   <div>
                     <p className="font-semibold text-slate-800">{post.author}</p>
@@ -458,7 +458,7 @@ const BlogPost = () => {
                     Be part of India's journey towards financial innovation and inclusion.
                   </p>
                   <Link to="/membership">
-                    <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+                    <Button size="lg" className="bg-white text-[#1E4B8E] hover:bg-blue-50">
                       Join India DeFi Alliance
                     </Button>
                   </Link>
@@ -477,13 +477,13 @@ const BlogPost = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:to-purple-50/50 transition-all duration-500 pointer-events-none"></div>
                         <CardContent className="p-6 relative z-10">
                           <Badge className={`mb-3 ${
-                            relatedPost.category === 'Education' ? 'bg-blue-100 text-blue-700' :
-                            relatedPost.category === 'Technical' ? 'bg-purple-100 text-purple-700' :
-                            'bg-green-100 text-green-700'
+                            relatedPost.category === 'Education' ? 'bg-[#1E4B8E]/10 text-blue-700' :
+                            relatedPost.category === 'Technical' ? 'bg-[#F5A623]/10 text-purple-700' :
+                            'bg-[#2E9E5B]/10 text-green-700'
                           }`}>
                             {relatedPost.category}
                           </Badge>
-                          <h4 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
+                          <h4 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-[#1E4B8E] transition-colors">
                             {relatedPost.title}
                           </h4>
                           <p className="text-gray-600 text-sm mb-4">{relatedPost.subtitle}</p>

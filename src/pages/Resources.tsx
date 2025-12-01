@@ -5,7 +5,7 @@ import FloatingBot from '@/components/FloatingBot';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, FileText, Newspaper, Languages, ExternalLink, Download, Search, GraduationCap, Library, Calendar, User, ArrowRight } from 'lucide-react';
+import { BookOpen, FileText, Newspaper, Languages, ExternalLink, Calendar, User, ArrowRight } from 'lucide-react';
 
 const Resources = () => {
   const educationResources = [
@@ -14,14 +14,14 @@ const Resources = () => {
       type: "Interactive Guide",
       description: "Step by step guide covering the basics of DeFi: Smart Contracts, Lending, AMMs, governance, and risk management.",
       link: "/handbook",
-      icon: <BookOpen className="w-8 h-8 text-blue-600" />,
+      icon: <BookOpen className="w-8 h-8 text-[#1E4B8E]" />,
     },
     {
       title: "DeFi Glossary",
       type: "Multi-Language Resource",
       description: "Core DeFi terms in English, Hindi, and Tamil, with examples and deep dives.",
       link: "/glossary",
-      icon: <Languages className="w-8 h-8 text-green-600" />,
+      icon: <Languages className="w-8 h-8 text-[#2E9E5B]" />,
     },
   ];
 
@@ -103,76 +103,14 @@ const Resources = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 bg-white border-b border-gray-200">
-          {/* Dynamic Background Elements */}
-          <div className="absolute inset-0">
-            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-emerald-400/20 to-green-400/20 rounded-full blur-3xl animate-morph-slow"></div>
-            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-teal-400/15 to-cyan-400/15 rounded-full blur-2xl animate-float"></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-blue-300/25 to-indigo-300/25 rounded-full blur-xl animate-pulse-slow"></div>
-          </div>
-
-          {/* Network Lines Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <svg className="w-full h-full" viewBox="0 0 1000 600" fill="none">
-              <path d="M100 200L300 150L500 250L700 100L900 300" stroke="url(#resourceGradient1)" strokeWidth="3" opacity="0.6" className="animate-pulse" />
-              <path d="M150 400L350 300L550 450L750 200L950 500" stroke="url(#resourceGradient2)" strokeWidth="3" opacity="0.6" className="animate-pulse" style={{ animationDelay: '1s' }} />
-              <circle cx="100" cy="200" r="6" fill="url(#resourceNode1)" className="animate-glow-pulse" />
-              <circle cx="300" cy="150" r="8" fill="url(#resourceNode2)" className="animate-glow-pulse" style={{ animationDelay: '0.5s' }} />
-              <circle cx="500" cy="250" r="7" fill="url(#resourceNode3)" className="animate-glow-pulse" style={{ animationDelay: '1s' }} />
-              <circle cx="700" cy="100" r="9" fill="url(#resourceNode4)" className="animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
-              <defs>
-                <linearGradient id="resourceGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#10b981', stopOpacity: 1 }} />
-                  <stop offset="50%" style={{ stopColor: '#14b8a6', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#06b6d4', stopOpacity: 1 }} />
-                </linearGradient>
-                <linearGradient id="resourceGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#3b82f6', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#10b981', stopOpacity: 1 }} />
-                </linearGradient>
-                <radialGradient id="resourceNode1"><stop offset="0%" style={{ stopColor: '#10b981' }} /></radialGradient>
-                <radialGradient id="resourceNode2"><stop offset="0%" style={{ stopColor: '#14b8a6' }} /></radialGradient>
-                <radialGradient id="resourceNode3"><stop offset="0%" style={{ stopColor: '#06b6d4' }} /></radialGradient>
-                <radialGradient id="resourceNode4"><stop offset="0%" style={{ stopColor: '#3b82f6' }} /></radialGradient>
-              </defs>
-            </svg>
-          </div>
-
-          {/* Floating Resource Icons */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-20 left-20 animate-float">
-              <BookOpen className="w-12 h-12 text-emerald-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute top-32 right-24 animate-float" style={{ animationDelay: '2s' }}>
-              <Search className="w-10 h-10 text-teal-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute bottom-28 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
-              <Library className="w-11 h-11 text-blue-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute bottom-20 right-1/3 animate-float" style={{ animationDelay: '1s' }}>
-              <GraduationCap className="w-10 h-10 text-cyan-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute top-1/2 right-20 animate-float" style={{ animationDelay: '3s' }}>
-              <FileText className="w-9 h-9 text-indigo-300 drop-shadow-lg" />
-            </div>
-          </div>
-
-          {/* Glowing Orbs */}
-          <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-1/3 w-4 h-4 bg-emerald-400 rounded-full animate-glow-pulse shadow-lg shadow-emerald-400/50"></div>
-            <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-teal-400 rounded-full animate-glow-pulse shadow-lg shadow-teal-400/50" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-cyan-400 rounded-full animate-glow-pulse shadow-lg shadow-cyan-400/50" style={{ animationDelay: '2s' }}></div>
-          </div>
-
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 lg:py-20 bg-white border-b border-gray-200">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6 animate-staggered-fade-in">
+              <div className="mb-6">
                 <div className="inline-flex items-center gap-3 mb-4">
-                  <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                  <div className="w-8 h-1 bg-[#1E4B8E] rounded-full"></div>
                   <span className="text-slate-600 text-sm uppercase tracking-wider font-medium">Knowledge Hub</span>
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
-                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '0.9s' }}></div>
+                  <div className="w-8 h-1 bg-[#2E9E5B] rounded-full"></div>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
                   Resources
@@ -181,18 +119,18 @@ const Resources = () => {
               <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
                 Essential Resources • Media Coverage • Research Reports
               </p>
-              
+
               {/* Resource Categories */}
-              <div className="flex flex-wrap justify-center gap-6 animate-staggered-fade-in stagger-3">
-                <div className="flex items-center gap-2 text-emerald-700 bg-emerald-50 px-4 py-2 rounded-full border border-emerald-200">
+              <div className="flex flex-wrap justify-center gap-6">
+                <div className="flex items-center gap-2 text-[#1E4B8E] bg-[#1E4B8E]/10 px-4 py-2 rounded-full border border-[#1E4B8E]/20">
                   <BookOpen className="w-4 h-4" />
                   <span className="text-sm">Educational Materials</span>
                 </div>
-                <div className="flex items-center gap-2 text-teal-700 bg-teal-50 px-4 py-2 rounded-full border border-teal-200">
+                <div className="flex items-center gap-2 text-[#2E9E5B] bg-[#2E9E5B]/10 px-4 py-2 rounded-full border border-[#2E9E5B]/20">
                   <FileText className="w-4 h-4" />
                   <span className="text-sm">Research Papers</span>
                 </div>
-                <div className="flex items-center gap-2 text-cyan-700 bg-cyan-50 px-4 py-2 rounded-full border border-cyan-200">
+                <div className="flex items-center gap-2 text-[#F5A623] bg-[#F5A623]/10 px-4 py-2 rounded-full border border-[#F5A623]/20">
                   <Newspaper className="w-4 h-4" />
                   <span className="text-sm">Media Coverage</span>
                 </div>
@@ -202,7 +140,7 @@ const Resources = () => {
         </section>
 
         {/* Essential Resources */}
-        <section className="py-12 lg:py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <section className="py-12 lg:py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Essential Resources</h2>
@@ -213,21 +151,20 @@ const Resources = () => {
                       <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-sm">
                         {resource.icon}
                       </div>
-                      <Badge variant="secondary" className="mb-3">{resource.type}</Badge>
                       <CardTitle className="text-xl font-bold text-slate-800">{resource.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-slate-600 mb-6">{resource.description}</p>
                       {resource.title === "DeFi Handbook" ? (
-                        <a href={resource.link} className="text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center">
+                        <a href={resource.link} className="text-[#1E4B8E] hover:text-blue-700 font-medium flex items-center justify-center">
                           View Handbook <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                       ) : resource.title === "DeFi Glossary" ? (
-                        <a href={resource.link} className="text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center">
+                        <a href={resource.link} className="text-[#1E4B8E] hover:text-blue-700 font-medium flex items-center justify-center">
                           View Glossary <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                       ) : (
-                        <a href={resource.link} className="text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center">
+                        <a href={resource.link} className="text-[#1E4B8E] hover:text-blue-700 font-medium flex items-center justify-center">
                           Link <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                       )}
@@ -240,7 +177,7 @@ const Resources = () => {
         </section>
 
         {/* Blog Section */}
-        <section className="py-12 lg:py-16 bg-gradient-to-br from-slate-50 to-gray-50">
+        <section className="py-12 lg:py-16 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Latest Blog Articles</h2>
@@ -277,7 +214,7 @@ const Resources = () => {
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-2 text-sm text-slate-500">
                           <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
-                            <User className="w-4 h-4 text-blue-600" />
+                            <User className="w-4 h-4 text-[#1E4B8E]" />
                           </div>
                           <span className="font-medium">{article.author}</span>
                         </div>
@@ -289,7 +226,7 @@ const Resources = () => {
                       <div className="mt-4 pt-4 border-t border-gray-100">
                         <a 
                           href={article.link} 
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-600 font-semibold rounded-lg hover:from-blue-100 hover:to-purple-100 transition-all duration-300 hover:shadow-md"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 text-[#1E4B8E] font-semibold rounded-lg hover:from-blue-100 hover:to-purple-100 transition-all duration-300 hover:shadow-md"
                         >
                           Read Article 
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -300,7 +237,7 @@ const Resources = () => {
                 ))}
               </div>
               <div className="text-center mt-8">
-                <Button variant="outline" size="lg" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50">
+                <Button variant="outline" size="lg" className="border-2 border-blue-500 text-[#1E4B8E] hover:bg-blue-50">
                   View All Articles
                 </Button>
               </div>
@@ -335,7 +272,7 @@ const Resources = () => {
         </section>
 
         {/* Research and Reports */}
-        <section className="py-12 lg:py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50">
+        <section className="py-12 lg:py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Research and Reports</h2>
@@ -344,7 +281,7 @@ const Resources = () => {
                   <Card key={index} className="content-box-enhanced bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
                     <CardHeader className="pb-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-sm">
-                        <FileText className="w-6 h-6 text-purple-600" />
+                        <FileText className="w-6 h-6 text-[#F5A623]" />
                       </div>
                       <Badge className="mb-2">{report.type}</Badge>
                       <CardTitle className="text-lg font-bold text-slate-800">{report.title}</CardTitle>

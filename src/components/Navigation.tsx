@@ -41,7 +41,7 @@ const Navigation = () => {
               alt="India DeFi Alliance Logo"
               className="h-8 lg:h-10 w-auto object-contain"
             />
-            <span className="text-lg lg:text-xl font-display text-primary tracking-wide" style={{ fontFamily: 'Outfit, sans-serif', fontWeight: '200', letterSpacing: '0.03em' }}>
+            <span className="text-lg lg:text-xl text-foreground" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '600' }}>
               India DeFi Alliance
             </span>
           </div>

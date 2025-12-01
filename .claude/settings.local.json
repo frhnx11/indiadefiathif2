@@ -22,7 +22,8 @@
       "Bash(npx vercel:*)",
       "Bash(npx vite:*)",
       "Bash(node:*)",
-      "Bash(npm:*)"
+      "Bash(npm:*)",
+      "Bash(powershell -Command:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"

@@ -4,24 +4,24 @@ import Footer from '@/components/Footer';
 import FloatingBot from '@/components/FloatingBot';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Globe, Shield, Rocket, Users, Code, Sparkles, Target, Zap } from 'lucide-react';
+import { ArrowRight, Globe, Shield, Rocket, Users, Code } from 'lucide-react';
 
 const Membership = () => {
   const whyJoinReasons = [
     {
       title: "Shape the Future of Finance",
       description: "Join a movement redefining India's financial landscape through open, transparent, and inclusive systems.",
-      icon: <Rocket className="w-8 h-8 text-blue-600" />
+      icon: <Rocket className="w-8 h-8 text-[#1E4B8E]" />
     },
     {
       title: "Bridge Innovation and Policy",
       description: "Collaborate with builders, thinkers, and regulators to turn visionary ideas into impactful policy and practice.",
-      icon: <Globe className="w-8 h-8 text-green-600" />
+      icon: <Globe className="w-8 h-8 text-[#2E9E5B]" />
     },
     {
       title: "Lead Global Standards from India",
       description: "Help set benchmarks for responsible decentralization and financial inclusion that influence the world.",
-      icon: <Shield className="w-8 h-8 text-purple-600" />
+      icon: <Shield className="w-8 h-8 text-[#F5A623]" />
     },
     {
       title: "Build for Everyone",
@@ -35,21 +35,21 @@ const Membership = () => {
       title: "For the Contrarian Builder",
       subtitle: "Help Us fix India's Trillion-Dollar Mistake",
       content: "For years, the smart money has written off India's crypto scene as a regulatory nightmare. They're not wrong. But they're also missing the point. India has the best developers on the planet, and they are building the future for everyone else. We're creating an alliance to end this absurdity. The goal is simple: fix the policy, unleash the talent, and capture the trillion-dollar opportunity everyone is too scared to touch. This is a call for builders and backers, not talkers. Are you in?",
-      icon: <Code className="w-12 h-12 text-blue-600" />,
+      icon: <Code className="w-12 h-12 text-[#1E4B8E]" />,
       bgColor: "bg-blue-50"
     },
     {
       title: "For the Geopolitical Strategist",
       subtitle: "India's Choice: Digital Colony or Network State?",
       content: "A nation of 1.4 billion people is at a crossroads. Path one is the status quo: a digital colony, using financial protocols built and controlled by other nations. Path two is technological sovereignty. We are forming the Indian DeFi Alliance to force the choice for path two. This isn't just about business; it's about architecting the future of a subcontinent and ensuring it isn't a passive rule-taker in the Internet of Value. We are assembling the people who understand the stakes. Your voice is needed. Are you in?",
-      icon: <Globe className="w-12 h-12 text-green-600" />,
+      icon: <Globe className="w-12 h-12 text-[#2E9E5B]" />,
       bgColor: "bg-green-50"
     },
     {
       title: "For the Hard-Nosed VC",
       subtitle: "This is the Biggest Asymmetric Bet in Crypto Right Now",
       content: "The market has priced in India's policy chaos. That's the opportunity. We have the talent and the user base, but a self-inflicted \"Innovation Tax\" is strangling growth. The Indian DeFi Alliance is being formed to eliminate that tax. This is the ground floor of influencing the rules for a future trillion-dollar market. For a small contribution of capital and credibility, the upside is shaping the regulatory alpha for the next decade. This is the most asymmetric bet available in the ecosystem today. Let's talk.",
-      icon: <Rocket className="w-12 h-12 text-purple-600" />,
+      icon: <Rocket className="w-12 h-12 text-[#F5A623]" />,
       bgColor: "bg-purple-50"
     },
     {
@@ -73,76 +73,14 @@ const Membership = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 bg-white border-b border-gray-200">
-          {/* Dynamic Background Elements */}
-          <div className="absolute inset-0">
-            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-morph-slow"></div>
-            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-violet-400/15 to-pink-400/15 rounded-full blur-2xl animate-float"></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-purple-300/25 to-indigo-300/25 rounded-full blur-xl animate-pulse-slow"></div>
-          </div>
-
-          {/* Network Lines Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <svg className="w-full h-full" viewBox="0 0 1000 600" fill="none">
-              <path d="M100 300L300 150L500 350L700 200L900 400" stroke="url(#memberGradient1)" strokeWidth="3" opacity="0.6" className="animate-pulse" />
-              <path d="M150 500L350 250L550 450L750 100L950 350" stroke="url(#memberGradient2)" strokeWidth="3" opacity="0.6" className="animate-pulse" style={{ animationDelay: '1s' }} />
-              <circle cx="100" cy="300" r="6" fill="url(#memberNode1)" className="animate-glow-pulse" />
-              <circle cx="300" cy="150" r="8" fill="url(#memberNode2)" className="animate-glow-pulse" style={{ animationDelay: '0.5s' }} />
-              <circle cx="500" cy="350" r="7" fill="url(#memberNode3)" className="animate-glow-pulse" style={{ animationDelay: '1s' }} />
-              <circle cx="700" cy="200" r="9" fill="url(#memberNode4)" className="animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
-              <defs>
-                <linearGradient id="memberGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#6366f1', stopOpacity: 1 }} />
-                  <stop offset="50%" style={{ stopColor: '#8b5cf6', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
-                </linearGradient>
-                <linearGradient id="memberGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#ec4899', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#6366f1', stopOpacity: 1 }} />
-                </linearGradient>
-                <radialGradient id="memberNode1"><stop offset="0%" style={{ stopColor: '#6366f1' }} /></radialGradient>
-                <radialGradient id="memberNode2"><stop offset="0%" style={{ stopColor: '#8b5cf6' }} /></radialGradient>
-                <radialGradient id="memberNode3"><stop offset="0%" style={{ stopColor: '#a855f7' }} /></radialGradient>
-                <radialGradient id="memberNode4"><stop offset="0%" style={{ stopColor: '#ec4899' }} /></radialGradient>
-              </defs>
-            </svg>
-          </div>
-
-          {/* Floating Icons */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-20 left-20 animate-float">
-              <Rocket className="w-12 h-12 text-indigo-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute top-32 right-24 animate-float" style={{ animationDelay: '2s' }}>
-              <Users className="w-10 h-10 text-purple-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute bottom-28 left-1/4 animate-float" style={{ animationDelay: '4s' }}>
-              <Shield className="w-11 h-11 text-violet-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute bottom-20 right-1/3 animate-float" style={{ animationDelay: '1s' }}>
-              <Globe className="w-10 h-10 text-pink-300 drop-shadow-lg" />
-            </div>
-            <div className="absolute top-1/2 right-20 animate-float" style={{ animationDelay: '3s' }}>
-              <Sparkles className="w-9 h-9 text-indigo-300 drop-shadow-lg" />
-            </div>
-          </div>
-
-          {/* Glowing Orbs */}
-          <div className="absolute inset-0">
-            <div className="absolute top-1/4 left-1/3 w-4 h-4 bg-indigo-400 rounded-full animate-glow-pulse shadow-lg shadow-indigo-400/50"></div>
-            <div className="absolute bottom-1/3 right-1/4 w-6 h-6 bg-purple-400 rounded-full animate-glow-pulse shadow-lg shadow-purple-400/50" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-violet-400 rounded-full animate-glow-pulse shadow-lg shadow-violet-400/50" style={{ animationDelay: '2s' }}></div>
-          </div>
-
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 lg:py-20 bg-white border-b border-gray-200">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6 animate-staggered-fade-in">
+              <div className="mb-6">
                 <div className="inline-flex items-center gap-3 mb-4">
-                  <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                  <div className="w-8 h-1 bg-[#1E4B8E] rounded-full"></div>
                   <span className="text-slate-600 text-sm uppercase tracking-wider font-medium">Join the Alliance</span>
-                  <div className="w-2 h-2 bg-violet-400 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
-                  <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '0.9s' }}></div>
+                  <div className="w-8 h-1 bg-[#2E9E5B] rounded-full"></div>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
                   Why Join Us
@@ -151,18 +89,18 @@ const Membership = () => {
               <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
                 Be part of the movement that's shaping India's decentralized financial future
               </p>
-              
+
               {/* Member Benefits */}
-              <div className="flex flex-wrap justify-center gap-6 animate-staggered-fade-in stagger-3">
-                <div className="flex items-center gap-2 text-indigo-700 bg-indigo-50 px-4 py-2 rounded-full border border-indigo-200">
+              <div className="flex flex-wrap justify-center gap-6">
+                <div className="flex items-center gap-2 text-[#1E4B8E] bg-[#1E4B8E]/10 px-4 py-2 rounded-full border border-[#1E4B8E]/20">
                   <Rocket className="w-4 h-4" />
                   <span className="text-sm">Shape Policy</span>
                 </div>
-                <div className="flex items-center gap-2 text-purple-700 bg-purple-50 px-4 py-2 rounded-full border border-purple-200">
+                <div className="flex items-center gap-2 text-[#2E9E5B] bg-[#2E9E5B]/10 px-4 py-2 rounded-full border border-[#2E9E5B]/20">
                   <Users className="w-4 h-4" />
                   <span className="text-sm">Build Networks</span>
                 </div>
-                <div className="flex items-center gap-2 text-violet-700 bg-violet-50 px-4 py-2 rounded-full border border-violet-200">
+                <div className="flex items-center gap-2 text-[#F5A623] bg-[#F5A623]/10 px-4 py-2 rounded-full border border-[#F5A623]/20">
                   <Shield className="w-4 h-4" />
                   <span className="text-sm">Lead Innovation</span>
                 </div>
@@ -172,7 +110,7 @@ const Membership = () => {
         </section>
 
         {/* First Section - Why Join */}
-        <section className="py-12 lg:py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <section className="py-12 lg:py-16 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8">
@@ -222,16 +160,16 @@ const Membership = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join the Alliance?</h2>
-              <p className="text-xl mb-8 opacity-90">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#1E4B8E]">Ready to Join the Alliance?</h2>
+              <p className="text-xl mb-8 text-slate-600">
                 Be part of India's DeFi revolution and help shape the future of finance
               </p>
-              <Button 
-                size="lg" 
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-6 text-lg"
+              <Button
+                size="lg"
+                className="bg-[#2E9E5B] hover:bg-[#257a48] text-white font-semibold px-8 py-6 text-lg"
                 onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
               >
                 Join Here

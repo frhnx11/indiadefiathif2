@@ -72,23 +72,14 @@ const Handbook = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 border-b border-gray-200">
-          {/* Dynamic Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-morph-slow"></div>
-            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-indigo-400/15 to-purple-400/15 rounded-full blur-2xl animate-float"></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-purple-300/25 to-blue-300/25 rounded-full blur-xl animate-pulse-slow"></div>
-          </div>
-
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 lg:py-20 bg-white border-b border-gray-200">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6 animate-staggered-fade-in">
+              <div className="mb-6">
                 <div className="inline-flex items-center gap-3 mb-4">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                  <div className="w-8 h-1 bg-[#1E4B8E] rounded-full"></div>
                   <span className="text-slate-600 text-sm uppercase tracking-wider font-medium">Educational Resource</span>
-                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
-                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '0.9s' }}></div>
+                  <div className="w-8 h-1 bg-[#2E9E5B] rounded-full"></div>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
                   DeFi Handbook
@@ -97,20 +88,20 @@ const Handbook = () => {
               <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
                 Your comprehensive guide to understanding Decentralized Finance
               </p>
-              
-              <div className="flex flex-wrap justify-center gap-4 animate-staggered-fade-in stagger-3">
-                <Badge className="px-4 py-2 bg-blue-100 text-blue-700 border-blue-200">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  Step-by-Step Guide
-                </Badge>
-                <Badge className="px-4 py-2 bg-indigo-100 text-indigo-700 border-indigo-200">
-                  <Shield className="w-4 h-4 mr-2" />
-                  Security Best Practices
-                </Badge>
-                <Badge className="px-4 py-2 bg-purple-100 text-purple-700 border-purple-200">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  Real-World Examples
-                </Badge>
+
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex items-center gap-2 text-[#1E4B8E] bg-[#1E4B8E]/10 px-4 py-2 rounded-full border border-[#1E4B8E]/20">
+                  <BookOpen className="w-4 h-4" />
+                  <span className="text-sm">Step-by-Step Guide</span>
+                </div>
+                <div className="flex items-center gap-2 text-[#2E9E5B] bg-[#2E9E5B]/10 px-4 py-2 rounded-full border border-[#2E9E5B]/20">
+                  <Shield className="w-4 h-4" />
+                  <span className="text-sm">Security Best Practices</span>
+                </div>
+                <div className="flex items-center gap-2 text-[#F5A623] bg-[#F5A623]/10 px-4 py-2 rounded-full border border-[#F5A623]/20">
+                  <TrendingUp className="w-4 h-4" />
+                  <span className="text-sm">Real-World Examples</span>
+                </div>
               </div>
             </div>
           </div>
@@ -153,7 +144,7 @@ const Handbook = () => {
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center">
-                        <BookOpen className="w-6 h-6 text-blue-600" />
+                        <BookOpen className="w-6 h-6 text-[#1E4B8E]" />
                       </div>
                       <div>
                         <CardTitle className="text-2xl font-bold text-slate-800">Introduction to DeFi</CardTitle>
@@ -173,19 +164,19 @@ const Handbook = () => {
                       </p>
                       <ul className="space-y-2">
                         <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-600 mt-1 shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-[#2E9E5B] mt-1 shrink-0" />
                           <span className="text-slate-700">No intermediaries or central authorities</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-600 mt-1 shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-[#2E9E5B] mt-1 shrink-0" />
                           <span className="text-slate-700">24/7 global accessibility</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-600 mt-1 shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-[#2E9E5B] mt-1 shrink-0" />
                           <span className="text-slate-700">Transparent and auditable transactions</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-600 mt-1 shrink-0" />
+                          <CheckCircle className="w-5 h-5 text-[#2E9E5B] mt-1 shrink-0" />
                           <span className="text-slate-700">Programmable money through smart contracts</span>
                         </li>
                       </ul>
@@ -205,7 +196,7 @@ const Handbook = () => {
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-xl flex items-center justify-center">
-                        <Layers className="w-6 h-6 text-indigo-600" />
+                        <Layers className="w-6 h-6 text-[#1E4B8E]" />
                       </div>
                       <div>
                         <CardTitle className="text-2xl font-bold text-slate-800">DeFi Fundamentals</CardTitle>
@@ -265,7 +256,7 @@ const Handbook = () => {
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-violet-100 rounded-xl flex items-center justify-center">
-                        <Network className="w-6 h-6 text-purple-600" />
+                        <Network className="w-6 h-6 text-[#F5A623]" />
                       </div>
                       <div>
                         <CardTitle className="text-2xl font-bold text-slate-800">Key DeFi Protocols</CardTitle>
@@ -302,7 +293,7 @@ const Handbook = () => {
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl flex items-center justify-center">
-                        <Coins className="w-6 h-6 text-green-600" />
+                        <Coins className="w-6 h-6 text-[#2E9E5B]" />
                       </div>
                       <div>
                         <CardTitle className="text-2xl font-bold text-slate-800">Lending & Borrowing</CardTitle>
@@ -320,15 +311,15 @@ const Handbook = () => {
                         <h4 className="text-lg font-semibold text-slate-800 mb-3">For Lenders</h4>
                         <ul className="space-y-2 text-sm text-slate-700">
                           <li className="flex items-start gap-2">
-                            <ChevronRight className="w-4 h-4 text-green-600 mt-1 shrink-0" />
+                            <ChevronRight className="w-4 h-4 text-[#2E9E5B] mt-1 shrink-0" />
                             <span>Earn passive income on idle assets</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <ChevronRight className="w-4 h-4 text-green-600 mt-1 shrink-0" />
+                            <ChevronRight className="w-4 h-4 text-[#2E9E5B] mt-1 shrink-0" />
                             <span>No minimum investment requirements</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <ChevronRight className="w-4 h-4 text-green-600 mt-1 shrink-0" />
+                            <ChevronRight className="w-4 h-4 text-[#2E9E5B] mt-1 shrink-0" />
                             <span>Withdraw funds anytime</span>
                           </li>
                         </ul>
@@ -337,15 +328,15 @@ const Handbook = () => {
                         <h4 className="text-lg font-semibold text-slate-800 mb-3">For Borrowers</h4>
                         <ul className="space-y-2 text-sm text-slate-700">
                           <li className="flex items-start gap-2">
-                            <ChevronRight className="w-4 h-4 text-blue-600 mt-1 shrink-0" />
+                            <ChevronRight className="w-4 h-4 text-[#1E4B8E] mt-1 shrink-0" />
                             <span>Access liquidity without selling assets</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <ChevronRight className="w-4 h-4 text-blue-600 mt-1 shrink-0" />
+                            <ChevronRight className="w-4 h-4 text-[#1E4B8E] mt-1 shrink-0" />
                             <span>No credit checks required</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <ChevronRight className="w-4 h-4 text-blue-600 mt-1 shrink-0" />
+                            <ChevronRight className="w-4 h-4 text-[#1E4B8E] mt-1 shrink-0" />
                             <span>Flexible repayment terms</span>
                           </li>
                         </ul>
@@ -515,7 +506,7 @@ const Handbook = () => {
                     <div className="grid md:grid-cols-2 gap-4 mb-6">
                       <div className="bg-green-50 p-4 rounded-xl">
                         <h5 className="font-semibold text-slate-800 mb-2 flex items-center gap-2">
-                          <Lock className="w-4 h-4 text-green-600" />
+                          <Lock className="w-4 h-4 text-[#2E9E5B]" />
                           Wallet Security
                         </h5>
                         <ul className="space-y-1 text-sm text-slate-600">
@@ -526,7 +517,7 @@ const Handbook = () => {
                       </div>
                       <div className="bg-blue-50 p-4 rounded-xl">
                         <h5 className="font-semibold text-slate-800 mb-2 flex items-center gap-2">
-                          <Shield className="w-4 h-4 text-blue-600" />
+                          <Shield className="w-4 h-4 text-[#1E4B8E]" />
                           Protocol Safety
                         </h5>
                         <ul className="space-y-1 text-sm text-slate-600">
@@ -557,7 +548,7 @@ const Handbook = () => {
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl flex items-center justify-center">
-                        <Zap className="w-6 h-6 text-green-600" />
+                        <Zap className="w-6 h-6 text-[#2E9E5B]" />
                       </div>
                       <div>
                         <CardTitle className="text-2xl font-bold text-slate-800">Getting Started with DeFi</CardTitle>
@@ -621,7 +612,7 @@ const Handbook = () => {
                     </div>
 
                     <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-8 rounded-xl text-center">
-                      <Globe className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
+                      <Globe className="w-12 h-12 text-[#1E4B8E] mx-auto mb-4" />
                       <h3 className="text-xl font-bold text-slate-800 mb-3">Ready to Start Your DeFi Journey?</h3>
                       <p className="text-slate-600 mb-6">Join the India DeFi Alliance community for support, resources, and updates.</p>
                       <Button 
@@ -643,14 +634,14 @@ const Handbook = () => {
                     <h3 className="text-xl font-bold text-slate-800 mb-4">Additional Resources</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       <a href="/glossary" className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                        <BookOpen className="w-8 h-8 text-blue-600" />
+                        <BookOpen className="w-8 h-8 text-[#1E4B8E]" />
                         <div>
                           <p className="font-semibold text-slate-800">DeFi Glossary</p>
                           <p className="text-sm text-slate-600">Multi-language terminology guide</p>
                         </div>
                       </a>
                       <a href="/resources" className="flex items-center gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                        <FileText className="w-8 h-8 text-green-600" />
+                        <FileText className="w-8 h-8 text-[#2E9E5B]" />
                         <div>
                           <p className="font-semibold text-slate-800">Research Papers</p>
                           <p className="text-sm text-slate-600">Latest DeFi research and analysis</p>

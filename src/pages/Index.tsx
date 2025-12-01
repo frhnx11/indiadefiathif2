@@ -57,25 +57,25 @@ const Index = () => {
 
   const features = [
     {
-      icon: <BookOpen className="w-8 h-8 text-blue-600" />,
+      icon: <BookOpen className="w-8 h-8 text-[#1E4B8E]" />,
       title: "Educational Excellence",
       description: "Comprehensive DeFi handbook, interactive glossary in multiple languages, and expert-led video tutorials.",
       highlight: "Multi-language Support"
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-600" />,
+      icon: <Shield className="w-8 h-8 text-[#2E9E5B]" />,
       title: "Policy Advocacy",
       description: "Working directly with regulators to create balanced frameworks that protect consumers while fostering innovation.",
       highlight: "Direct Regulatory Engagement"
     },
     {
-      icon: <Lightbulb className="w-8 h-8 text-purple-600" />,
+      icon: <Lightbulb className="w-8 h-8 text-[#F5A623]" />,
       title: "Cutting-edge Research",
       description: "Partnerships with IIT Bombay and leading universities to advance DeFi security, governance, and inclusion.",
       highlight: "Academic Partnerships"
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-600" />,
+      icon: <Users className="w-8 h-8 text-[#1E4B8E]" />,
       title: "Thriving Community",
       description: "Connect with innovators, regulators, and institutions in India's most active DeFi community.",
       highlight: "Active Network"
@@ -142,14 +142,14 @@ const Index = () => {
         <HeroSection />
         
         {/* Impact Stats Section */}
-        <section className="py-12 lg:py-16 bg-gray-50">
+        <section className="py-12 lg:py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {stats.map((stat, index) => (
                   <Card key={index} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
                     <CardContent className="p-6 text-center">
-                      <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 p-2">
+                      <div className="w-14 h-14 bg-[#1E4B8E]/10 rounded-xl flex items-center justify-center mx-auto mb-4 p-2">
                         <img src={stat.iconPath} alt={stat.label} className="w-full h-full object-contain" />
                       </div>
                       <div className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2">{stat.number}</div>
@@ -202,7 +202,7 @@ const Index = () => {
         </section>
 
         {/* About Us Section */}
-        <section className="py-8 lg:py-12 bg-gray-50">
+        <section className="py-8 lg:py-12 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
             </div>
@@ -223,8 +223,8 @@ const Index = () => {
                   }`}
                 >
                   <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Target className="w-8 h-8 text-blue-600" />
+                    <div className="w-16 h-16 bg-[#1E4B8E]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Target className="w-8 h-8 text-[#1E4B8E]" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-800">Our Mission</h2>
                   </div>
@@ -245,8 +245,8 @@ const Index = () => {
                   style={{ animationDelay: '200ms' }}
                 >
                   <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <TrendingUp className="w-8 h-8 text-purple-600" />
+                    <div className="w-16 h-16 bg-[#2E9E5B]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <TrendingUp className="w-8 h-8 text-[#2E9E5B]" />
                     </div>
                     <h2 className="text-2xl font-bold text-slate-800">Our Vision</h2>
                   </div>
@@ -277,8 +277,8 @@ const Index = () => {
               <div className="grid md:grid-cols-3 gap-8">
                 <Card className="bg-white border border-gray-200 h-full hover:shadow-lg transition-shadow">
                   <CardHeader className="pb-4">
-                    <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <BookOpen className="w-10 h-10 text-indigo-600" />
+                    <div className="w-16 h-16 bg-[#1E4B8E]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <BookOpen className="w-10 h-10 text-[#1E4B8E]" />
                     </div>
                     <CardTitle className="text-xl text-center text-slate-800 font-bold">Comprehensive DeFi Handbook</CardTitle>
                   </CardHeader>
@@ -287,15 +287,15 @@ const Index = () => {
                       Step by step guide covering the basics of DeFi: Smart Contracts, Lending, AMMs, governance, and risk management.
                     </p>
                     <div className="text-center mt-4">
-                      <a href="/handbook" className="text-blue-600 hover:text-blue-700 font-medium">View Handbook →</a>
+                      <a href="/handbook" className="text-[#1E4B8E] hover:text-[#163a6e] font-medium">View Handbook →</a>
                     </div>
                   </CardContent>
                 </Card>
 
                 <Card className="bg-white border border-gray-200 h-full hover:shadow-lg transition-shadow">
                   <CardHeader className="pb-4">
-                    <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Globe className="w-10 h-10 text-emerald-600" />
+                    <div className="w-16 h-16 bg-[#2E9E5B]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Globe className="w-10 h-10 text-[#2E9E5B]" />
                     </div>
                     <CardTitle className="text-xl text-center text-slate-800 font-bold">DeFi Glossary</CardTitle>
                   </CardHeader>
@@ -304,15 +304,15 @@ const Index = () => {
                       Core DeFi terms in English, Hindi, and Tamil, with examples and deep dives.
                     </p>
                     <div className="text-center mt-4">
-                      <a href="/glossary" className="text-blue-600 hover:text-blue-700 font-medium">View Glossary →</a>
+                      <a href="/glossary" className="text-[#2E9E5B] hover:text-[#257a48] font-medium">View Glossary →</a>
                     </div>
                   </CardContent>
                 </Card>
 
                 <Card className="bg-white border border-gray-200 h-full hover:shadow-lg transition-shadow">
                   <CardHeader className="pb-4">
-                    <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Play className="w-10 h-10 text-violet-600" />
+                    <div className="w-16 h-16 bg-[#F5A623]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Play className="w-10 h-10 text-[#F5A623]" />
                     </div>
                     <CardTitle className="text-xl text-center text-slate-800 font-bold">Resources</CardTitle>
                   </CardHeader>
@@ -321,7 +321,7 @@ const Index = () => {
                       Comprehensive collection of educational materials, research papers, and guides.
                     </p>
                     <div className="text-center mt-4">
-                      <a href="/resources" className="text-blue-600 hover:text-blue-700 font-medium">Explore →</a>
+                      <a href="/resources" className="text-[#F5A623] hover:text-[#d48b1a] font-medium">Explore →</a>
                     </div>
                   </CardContent>
                 </Card>
@@ -332,7 +332,7 @@ const Index = () => {
 
 
         {/* Our Objectives */}
-        <section className="py-12 lg:py-16 bg-gradient-to-r from-background/50 to-background/30">
+        <section className="py-12 lg:py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <Card className="content-box-enhanced animate-background-shift animate-staggered-fade-in p-8 lg:p-12">
@@ -351,16 +351,16 @@ const Index = () => {
                         className="flex items-start gap-3 animate-staggered-fade-in"
                         style={{ animationDelay: `${index * 0.1}s` }}
                       >
-                        <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-1" />
+                        <CheckCircle className="w-5 h-5 text-[#2E9E5B] shrink-0 mt-1" />
                         <p className="body-text">{objective}</p>
                       </div>
                     ))}
                   </div>
                   
                   <div className="text-center mt-8">
-                    <Button 
-                      size="lg" 
-                      className="btn-vibrant bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-colorful-hover transform hover:scale-105 transition-all duration-300"
+                    <Button
+                      size="lg"
+                      className="bg-[#1E4B8E] hover:bg-[#163a6e] text-white shadow-lg transform hover:scale-105 transition-all duration-300"
                       onClick={() => window.open('/pitchdeck.pdf', '_blank')}
                     >
                       Discover Our Objectives <ArrowRight className="w-5 h-5 ml-2" />
@@ -373,11 +373,11 @@ const Index = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-12 lg:py-16 bg-gradient-to-r from-background/50 to-background/30">
+        <section className="py-12 lg:py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="section-heading mb-4 animate-text-glow">Frequently Asked Questions</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#1E4B8E] mb-4">Frequently Asked Questions</h2>
                 <p className="body-text text-lg max-w-3xl mx-auto">
                   Get answers to common questions about DeFi and the India DeFi Alliance.
                 </p>
@@ -390,7 +390,7 @@ const Index = () => {
                       className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200"
                       onClick={() => toggleFAQ(index)}
                     >
-                      <h3 className="text-lg font-semibold text-primary pr-4">{faq.question}</h3>
+                      <h3 className="text-lg font-semibold text-[#1E4B8E] pr-4">{faq.question}</h3>
                       <ChevronDown 
                         className={`w-5 h-5 text-gray-500 transition-transform duration-200 flex-shrink-0 ${
                           openFAQ === index ? 'transform rotate-180' : ''
@@ -411,9 +411,8 @@ const Index = () => {
                           )}
                           {index === faqData.length - 1 && (
                             <div className="mt-4">
-                              <Button 
-                                variant="outline" 
-                                className="btn-vibrant border-2 border-emerald-500 text-emerald-700 hover:text-white hover:bg-emerald-500 shadow-colorful-hover transform hover:scale-105 transition-all duration-300"
+                              <Button
+                                className="bg-[#2E9E5B] hover:bg-[#257a48] text-white transform hover:scale-105 transition-all duration-300"
                                 onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
                               >
                                 Join the Alliance <ArrowRight className="w-4 h-4 ml-2" />
@@ -436,7 +435,7 @@ const Index = () => {
             <div className="max-w-4xl mx-auto text-center">
               <Card className="content-box-enhanced animate-pulse-glow p-12 lg:p-16">
                 <CardContent className="p-0">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-gradient-rainbow mb-6">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-[#1E4B8E] mb-6">
                     Ready to Shape India's DeFi Future?
                   </h2>
                   <p className="body-text text-xl mb-8 max-w-2xl mx-auto">
@@ -445,18 +444,18 @@ const Index = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button 
-                      size="lg" 
-                      className="text-lg px-8 py-4 btn-vibrant bg-gradient-to-r from-green-500 via-blue-600 to-purple-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white shadow-colorful-hover transform hover:scale-105 transition-all duration-300"
+                    <Button
+                      size="lg"
+                      className="text-lg px-8 py-4 bg-[#2E9E5B] hover:bg-[#257a48] text-white shadow-lg transform hover:scale-105 transition-all duration-300"
                       onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
                     >
                       <Users className="w-5 h-5 mr-2" />
                       Join the Alliance
                     </Button>
-                    <Button 
-                      variant="outline" 
-                      size="lg" 
-                      className="text-lg px-8 py-4 border-2 border-gradient-to-r border-purple-500 text-purple-700 hover:bg-purple-50 hover:border-purple-600 shadow-colorful-hover transform hover:scale-105 transition-all duration-300"
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="text-lg px-8 py-4 border-2 border-[#1E4B8E] text-[#1E4B8E] hover:bg-[#1E4B8E] hover:text-white shadow-lg transform hover:scale-105 transition-all duration-300"
                       onClick={() => window.location.href = '/contact'}
                     >
                       <MessageCircle className="w-5 h-5 mr-2" />

@@ -159,23 +159,14 @@ const Glossary = () => {
       <Navigation />
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-20 bg-gradient-to-br from-purple-50 via-violet-50 to-indigo-50 border-b border-gray-200">
-          {/* Dynamic Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-violet-400/20 rounded-full blur-3xl animate-morph-slow"></div>
-            <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-violet-400/15 to-indigo-400/15 rounded-full blur-2xl animate-float"></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-indigo-300/25 to-purple-300/25 rounded-full blur-xl animate-pulse-slow"></div>
-          </div>
-
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 lg:py-20 bg-white border-b border-gray-200">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6 animate-staggered-fade-in">
+              <div className="mb-6">
                 <div className="inline-flex items-center gap-3 mb-4">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-violet-400 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                  <div className="w-8 h-1 bg-[#1E4B8E] rounded-full"></div>
                   <span className="text-slate-600 text-sm uppercase tracking-wider font-medium">Interactive Resource</span>
-                  <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
-                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.9s' }}></div>
+                  <div className="w-8 h-1 bg-[#2E9E5B] rounded-full"></div>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
                   DeFi Glossary
@@ -184,20 +175,20 @@ const Glossary = () => {
               <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
                 Core DeFi terms explained in English, Hindi, and Tamil
               </p>
-              
-              <div className="flex flex-wrap justify-center gap-4 animate-staggered-fade-in stagger-3">
-                <Badge className="px-4 py-2 bg-purple-100 text-purple-700 border-purple-200">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  100+ Terms
-                </Badge>
-                <Badge className="px-4 py-2 bg-violet-100 text-violet-700 border-violet-200">
-                  <Languages className="w-4 h-4 mr-2" />
-                  Multi-Language Support
-                </Badge>
-                <Badge className="px-4 py-2 bg-indigo-100 text-indigo-700 border-indigo-200">
-                  <Shield className="w-4 h-4 mr-2" />
-                  Risk Analysis
-                </Badge>
+
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex items-center gap-2 text-[#1E4B8E] bg-[#1E4B8E]/10 px-4 py-2 rounded-full border border-[#1E4B8E]/20">
+                  <BookOpen className="w-4 h-4" />
+                  <span className="text-sm">100+ Terms</span>
+                </div>
+                <div className="flex items-center gap-2 text-[#2E9E5B] bg-[#2E9E5B]/10 px-4 py-2 rounded-full border border-[#2E9E5B]/20">
+                  <Languages className="w-4 h-4" />
+                  <span className="text-sm">Multi-Language Support</span>
+                </div>
+                <div className="flex items-center gap-2 text-[#F5A623] bg-[#F5A623]/10 px-4 py-2 rounded-full border border-[#F5A623]/20">
+                  <Shield className="w-4 h-4" />
+                  <span className="text-sm">Risk Analysis</span>
+                </div>
               </div>
             </div>
           </div>
@@ -218,40 +209,40 @@ const Glossary = () => {
                   <div className="grid md:grid-cols-2 gap-6 mb-6">
                     <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-xl">
                       <h4 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                        <TrendingUp className="w-5 h-5 text-purple-600" />
+                        <TrendingUp className="w-5 h-5 text-[#F5A623]" />
                         Market Dynamics
                       </h4>
                       <ul className="space-y-2 text-sm text-slate-700">
                         <li className="flex items-start gap-2">
-                          <ChevronRight className="w-4 h-4 text-purple-600 mt-1 shrink-0" />
+                          <ChevronRight className="w-4 h-4 text-[#F5A623] mt-1 shrink-0" />
                           <span>SEC's 2024 approval of spot crypto ETFs</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <ChevronRight className="w-4 h-4 text-purple-600 mt-1 shrink-0" />
+                          <ChevronRight className="w-4 h-4 text-[#F5A623] mt-1 shrink-0" />
                           <span>Resurgence of the "Coinbase premium"</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <ChevronRight className="w-4 h-4 text-purple-600 mt-1 shrink-0" />
+                          <ChevronRight className="w-4 h-4 text-[#F5A623] mt-1 shrink-0" />
                           <span>Growing institutional confidence</span>
                         </li>
                       </ul>
                     </div>
                     <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-xl">
                       <h4 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                        <Network className="w-5 h-5 text-indigo-600" />
+                        <Network className="w-5 h-5 text-[#1E4B8E]" />
                         Technical Evolution
                       </h4>
                       <ul className="space-y-2 text-sm text-slate-700">
                         <li className="flex items-start gap-2">
-                          <ChevronRight className="w-4 h-4 text-indigo-600 mt-1 shrink-0" />
+                          <ChevronRight className="w-4 h-4 text-[#1E4B8E] mt-1 shrink-0" />
                           <span>Multi-chain interoperability solutions</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <ChevronRight className="w-4 h-4 text-indigo-600 mt-1 shrink-0" />
+                          <ChevronRight className="w-4 h-4 text-[#1E4B8E] mt-1 shrink-0" />
                           <span>Wrapped Bitcoin (wBTC) integration</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <ChevronRight className="w-4 h-4 text-indigo-600 mt-1 shrink-0" />
+                          <ChevronRight className="w-4 h-4 text-[#1E4B8E] mt-1 shrink-0" />
                           <span>Cross-chain liquidity bridges</span>
                         </li>
                       </ul>
@@ -356,7 +347,7 @@ const Glossary = () => {
                           <div className="mt-6 space-y-4">
                             <div className="bg-blue-50 p-4 rounded-lg">
                               <h5 className="font-semibold text-slate-800 mb-2 flex items-center gap-2">
-                                <BookOpen className="w-4 h-4 text-blue-600" />
+                                <BookOpen className="w-4 h-4 text-[#1E4B8E]" />
                                 Example
                               </h5>
                               <p className="text-sm text-slate-700">{term.example}</p>
@@ -561,7 +552,7 @@ const Glossary = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  className="bg-white text-purple-600 hover:bg-gray-100"
+                  className="bg-white text-[#F5A623] hover:bg-gray-100"
                   onClick={() => window.location.href = '/handbook'}
                 >
                   <BookOpen className="w-5 h-5 mr-2" />

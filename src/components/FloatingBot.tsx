@@ -63,28 +63,28 @@ const FloatingBot = () => {
     if (totalScore <= 3) {
       return {
         level: "DeFi Newbie",
-        color: "bg-blue-100 text-blue-800",
+        color: "bg-[#1E4B8E]/10 text-[#1E4B8E]",
         description: "You're just starting your DeFi journey! Our educational resources are perfect for you.",
         recommendation: "Start with our DeFi Basics video series and interactive glossary.",
       };
     } else if (totalScore <= 7) {
       return {
         level: "DeFi Explorer",
-        color: "bg-green-100 text-green-800", 
+        color: "bg-[#2E9E5B]/10 text-[#2E9E5B]",
         description: "You have a good foundation! Ready to dive deeper into DeFi protocols.",
         recommendation: "Check out our comprehensive DeFi handbook and join our community discussions.",
       };
     } else if (totalScore <= 11) {
       return {
         level: "DeFi Enthusiast",
-        color: "bg-purple-100 text-purple-800",
+        color: "bg-[#F5A623]/10 text-[#F5A623]",
         description: "You're actively engaged with DeFi! Time to explore advanced strategies.",
         recommendation: "Join our Full Membership for exclusive research and policy insights.",
       };
     } else {
       return {
         level: "DeFi Expert",
-        color: "bg-yellow-100 text-yellow-800",
+        color: "bg-[#2E9E5B]/10 text-[#2E9E5B]",
         description: "You're a DeFi power user! Consider contributing to the ecosystem.",
         recommendation: "Apply for Founding Membership and help shape DeFi policy in India.",
       };
@@ -125,7 +125,7 @@ const FloatingBot = () => {
         <DialogTrigger asChild>
           <Button
             size="lg"
-            className="fixed bottom-6 right-6 z-50 rounded-full w-16 h-16 bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="fixed bottom-6 right-6 z-50 rounded-full w-16 h-16 bg-[#1E4B8E] hover:bg-[#163a6e] shadow-lg hover:shadow-xl transition-all duration-300"
             aria-label="Open DeFi Quiz"
           >
             <Bot className="w-8 h-8 text-white" />
@@ -203,8 +203,8 @@ const FloatingBot = () => {
           ) : (
             <Card className="border-0 shadow-none">
               <CardHeader className="px-0 text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-[#2E9E5B]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-[#2E9E5B]" />
                 </div>
                 <CardTitle className="text-xl">Quiz Complete!</CardTitle>
                 <Badge className={`mx-auto mt-2 ${result.color}`}>
