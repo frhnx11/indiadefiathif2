@@ -611,12 +611,12 @@ const Handbook = () => {
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-8 rounded-xl text-center">
+                    <div className="bg-white border border-gray-200 p-8 rounded-xl text-center">
                       <Globe className="w-12 h-12 text-[#1E4B8E] mx-auto mb-4" />
-                      <h3 className="text-xl font-bold text-slate-800 mb-3">Ready to Start Your DeFi Journey?</h3>
+                      <h3 className="text-xl font-bold text-[#1E4B8E] mb-3">Ready to Start Your DeFi Journey?</h3>
                       <p className="text-slate-600 mb-6">Join the India DeFi Alliance community for support, resources, and updates.</p>
-                      <Button 
-                        className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white"
+                      <Button
+                        className="bg-[#2E9E5B] hover:bg-[#258a4d] text-white"
                         onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
                       >
                         Join the Community

@@ -379,7 +379,7 @@ const Glossary = () => {
               
               <div className="overflow-x-auto">
                 <table className="w-full bg-white rounded-xl shadow-xl">
-                  <thead className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                  <thead className="bg-[#1E4B8E] text-white">
                     <tr>
                       <th className="px-6 py-4 text-left">Blockchain</th>
                       <th className="px-6 py-4 text-left">Token</th>
@@ -539,29 +539,27 @@ const Glossary = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 lg:py-20 bg-gradient-to-r from-purple-600 to-indigo-600">
+        <section className="py-16 lg:py-20 bg-white border-t border-gray-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1E4B8E] mb-6">
                 Continue Your DeFi Education
               </h2>
-              <p className="text-xl text-white/90 mb-8">
+              <p className="text-xl text-slate-600 mb-8">
                 Explore more resources and join our community to stay updated on the latest in DeFi
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
-                  variant="secondary"
-                  className="bg-white text-[#F5A623] hover:bg-gray-100"
+                <Button
+                  size="lg"
+                  className="bg-[#1E4B8E] text-white hover:bg-[#163a6e]"
                   onClick={() => window.location.href = '/handbook'}
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
                   View DeFi Handbook
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10"
+                <Button
+                  size="lg"
+                  className="bg-[#2E9E5B] text-white hover:bg-[#258a4d]"
                   onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
                 >
                   <Users className="w-5 h-5 mr-2" />

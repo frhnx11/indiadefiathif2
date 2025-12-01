@@ -451,14 +451,14 @@ const BlogPost = () => {
               </div>
               
               {/* Call to Action */}
-              <Card className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 shadow-2xl">
+              <Card className="mt-12 bg-white border border-gray-200 shadow-xl">
                 <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-bold mb-4">Join the DeFi Revolution</h3>
-                  <p className="mb-6 text-blue-100">
+                  <h3 className="text-2xl font-bold text-[#1E4B8E] mb-4">Join the DeFi Revolution</h3>
+                  <p className="mb-6 text-slate-600">
                     Be part of India's journey towards financial innovation and inclusion.
                   </p>
                   <Link to="/membership">
-                    <Button size="lg" className="bg-white text-[#1E4B8E] hover:bg-blue-50">
+                    <Button size="lg" className="bg-[#2E9E5B] text-white hover:bg-[#258a4d]">
                       Join India DeFi Alliance
                     </Button>
                   </Link>
