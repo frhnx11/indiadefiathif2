@@ -134,49 +134,51 @@ const About = () => {
         </section>
 
         {/* Mission & Vision Enhanced */}
-        <section ref={sectionRef} className="py-12 lg:py-16 bg-gradient-to-r from-background/30 to-background/50">
+        <section ref={sectionRef} className="py-12 lg:py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
                 {/* Mission */}
-                <div 
-                  className={`content-box-mission p-10 lg:p-12 h-full transition-all duration-800 transform hover:-translate-y-1 ${
-                    isVisible 
-                      ? 'animate-slide-up-scale translate-x-0' 
+                <div
+                  className={`bg-[#1E4B8E] rounded-2xl p-10 lg:p-12 h-full transition-all duration-800 transform hover:-translate-y-1 shadow-xl ${
+                    isVisible
+                      ? 'animate-slide-up-scale translate-x-0'
                       : 'opacity-0 -translate-x-8'
                   }`}
                 >
                   <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-[#1E4B8E]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Target className="w-8 h-8 text-[#1E4B8E]" />
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Target className="w-8 h-8 text-white" />
                     </div>
-                    <h2 className="text-2xl font-bold text-slate-800">Mission</h2>
+                    <h2 className="text-2xl font-bold text-white font-playfair">Our Mission</h2>
                   </div>
                   <div className="animate-content-reveal text-center" style={{ animationDelay: '0.3s' }}>
-                    <p className="text-lg leading-relaxed text-slate-600">
-                      To bridge innovators and policymakers, shape balanced regulations, and build India's DeFi future through research, education, and collaboration.
+                    <p className="text-lg leading-relaxed text-white/90">
+                      Bridging innovators and policymakers, shaping balanced regulations, and building India's DeFi future through research, education, and collaboration.
                     </p>
                   </div>
                 </div>
 
                 {/* Vision */}
-                <div 
-                  className={`content-box-vision p-10 lg:p-12 h-full transition-all duration-800 transform hover:-translate-y-1 delay-200 ${
-                    isVisible 
-                      ? 'animate-slide-up-scale translate-x-0' 
+                <div
+                  className={`bg-[#2E9E5B] rounded-2xl p-10 lg:p-12 h-full transition-all duration-800 transform hover:-translate-y-1 delay-200 shadow-xl ${
+                    isVisible
+                      ? 'animate-slide-up-scale translate-x-0'
                       : 'opacity-0 translate-x-8'
                   }`}
                   style={{ animationDelay: '200ms' }}
                 >
                   <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-[#2E9E5B]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <TrendingUp className="w-8 h-8 text-[#2E9E5B]" />
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <TrendingUp className="w-8 h-8 text-white" />
                     </div>
-                    <h2 className="text-2xl font-bold text-slate-800">Vision</h2>
+                    <h2 className="text-2xl font-bold text-white font-playfair">Our Vision</h2>
                   </div>
                   <div className="animate-content-reveal text-center" style={{ animationDelay: '0.4s' }}>
-                    <p className="text-lg leading-relaxed text-slate-600">
-                      A resilient, open, and transparent financial system—built on decentralized technologies—that gives every Indian fair access to finance and opportunity.
+                    <p className="text-lg leading-relaxed text-white/90">
+                      A resilient, open, and transparent financial system—built on decentralized
+                      technologies—that empowers every Indian with equitable access to financial
+                      services and economic opportunity.
                     </p>
                   </div>
                 </div>
