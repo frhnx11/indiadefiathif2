@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
 				'display': ['Inter Display', 'Inter', 'sans-serif'],
+				'playfair': ['Playfair Display', 'Georgia', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

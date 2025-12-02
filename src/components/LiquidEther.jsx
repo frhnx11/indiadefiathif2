@@ -376,10 +376,12 @@ export default function LiquidEther({
     varying vec2 uv;
     void main(){
     vec2 ratio = max(fboSize.x, fboSize.y) / fboSize;
+    // Slower decay factor - clears in about 7 seconds
+    float decay = 0.993;
     if(isBFECC == false){
         vec2 vel = texture2D(velocity, uv).xy;
         vec2 uv2 = uv - vel * dt * ratio;
-        vec2 newVel = texture2D(velocity, uv2).xy;
+        vec2 newVel = texture2D(velocity, uv2).xy * decay;
         gl_FragColor = vec4(newVel, 0.0, 0.0);
     } else {
         vec2 spot_new = uv;
@@ -391,7 +393,7 @@ export default function LiquidEther({
         vec2 spot_new3 = spot_new - error / 2.0;
         vec2 vel_2 = texture2D(velocity, spot_new3).xy;
         vec2 spot_old2 = spot_new3 - vel_2 * dt * ratio;
-        vec2 newVel2 = texture2D(velocity, spot_old2).xy; 
+        vec2 newVel2 = texture2D(velocity, spot_old2).xy * decay;
         gl_FragColor = vec4(newVel2, 0.0, 0.0);
     }
 }
@@ -405,9 +407,13 @@ export default function LiquidEther({
     void main(){
     vec2 vel = texture2D(velocity, uv).xy;
     float lenv = clamp(length(vel), 0.0, 1.0);
-    vec3 c = texture2D(palette, vec2(lenv, 0.5)).rgb;
-    vec3 outRGB = mix(bgColor.rgb, c, lenv);
-    float outA = mix(bgColor.a, 1.0, lenv);
+    // Amplify the velocity to make colors more visible
+    float amplifiedLenv = clamp(lenv * 2.0, 0.0, 1.0);
+    vec3 c = texture2D(palette, vec2(amplifiedLenv, 0.5)).rgb;
+    // Mix with a light yellow/cream color instead of grey for low velocities
+    vec3 lightYellow = vec3(1.0, 0.98, 0.9);
+    vec3 outRGB = mix(lightYellow, c, amplifiedLenv);
+    float outA = amplifiedLenv;
     gl_FragColor = vec4(outRGB, outA);
 }
 `;

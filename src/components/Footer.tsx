@@ -4,7 +4,7 @@ import { Twitter, Linkedin, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-16">
+    <footer className="bg-[#2E9E5B] text-white py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Main Footer Content */}
@@ -17,21 +17,21 @@ const Footer = () => {
                   alt="India DeFi Alliance Logo"
                   className="h-10 w-auto object-contain"
                 />
-                <span className="text-xl font-bold">India DeFi Alliance</span>
+                <span className="text-xl font-bold font-playfair">India DeFi Alliance</span>
               </div>
-              <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-md">
+              <p className="text-white/80 leading-relaxed mb-6 max-w-md">
                 Building a secure, inclusive, and transparent financial ecosystem for everyone through Decentralized Technology.
               </p>
               
               {/* Social Links */}
               <div className="flex space-x-4">
-                <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary-foreground/10">
+                <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
                   <Twitter className="w-5 h-5" />
                 </Button>
-                <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary-foreground/10">
+                <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
                   <Linkedin className="w-5 h-5" />
                 </Button>
-                <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary-foreground/10">
+                <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
                   <MessageCircle className="w-5 h-5" />
                 </Button>
               </div>
@@ -39,7 +39,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
               <ul className="space-y-2">
                 {['Home', 'About', 'Resources', 'Why Join Us', 'Contact'].map((link) => {
                   const href = link === 'Why Join Us' ? '/membership' : `/${link.toLowerCase().replace(' ', '-')}`;
@@ -47,7 +47,7 @@ const Footer = () => {
                     <li key={link}>
                       <a
                         href={href === '/home' ? '/' : href}
-                        className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200"
+                        className="text-white/80 hover:text-white transition-colors duration-200"
                       >
                         {link}
                       </a>
@@ -59,16 +59,16 @@ const Footer = () => {
 
             {/* Contact */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
+              <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
               <div className="space-y-4">
-                <Button 
-                  variant="outline" 
-                  className="w-full bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10"
+                <Button
+                  variant="outline"
+                  className="w-full bg-transparent border-white/20 text-white hover:bg-white/10"
                   onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSduy4NyNRcuivBY89H75z9ks8d6G6tlhDnpErxiTPS1_eHg3g/viewform', '_blank')}
                 >
                   Join the Alliance
                 </Button>
-                <Button variant="outline" className="w-full bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+                <Button variant="outline" className="w-full bg-transparent border-white/20 text-white hover:bg-white/10">
                   Download Vision
                 </Button>
               </div>
@@ -76,9 +76,9 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-primary-foreground/20 pt-8">
+          <div className="border-t border-white/20 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
+              <p className="text-white/60 text-sm mb-4 md:mb-0">
                 © 2024 India DeFi Alliance. All rights reserved.
               </p>
             </div>

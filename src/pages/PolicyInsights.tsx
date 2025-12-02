@@ -112,7 +112,7 @@ const PolicyInsights = () => {
                   <span className="text-slate-600 text-sm uppercase tracking-wider font-medium">Policy & Regulation</span>
                   <div className="w-8 h-1 bg-[#2E9E5B] rounded-full"></div>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight font-playfair">
                   Policy Insights
                 </h1>
               </div>

@@ -34,7 +34,7 @@ const HeroSection = () => {
           {/* Title */}
           <div className="text-center relative">
             <div className="w-full mb-12">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight py-4 text-center" style={{ fontFamily: 'Inter, sans-serif', fontWeight: '800', letterSpacing: '-0.02em' }}>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight py-4 text-center font-playfair font-bold tracking-tight">
                 <span className="text-slate-900">India DeFi Alliance</span>
               </h1>
             </div>

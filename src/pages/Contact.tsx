@@ -9,7 +9,8 @@ const Contact = () => {
   const emails = [
     { name: "Athif Ahmed", email: "athif.ahmed@indiadefialliance.com" },
     { name: "Reddy Pawan", email: "reddy.pawan@indiadefialliance.com" },
-    { name: "Aritra Sarkhel", email: "aritra.sarkhel@indiadefialliance.com" }
+    { name: "Aritra Sarkhel", email: "aritra.sarkhel@indiadefialliance.com" },
+    { name: "Aabha Dixit", email: "aabha.dixit@indiadefialliance.com" }
   ];
 
   return (
@@ -26,7 +27,7 @@ const Contact = () => {
                   <span className="text-slate-600 text-sm uppercase tracking-wider font-medium">Get in Touch</span>
                   <div className="w-8 h-1 bg-[#2E9E5B] rounded-full"></div>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight font-playfair">
                   Contact Us
                 </h1>
               </div>
@@ -71,7 +72,7 @@ const Contact = () => {
                   <div className="space-y-6">
                     <div className="border-t border-gray-200 pt-6">
                       <h3 className="text-lg font-semibold text-slate-800 mb-4 text-center">Email Us</h3>
-                      <div className="space-y-3">
+                      <div className="space-y-8">
                         {emails.map((contact, index) => (
                           <div key={index} className="text-center">
                             <p className="text-sm text-slate-500 mb-1">{contact.name}</p>
