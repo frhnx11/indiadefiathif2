@@ -13,6 +13,10 @@ import Handbook from "./pages/Handbook";
 import Glossary from "./pages/Glossary";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import CatchAllPage from "./pages/CatchAllPage";
+
+// Initialize Builder.io
+import "./lib/builder";
 
 const queryClient = new QueryClient();
 
@@ -33,7 +37,8 @@ const App = () => (
           <Route path="/glossary" element={<Glossary />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          {/* Builder.io managed pages - will show 404 if no Builder content exists */}
+          <Route path="*" element={<CatchAllPage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
